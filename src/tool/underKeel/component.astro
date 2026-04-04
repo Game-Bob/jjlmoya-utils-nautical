@@ -1,0 +1,240 @@
+---
+import './style.css';
+import type { UnderKeelUI } from './index';
+
+interface Props {
+  ui: UnderKeelUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section id="under-keel-calculator" class="under-keel-calculator" data-ui={JSON.stringify(ui)}>
+  <div class="main-card">
+    <div class="calc-sidebar">
+      <div class="sidebar-header">
+        <h3>{ui.parametersLabel}</h3>
+      </div>
+
+      <div class="input-set">
+        <div class="input-block">
+          <label>{ui.boatDraftLabel}</label>
+          <div class="unit-input">
+            <input type="number" id="boat-draft" value="2.0" step="0.1" />
+            <span>m</span>
+          </div>
+        </div>
+
+        <div class="input-block">
+          <label>{ui.chartDepthLabel}</label>
+          <div class="unit-input">
+            <input type="number" id="chart-depth" value="1.5" step="0.1" />
+            <span>m</span>
+          </div>
+        </div>
+
+        <div class="input-block">
+          <label>{ui.safetyMarginLabel}</label>
+          <div class="unit-input">
+            <input type="number" id="safety-margin" value="0.5" step="0.1" />
+            <span>m</span>
+          </div>
+        </div>
+
+        <div class="hr-divider"></div>
+
+        <div class="input-block">
+          <label>{ui.highTideLabel}</label>
+          <div class="row">
+            <input type="time" id="high-tide-time" value="12:00" />
+            <input type="number" id="high-tide-height" value="3.5" step="0.1" class="mini-num" />
+          </div>
+        </div>
+
+        <div class="input-block">
+          <label>{ui.lowTideLabel}</label>
+          <div class="row">
+            <input type="time" id="low-tide-time" value="06:00" />
+            <input type="number" id="low-tide-height" value="0.5" step="0.1" class="mini-num" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-content">
+      <div class="top-row">
+        <div class="result-display">
+          <span class="label">{ui.passWindowLabel}</span>
+          <div class="time-range">
+            <span id="pass-start">--:--</span>
+            <div class="arrow-sep">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12,4L10.59,5.41L16.17,11H4V13H16.17L10.59,18.59L12,20L20,12L12,4Z"></path>
+              </svg>
+            </div>
+            <span id="pass-end">--:--</span>
+          </div>
+          <span id="pass-status" class="status-indicator">--</span>
+        </div>
+
+        <div class="data-group">
+          <div class="stat-pill">
+            <span>{ui.neededLabel}</span>
+            <strong id="needed-depth">--</strong>
+          </div>
+          <div class="stat-pill">
+            <span>{ui.tideRequiredLabel}</span>
+            <strong id="needed-tide">--</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="visual-container">
+        <div class="ocean-frame">
+          <div class="surface-line"></div>
+          <div class="ship-silhouette" id="viz-boat">
+            <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+              <path fill="currentColor" d="M10,20 L90,20 L80,35 L20,35 Z"></path>
+            </svg>
+          </div>
+          <div class="water-volume" id="viz-water"></div>
+          <div class="sand-bottom">
+            <span>{ui.bottomLabel}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const section = document.getElementById('under-keel-calculator') as HTMLElement;
+  const ui = JSON.parse(section.dataset.ui as string);
+
+  interface CycleData {
+    flooding: boolean; sT: number; dur: number;
+    sH: number; amp: number; mult: number; tH: number;
+  }
+
+  class UnderKeelCalculator {
+    private draftIn: HTMLInputElement;
+    private depthIn: HTMLInputElement;
+    private marginIn: HTMLInputElement;
+    private highTIn: HTMLInputElement;
+    private highHIn: HTMLInputElement;
+    private lowTIn: HTMLInputElement;
+    private lowHIn: HTMLInputElement;
+    private statusInd: HTMLElement;
+    private startSpan: HTMLElement;
+    private endSpan: HTMLElement;
+    private neededD: HTMLElement;
+    private neededT: HTMLElement;
+    private vizWater: HTMLElement;
+    private vizBoat: HTMLElement;
+
+    constructor() {
+      this.draftIn = document.getElementById('boat-draft') as HTMLInputElement;
+      this.depthIn = document.getElementById('chart-depth') as HTMLInputElement;
+      this.marginIn = document.getElementById('safety-margin') as HTMLInputElement;
+      this.highTIn = document.getElementById('high-tide-time') as HTMLInputElement;
+      this.highHIn = document.getElementById('high-tide-height') as HTMLInputElement;
+      this.lowTIn = document.getElementById('low-tide-time') as HTMLInputElement;
+      this.lowHIn = document.getElementById('low-tide-height') as HTMLInputElement;
+      this.statusInd = document.getElementById('pass-status') as HTMLElement;
+      this.startSpan = document.getElementById('pass-start') as HTMLElement;
+      this.endSpan = document.getElementById('pass-end') as HTMLElement;
+      this.neededD = document.getElementById('needed-depth') as HTMLElement;
+      this.neededT = document.getElementById('needed-tide') as HTMLElement;
+      this.vizWater = document.getElementById('viz-water') as HTMLElement;
+      this.vizBoat = document.getElementById('viz-boat') as HTMLElement;
+      this.init();
+    }
+
+    private init() {
+      const inputs = [this.draftIn, this.depthIn, this.marginIn, this.highTIn, this.highHIn, this.lowTIn, this.lowHIn];
+      inputs.forEach((i) => i.addEventListener('input', () => this.calculate()));
+      this.calculate();
+    }
+
+    private tToM(s: string) {
+      const [h, m] = s.split(':').map(Number);
+      return (h ?? 0) * 60 + (m ?? 0);
+    }
+
+    private mToT(m: number) {
+      let mins = Math.round(m) % 1440;
+      if (mins < 0) mins += 1440;
+      return `${String(Math.floor(mins / 60)).padStart(2, '0')}:${String(mins % 60).padStart(2, '0')}`;
+    }
+
+    private getCycleData(tH: number, hH: number, tL: number, hL: number): CycleData {
+      const flooding = tH > tL;
+      return {
+        flooding,
+        sT: flooding ? tL : tH,
+        dur: Math.abs(tH - tL),
+        sH: flooding ? hL : hH,
+        amp: Math.abs(hH - hL),
+        mult: flooding ? 1 : -1,
+        tH,
+      };
+    }
+
+    private findOffset(target: number, dur: number) {
+      const doz = [1 / 12, 2 / 12, 3 / 12, 3 / 12, 2 / 12, 1 / 12];
+      const step = dur / 6;
+      let cum = 0;
+      for (let i = 0; i < 6; i++) {
+        const d = doz[i] ?? 0;
+        if (cum + d >= target) return (i + (target - cum) / d) * step;
+        cum += d;
+      }
+      return dur;
+    }
+
+    private updateUI(txt: string, s: string, e: string, cls: string) {
+      this.statusInd.textContent = txt;
+      this.statusInd.className = `status-indicator ${cls}`;
+      this.startSpan.textContent = s;
+      this.endSpan.textContent = e;
+    }
+
+    private resolveStatus(tideReq: number, hH: number, hL: number, cycle: CycleData) {
+      const { flooding, sT, dur, sH, amp, mult, tH } = cycle;
+      if (tideReq > hH) { this.updateUI(ui.statusNeverLabel, '--:--', '--:--', 'danger'); return; }
+      if (tideReq <= hL) { this.updateUI(ui.statusAlwaysLabel, this.mToT(sT), this.mToT(sT + dur), 'success'); return; }
+      const tOff = this.findOffset((tideReq - sH) / (mult * amp), dur);
+      const pT = sT + tOff;
+      if (flooding) { this.updateUI(ui.statusFromLabel, this.mToT(pT), this.mToT(tH + (tH - pT)), 'warning'); return; }
+      this.updateUI(ui.statusUntilLabel, this.mToT(tH - (pT - tH)), this.mToT(pT), 'warning');
+    }
+
+    private updateViz(needed: number, sd: number, hH: number, dr: number) {
+      const totalWater = sd + hH;
+      const maxVal = Math.max(needed, totalWater, 5) + 2;
+      const floorPct = 15;
+      const waterPct = floorPct + (totalWater / maxVal) * (100 - floorPct);
+      const boatPct = Math.max(floorPct, Math.min(95, floorPct + ((totalWater - dr) / maxVal) * (100 - floorPct)));
+      this.vizWater.style.height = `${waterPct}%`;
+      this.vizBoat.style.bottom = `${boatPct}%`;
+    }
+
+    private calculate() {
+      const dr = parseFloat(this.draftIn.value);
+      const sd = parseFloat(this.depthIn.value);
+      const mg = parseFloat(this.marginIn.value);
+      const hH = parseFloat(this.highHIn.value);
+      const hL = parseFloat(this.lowHIn.value);
+      if (isNaN(dr) || isNaN(sd) || isNaN(mg) || isNaN(hH)) return;
+      const needed = dr + mg;
+      const tideReq = Math.max(0, needed - sd);
+      this.neededD.textContent = `${needed.toFixed(1)}m`;
+      this.neededT.textContent = `${tideReq.toFixed(1)}m`;
+      const cycle = this.getCycleData(this.tToM(this.highTIn.value), hH, this.tToM(this.lowTIn.value), hL);
+      this.resolveStatus(tideReq, hH, hL, cycle);
+      this.updateViz(needed, sd, hH, dr);
+    }
+  }
+
+  new UnderKeelCalculator();
+</script>

@@ -1,7 +1,7 @@
 ---
 import PreviewLayout from '../layouts/PreviewLayout.astro';
 import PreviewNavSidebar from '../components/PreviewNavSidebar.astro';
-import { nauticalCategory, ALL_TOOLS } from '../index';
+import { ALL_TOOLS } from '../index';
 import { Icon } from 'astro-icon/components';
 import type { KnownLocale, ToolLocaleContent } from '../types';
 
@@ -11,8 +11,6 @@ export async function getStaticPaths() {
 }
 
 const { locale: currentLocale } = Astro.params as { locale: KnownLocale };
-
-const categoryContent = await nauticalCategory.i18n[currentLocale]!();
 
 const tools = ALL_TOOLS || [];
 
@@ -46,13 +44,13 @@ const toolsWithContent = tools.length > 0
 ---
 
 <PreviewLayout
-  title={categoryContent.title}
+  title="Vela y Náutica"
   currentLocale={currentLocale}
   hasSidebar={true}
 >
   <PreviewNavSidebar
     slot="sidebar"
-    categoryTitle={categoryContent.title}
+    categoryTitle="Vela y Náutica"
     tools={toolsWithContent.map(({ entry, locale, availableLocales }) => {
       const href = availableLocales[currentLocale] || (locale ? `/${currentLocale}/${locale.slug}` : '#');
       return {
@@ -65,8 +63,8 @@ const toolsWithContent = tools.length > 0
   <div class="dashboard">
     <header class="preview-header">
       <span class="badge">preview · @jjlmoya/utils-nautical</span>
-      <h1>{categoryContent.title}</h1>
-      <p>{categoryContent.description}</p>
+      <h1>Vela y Náutica</h1>
+      <p>Herramientas de navegación y vela</p>
     </header>
 
     <div class="tool-list">

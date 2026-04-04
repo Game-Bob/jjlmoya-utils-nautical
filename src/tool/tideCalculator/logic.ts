@@ -17,13 +17,15 @@ export interface CyclePoint {
   p: string;
 }
 
-export function generateCycle(
-  sT: number,
-  dur: number,
-  amp: number,
-  sH: number,
-  mult: number,
-): CyclePoint[] {
+export interface CycleParams {
+  sT: number;
+  dur: number;
+  amp: number;
+  sH: number;
+  mult: number;
+}
+
+export function generateCycle({ sT, dur, amp, sH, mult }: CycleParams): CyclePoint[] {
   const step = dur / 6;
   let curH = sH;
   const pts: CyclePoint[] = [{ t: sT, h: sH, p: '0%' }];
@@ -41,14 +43,23 @@ export interface InterpolationResult {
   status: 'up' | 'down' | 'out';
 }
 
-export function interpolateHeight(
-  tT: number,
-  sT: number,
-  dur: number,
-  amp: number,
-  sH: number,
-  mult: number,
-): InterpolationResult {
+export interface InterpolationParams {
+  tT: number;
+  sT: number;
+  dur: number;
+  amp: number;
+  sH: number;
+  mult: number;
+}
+
+export function interpolateHeight({
+  tT,
+  sT,
+  dur,
+  amp,
+  sH,
+  mult,
+}: InterpolationParams): InterpolationResult {
   const rel = tT - sT;
   if (rel < 0 || rel > dur) return { height: null, status: 'out' };
   const step = dur / 6;

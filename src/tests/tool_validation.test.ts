@@ -1,22 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import { ALL_TOOLS } from '../tools';
-import { nauticalCategory } from '../data';
 
 const TOOL_ID_REGEX = /^[a-z0-9]+-?[a-z0-9]*$/;
 
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
-    it('should have 6 tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(6);
-    });
-
-    it('nauticalCategory should be defined', () => {
-      expect(nauticalCategory).toBeDefined();
-      expect(nauticalCategory.i18n).toBeDefined();
-    });
-
-    it('nauticalCategory should have 6 tools', () => {
-      expect(nauticalCategory.tools.length).toBe(6);
+    it('should have 1 tool in ALL_TOOLS', () => {
+      expect(ALL_TOOLS.length).toBe(1);
     });
   });
 

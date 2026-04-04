@@ -102,6 +102,9 @@ const { ui } = Astro.props;
     const section = document.getElementById('tide-calculator') as HTMLElement;
     const ui = JSON.parse(section.dataset.ui as string);
 
+    interface CycleState { sT: number; dur: number; amp: number; sH: number; mult: number; }
+    type Pt = { t: number; h: number; p: string };
+
     class TideCalculator {
         private highTime: HTMLInputElement;
         private highHeight: HTMLInputElement;
@@ -169,40 +172,40 @@ const { ui } = Astro.props;
             const tT = this.timeToMins(this.targetTime.value);
             if (isNaN(hH) || isNaN(hL)) return;
             const isFlooding = tH > tL;
-            const dur = Math.abs(tH - tL);
-            const amp = Math.abs(hH - hL);
-            const sH = isFlooding ? hL : hH;
-            const sT = isFlooding ? tL : tH;
-            const mult = isFlooding ? 1 : -1;
-            this.displayAmp.textContent = `${amp.toFixed(2)} m`;
-            this.displayDur.textContent = `${Math.floor(dur / 60)}h ${dur % 60}m`;
-            const pts = this.generateCycle(sT, dur, amp, sH, mult);
-            this.updateUI(pts, tT, sT, dur, amp, sH, mult);
+            const state: CycleState = {
+                sT: isFlooding ? tL : tH,
+                dur: Math.abs(tH - tL),
+                amp: Math.abs(hH - hL),
+                sH: isFlooding ? hL : hH,
+                mult: isFlooding ? 1 : -1,
+            };
+            this.displayAmp.textContent = `${state.amp.toFixed(2)} m`;
+            this.displayDur.textContent = `${Math.floor(state.dur / 60)}h ${state.dur % 60}m`;
+            const pts = this.generateCycle(state);
+            this.updateUI(pts, tT, state);
         }
 
-        private generateCycle(sT: number, dur: number, amp: number, sH: number, mult: number) {
+        private generateCycle(state: CycleState): Pt[] {
+            const { sT, dur, amp, sH, mult } = state;
             const step = dur / 6;
             const doz = [1 / 12, 2 / 12, 3 / 12, 3 / 12, 2 / 12, 1 / 12];
-            let curH = sH;
-            const pts = [{ t: sT, h: sH, p: '0%' }];
+            const pts: Pt[] = [{ t: sT, h: sH, p: '0%' }];
             let cum = 0;
             for (let i = 0; i < 6; i++) {
                 cum += doz[i];
-                curH = sH + cum * amp * mult;
-                pts.push({ t: sT + step * (i + 1), h: curH, p: `${Math.round(cum * 100)}%` });
+                pts.push({ t: sT + step * (i + 1), h: sH + cum * amp * mult, p: `${Math.round(cum * 100)}%` });
             }
             return pts;
         }
 
-        private updateUI(
-            pts: { t: number; h: number; p: string }[],
-            tT: number,
-            sT: number,
-            dur: number,
-            amp: number,
-            sH: number,
-            mult: number,
-        ) {
+        private getRowLabel(i: number): string {
+            if (i === 0) return ui.tableStartLabel;
+            if (i === 6) return ui.tableEndLabel;
+            return '---';
+        }
+
+        private updateStatus(tT: number, state: CycleState) {
+            const { sT, dur, amp, sH, mult } = state;
             const rel = tT - sT;
             if (rel >= 0 && rel <= dur) {
                 const step = dur / 6;
@@ -211,8 +214,7 @@ const { ui } = Astro.props;
                 let cum = 0;
                 for (let i = 0; i < idx; i++) cum += doz[i];
                 const rem = (rel % step) / step;
-                const curD = idx < 6 ? doz[idx] : 0;
-                const h = sH + (cum + curD * rem) * amp * mult;
+                const h = sH + (cum + (idx < 6 ? (doz[idx] ?? 0) : 0) * rem) * amp * mult;
                 this.displayValue.textContent = h.toFixed(2);
                 this.displayStatus.textContent = mult > 0 ? ui.statusUpLabel : ui.statusDownLabel;
                 this.displayStatus.className = `status-indicator ${mult > 0 ? 'up' : 'down'}`;
@@ -221,60 +223,59 @@ const { ui } = Astro.props;
                 this.displayStatus.textContent = ui.statusOutOfRange;
                 this.displayStatus.className = 'status-indicator';
             }
+        }
+
+        private updateTable(pts: Pt[]) {
             this.tableBody.innerHTML = pts
-                .map(
-                    (p, i) => `
-                <tr>
+                .map((p, i) => `<tr>
                     <td>${this.minsToTime(p.t)}</td>
-                    <td>${i === 0 ? ui.tableStartLabel : i === 6 ? ui.tableEndLabel : '---'}</td>
+                    <td>${this.getRowLabel(i)}</td>
                     <td>${p.p}</td>
                     <td>${p.h.toFixed(2)}m</td>
-                </tr>
-            `,
-                )
+                </tr>`)
                 .join('');
-            this.updateChart(pts, tT, sT, dur, amp, sH, mult);
+        }
+
+        private updateUI(pts: Pt[], tT: number, state: CycleState) {
+            this.updateStatus(tT, state);
+            this.updateTable(pts);
+            this.updateChart(pts, tT, state);
+        }
+
+        private getChartDatasets() {
+            return [
+                {
+                    data: [] as number[],
+                    borderColor: '#0074B7',
+                    borderWidth: 3,
+                    pointRadius: 0,
+                    tension: 0.4,
+                    fill: true,
+                    backgroundColor: (context: { chart: { ctx: CanvasRenderingContext2D; chartArea: { top: number; bottom: number } } }) => {
+                        const { ctx: c, chartArea } = context.chart;
+                        if (!chartArea) return undefined;
+                        const g = c.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+                        g.addColorStop(0, 'rgba(0, 116, 183, 0.2)');
+                        g.addColorStop(1, 'rgba(0, 116, 183, 0)');
+                        return g;
+                    },
+                },
+                {
+                    data: [] as object[],
+                    pointRadius: 6,
+                    pointBackgroundColor: '#FF6B35',
+                    pointBorderColor: '#ffffff',
+                    pointBorderWidth: 2,
+                    showLine: false,
+                },
+            ];
         }
 
         private initChart() {
             const ctx = document.getElementById('tide-chart') as HTMLCanvasElement;
             return new Chart(ctx, {
                 type: 'line',
-                data: {
-                    labels: [],
-                    datasets: [
-                        {
-                            data: [],
-                            borderColor: '#0074B7',
-                            borderWidth: 3,
-                            pointRadius: 0,
-                            tension: 0.4,
-                            fill: true,
-                            backgroundColor: (context) => {
-                                const chart = context.chart;
-                                const { ctx: c, chartArea } = chart;
-                                if (!chartArea) return undefined;
-                                const gradient = c.createLinearGradient(
-                                    0,
-                                    chartArea.top,
-                                    0,
-                                    chartArea.bottom,
-                                );
-                                gradient.addColorStop(0, 'rgba(0, 116, 183, 0.2)');
-                                gradient.addColorStop(1, 'rgba(0, 116, 183, 0)');
-                                return gradient;
-                            },
-                        },
-                        {
-                            data: [],
-                            pointRadius: 6,
-                            pointBackgroundColor: '#FF6B35',
-                            pointBorderColor: '#ffffff',
-                            pointBorderWidth: 2,
-                            showLine: false,
-                        },
-                    ],
-                },
+                data: { labels: [], datasets: this.getChartDatasets() },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
@@ -287,19 +288,11 @@ const { ui } = Astro.props;
             });
         }
 
-        private updateChart(
-            pts: { t: number; h: number; p: string }[],
-            tT: number,
-            sT: number,
-            dur: number,
-            amp: number,
-            sH: number,
-            mult: number,
-        ) {
+        private updateChart(pts: Pt[], tT: number, state: CycleState) {
+            const { sT, dur, amp, sH, mult } = state;
             const labels = pts.map((p) => this.minsToTime(p.t));
-            const data = pts.map((p) => p.h);
             this.chart.data.labels = labels;
-            this.chart.data.datasets[0].data = data;
+            this.chart.data.datasets[0].data = pts.map((p) => p.h);
             const rel = tT - sT;
             if (rel >= 0 && rel <= dur) {
                 const step = dur / 6;
@@ -308,8 +301,7 @@ const { ui } = Astro.props;
                 let cum = 0;
                 for (let i = 0; i < idx; i++) cum += doz[i];
                 const rem = (rel % step) / step;
-                const curD = idx < 6 ? doz[idx] : 0;
-                const h = sH + (cum + curD * rem) * amp * mult;
+                const h = sH + (cum + (idx < 6 ? (doz[idx] ?? 0) : 0) * rem) * amp * mult;
                 this.chart.data.datasets[1].data = [{ x: labels[Math.round(rel / step)], y: h }];
             } else {
                 this.chart.data.datasets[1].data = [];
