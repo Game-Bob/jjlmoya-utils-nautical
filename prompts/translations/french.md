@@ -30,3 +30,4 @@ Dans la section `seo`, assure-toi que le contenu est riche (400-600 mots), struc
 
 ## Fichier Source à Traduire
 [Colle ici le contenu source]
+

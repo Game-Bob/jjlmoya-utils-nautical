@@ -1,0 +1,53 @@
+---
+import {
+  SEOTitle, SEOTable, SEOTip, SEOCard, SEOStats,
+  SEOGlossary, SEOProsCons, SEOSummary, SEODiagnostic, SEOArticle
+} from '@jjlmoya/utils-shared';
+import { endurance } from './index';
+import type { KnownLocale } from '../../types';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'es' } = Astro.props;
+const content = await endurance.i18n[locale]?.();
+if (!content) return null;
+
+const { seo } = content;
+---
+
+<SEOArticle>
+  {seo.map((section: any) => {
+    switch (section.type) {
+      case 'summary':
+        return <SEOSummary title={section.title} items={section.items} />;
+      case 'title':
+        return <SEOTitle title={section.text} level={section.level || 2} />;
+      case 'paragraph':
+        return <p set:html={section.html} />;
+      case 'stats':
+        return <SEOStats stats={section.items} columns={section.columns} />;
+      case 'card':
+        return <SEOCard title={section.title} icon={section.icon}><Fragment set:html={section.html} /></SEOCard>;
+      case 'tip':
+        return <SEOTip title={section.title}><Fragment set:html={section.html} /></SEOTip>;
+      case 'table':
+        return (
+          <SEOTable headers={section.headers}>
+            {section.rows.map((row: string[]) => (
+              <tr>{row.map((cell: string) => <td set:html={cell} />)}</tr>
+            ))}
+          </SEOTable>
+        );
+      case 'proscons':
+        return <SEOProsCons title={section.title} items={section.items} />;
+      case 'diagnostic':
+        return <SEODiagnostic title={section.title} icon={section.icon} type={section.variant} badge={section.badge}><Fragment set:html={section.html} /></SEODiagnostic>;
+      case 'glossary':
+        return <SEOGlossary items={section.items} />;
+      default:
+        return null;
+    }
+  })}
+</SEOArticle>

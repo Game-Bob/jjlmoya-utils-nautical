@@ -1,0 +1,177 @@
+.nautical-converter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  border: 2px solid var(--color-border, #e2e8f0);
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-text-muted, #64748b);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--color-primary, #0074B7);
+  border-color: var(--color-primary, #0074B7);
+  color: var(--color-text-on-dark, #fff);
+}
+
+.converter-card {
+  background: var(--color-bg-surface, #fff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+.field-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.field input,
+.field select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 0.75rem;
+  background: var(--color-bg-subtle, #f8fafc);
+  color: var(--color-text-base, #1e293b);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--color-primary, #0074B7);
+}
+
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  color: var(--color-text-muted, #64748b);
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-bg-subtle, #f8fafc);
+  border-radius: 1rem;
+}
+
+.result-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.result-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary, #0074B7);
+  flex: 1;
+}
+
+.copy-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid var(--color-border, #e2e8f0);
+  background: var(--color-bg-surface, #fff);
+  color: var(--color-text-muted, #64748b);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  border-color: var(--color-primary, #0074B7);
+  color: var(--color-primary, #0074B7);
+}
+
+.beaufort-card {
+  background: var(--color-bg-surface, #fff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.beaufort-title {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: var(--color-text-muted, #64748b);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.beaufort-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.beaufort-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: var(--color-text-subtle, #94a3b8);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--color-bg-subtle, #f1f5f9);
+}
+
+.beaufort-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-base, #334155);
+  border-bottom: 1px solid var(--color-bg-subtle, #f1f5f9);
+}
+
+@media (max-width: 600px) {
+  .input-row {
+    flex-direction: column;
+  }
+  .arrow-icon {
+    transform: rotate(90deg);
+    padding: 0;
+  }
+}

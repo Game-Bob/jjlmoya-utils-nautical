@@ -4,7 +4,7 @@ import icon from "astro-icon";
 export default defineConfig({
     integrations: [icon()],
     server: {
-        port: 3000,
+        port: 3014,
         host: true
     },
     vite: {
@@ -16,3 +16,4 @@ export default defineConfig({
         }
     }
 });
+

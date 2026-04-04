@@ -1,0 +1,168 @@
+---
+import './style.css';
+import type { UnderKeelUI } from './index';
+
+interface Props {
+  ui: UnderKeelUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section id="under-keel-calculator" class="under-keel-calculator">
+    <div class="main-card">
+        <div class="calc-sidebar">
+            <div class="sidebar-header">
+                <h3>{ui.vasoDeBajo}</h3>
+            </div>
+
+            <div class="input-set">
+                <div class="input-block">
+                    <label>{ui.caladoDelBarco}</label>
+                    <div class="unit-input">
+                        <input type="number" id="boat-draft" value="2.0" step="0.1" />
+                        <span>m</span>
+                    </div>
+                </div>
+
+                <div class="input-block">
+                    <label>{ui.sondaDeLaCarta}</label>
+                    <div class="unit-input">
+                        <input type="number" id="chart-depth" value="1.5" step="0.1" />
+                        <span>m</span>
+                    </div>
+                </div>
+
+                <div class="input-block">
+                    <label>{ui.resguardoSeguridad}</label>
+                    <div class="unit-input">
+                        <input type="number" id="safety-margin" value="0.5" step="0.1" />
+                        <span>m</span>
+                    </div>
+                </div>
+
+                <div class="hr-white"></div>
+
+                <div class="input-block">
+                    <label>{ui.pleamar}</label>
+                    <div class="row">
+                        <input type="time" id="pass-high-tide-time" value="12:00" />
+                        <input type="number" id="pass-high-tide-height" value="3.5" step="0.1" class="mini-num" />
+                    </div>
+                </div>
+
+                <div class="input-block">
+                    <label>{ui.bajamar}</label>
+                    <div class="row">
+                        <input type="time" id="pass-low-tide-time" value="06:00" />
+                        <input type="number" id="pass-low-tide-height" value="0.5" step="0.1" class="mini-num" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calc-content">
+            <div class="top-row">
+                <div class="result-display">
+                    <span class="label">{ui.ventanaDePaso}</span>
+                    <div class="time-range">
+                        <span id="pass-start">--:--</span>
+                        <div class="arrow-sep">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12,4L10.59,5.41L16.17,11H4V13H16.17L10.59,18.59L12,20L20,12L12,4Z"/></svg>
+                        </div>
+                        <span id="pass-end">--:--</span>
+                    </div>
+                    <span id="pass-status" class="status-indicator">Calculando...</span>
+                </div>
+
+                <div class="data-group">
+                    <div class="stat-pill">
+                        <span>{ui.necesario}:</span>
+                        <strong id="needed-depth">--</strong>
+                    </div>
+                    <div class="stat-pill">
+                        <span>{ui.mareaReq}</span>
+                        <strong id="needed-tide">--</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-container">
+                <div class="ocean-frame">
+                    <div class="surface-line"></div>
+                    <div class="ship-silhouette" id="viz-boat">
+                        <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+                            <path fill="currentColor" d="M10,20 L90,20 L80,35 L20,35 Z" />
+                        </svg>
+                    </div>
+                    <div class="water-volume" id="viz-water"></div>
+                    <div class="sand-bottom">
+                        <span>{ui.fondo}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { timeToMins, calculatePassWindow } from './logic';
+    import type { PassWindowParams } from './logic';
+
+    const draftIn = document.getElementById('boat-draft') as HTMLInputElement;
+    const depthIn = document.getElementById('chart-depth') as HTMLInputElement;
+    const marginIn = document.getElementById('safety-margin') as HTMLInputElement;
+    const highTimeIn = document.getElementById('pass-high-tide-time') as HTMLInputElement;
+    const highHeightIn = document.getElementById('pass-high-tide-height') as HTMLInputElement;
+    const lowTimeIn = document.getElementById('pass-low-tide-time') as HTMLInputElement;
+    const lowHeightIn = document.getElementById('pass-low-tide-height') as HTMLInputElement;
+    const statusInd = document.getElementById('pass-status') as HTMLElement;
+    const startSpan = document.getElementById('pass-start') as HTMLElement;
+    const endSpan = document.getElementById('pass-end') as HTMLElement;
+    const neededD = document.getElementById('needed-depth') as HTMLElement;
+    const neededT = document.getElementById('needed-tide') as HTMLElement;
+    const vizWater = document.getElementById('viz-water') as HTMLElement;
+    const vizBoat = document.getElementById('viz-boat') as HTMLElement;
+
+    const inputs = [draftIn, depthIn, marginIn, highTimeIn, highHeightIn, lowTimeIn, lowHeightIn];
+
+    function updateViz(dr: number, sd: number, hH: number) {
+        const totalWater = sd + hH;
+        const maxVal = Math.max(dr + parseFloat(marginIn.value), totalWater, 5) + 2;
+        const floorPct = 15;
+        const waterHeightPct = floorPct + (totalWater / maxVal) * (100 - floorPct);
+        let boatKeelPct = floorPct + ((totalWater - dr) / maxVal) * (100 - floorPct);
+        boatKeelPct = Math.max(floorPct, Math.min(95, boatKeelPct));
+        vizWater.style.height = `${waterHeightPct}%`;
+        vizBoat.style.bottom = `${boatKeelPct}%`;
+    }
+
+    function calculate() {
+        const dr = parseFloat(draftIn.value);
+        const sd = parseFloat(depthIn.value);
+        const mg = parseFloat(marginIn.value);
+        const hH = parseFloat(highHeightIn.value);
+        const hL = parseFloat(lowHeightIn.value);
+        const tH = timeToMins(highTimeIn.value);
+        const tL = timeToMins(lowTimeIn.value);
+
+        if (isNaN(dr) || isNaN(sd) || isNaN(mg) || isNaN(hH)) return;
+
+        const needed = dr + mg;
+        const tideReq = Math.max(0, needed - sd);
+        neededD.textContent = `${needed.toFixed(1)}m`;
+        neededT.textContent = `${tideReq.toFixed(1)}m`;
+
+        const params: PassWindowParams = { dr, sd, mg, hH, hL, tH, tL };
+        const result = calculatePassWindow(params);
+        statusInd.textContent = result.status;
+        statusInd.className = `status-indicator ${result.variant}`;
+        startSpan.textContent = result.start;
+        endSpan.textContent = result.end;
+
+        updateViz(dr, sd, hH);
+    }
+
+    inputs.forEach(i => i.addEventListener('input', calculate));
+    calculate();
+</script>

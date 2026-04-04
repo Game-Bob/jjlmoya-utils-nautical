@@ -1,5 +1,12 @@
-export { templateCategory } from './category';
-export { default as TemplateCategorySEO } from './category/seo.astro';
+export * from './tool/tideCalculator';
+export * from './tool/underKeel';
+export * from './tool/nauticalConverter';
+export * from './tool/sailArea';
+export * from './tool/speedConverter';
+export * from './tool/endurance';
+
+export { nauticalCategory } from './category';
+export { default as NauticalCategorySEO } from './category/seo.astro';
 
 export type {
   KnownLocale,
@@ -10,9 +17,8 @@ export type {
   CategoryLocaleContent,
   LocaleLoader,
   LocaleMap,
-  TemplateToolEntry,
-  TemplateCategoryEntry,
-  ToolDefinition,
+  NauticalToolEntry,
+  NauticalCategoryEntry,
 } from './types';
 
 export { ALL_TOOLS } from './tools';

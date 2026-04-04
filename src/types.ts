@@ -35,13 +35,6 @@ export interface ToolLocaleContent<TUI extends Record<string, string> = Record<s
   schemas: WithContext<Thing>[];
 }
 
-export interface ToolDefinition {
-  entry: PetToolEntry;
-  Component: unknown;
-  SEOComponent?: unknown;
-  BibliographyComponent?: unknown;
-}
-
 export interface CategoryLocaleContent {
   slug: string;
   title: string;
@@ -53,7 +46,7 @@ export type LocaleLoader<T> = () => Promise<T>;
 
 export type LocaleMap<T> = Partial<Record<KnownLocale, LocaleLoader<T>>>;
 
-export interface TemplateToolEntry<TUI extends Record<string, string> = Record<string, string>> {
+export interface NauticalToolEntry<TUI extends Record<string, string> = Record<string, string>> {
   id: string;
   icons: {
     bg: string;
@@ -62,14 +55,14 @@ export interface TemplateToolEntry<TUI extends Record<string, string> = Record<s
   i18n: LocaleMap<ToolLocaleContent<TUI>>;
 }
 
-export interface TemplateCategoryEntry {
+export interface NauticalCategoryEntry {
   icon: string;
-  tools: TemplateToolEntry[];
+  tools: NauticalToolEntry[];
   i18n: LocaleMap<CategoryLocaleContent>;
 }
 
 export interface ToolDefinition {
-  entry: TemplateToolEntry;
+  entry: NauticalToolEntry<Record<string, string>>;
   Component: unknown;
   SEOComponent: unknown;
   BibliographyComponent: unknown;

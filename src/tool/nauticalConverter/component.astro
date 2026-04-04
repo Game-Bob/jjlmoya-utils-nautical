@@ -1,0 +1,140 @@
+---
+import './style.css';
+import type { NauticalConverterUI } from './index';
+
+interface Props {
+  ui: NauticalConverterUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section id="nautical-converter" class="nautical-converter">
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="distance">{ui.tabDistance}</button>
+    <button class="tab-btn" data-tab="speed">{ui.tabSpeed}</button>
+    <button class="tab-btn" data-tab="depth">{ui.tabDepth}</button>
+    <button class="tab-btn" data-tab="pressure">{ui.tabPressure}</button>
+  </div>
+
+  <div class="converter-card">
+    <div class="input-row">
+      <div class="field">
+        <label class="field-label">{ui.labelValue}</label>
+        <input type="number" id="conv-value" value="1" step="any" />
+      </div>
+      <div class="field">
+        <label class="field-label">{ui.labelFrom}</label>
+        <select id="conv-from"></select>
+      </div>
+      <div class="arrow-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M4 11V13H16L10.5 18.5L11.92 19.92L19.84 12L11.92 4.08L10.5 5.5L16 11H4Z"/></svg>
+      </div>
+      <div class="field">
+        <label class="field-label">{ui.labelTo}</label>
+        <select id="conv-to"></select>
+      </div>
+    </div>
+
+    <div class="result-row">
+      <span class="result-label">{ui.labelResult}</span>
+      <span id="conv-result" class="result-value">--</span>
+      <button id="copy-btn" class="copy-btn">{ui.btnCopy}</button>
+    </div>
+  </div>
+
+  <div class="beaufort-card">
+    <h4 class="beaufort-title">{ui.beaufortTitle}</h4>
+    <div class="table-wrapper">
+      <table class="beaufort-table">
+        <thead>
+          <tr>
+            <th>{ui.beaufortForce}</th>
+            <th>{ui.beaufortSpeed}</th>
+            <th>{ui.beaufortDesc}</th>
+          </tr>
+        </thead>
+        <tbody id="beaufort-body"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { convertDistance, convertSpeed, convertDepth, convertPressure, BEAUFORT_SCALE } from './logic';
+  import type { DistanceUnit, SpeedUnit, DepthUnit, PressureUnit } from './logic';
+
+  const UNITS: Record<string, { label: string; units: string[] }> = {
+    distance: { label: 'distance', units: ['nm', 'km', 'mi', 'm'] },
+    speed: { label: 'speed', units: ['knots', 'kmh', 'mph', 'ms'] },
+    depth: { label: 'depth', units: ['m', 'ft', 'fathom'] },
+    pressure: { label: 'pressure', units: ['mbar', 'hPa', 'psi', 'atm', 'mmHg'] },
+  };
+
+  let currentTab = 'distance';
+
+  const valueEl = document.getElementById('conv-value') as HTMLInputElement;
+  const fromEl = document.getElementById('conv-from') as HTMLSelectElement;
+  const toEl = document.getElementById('conv-to') as HTMLSelectElement;
+  const resultEl = document.getElementById('conv-result') as HTMLElement;
+  const copyBtn = document.getElementById('copy-btn') as HTMLButtonElement;
+  const beaufortBody = document.getElementById('beaufort-body') as HTMLElement;
+
+  function populateSelects(tab: string) {
+    const units = UNITS[tab].units;
+    fromEl.innerHTML = units.map(u => `<option value="${u}">${u}</option>`).join('');
+    toEl.innerHTML = units.map((u, i) => `<option value="${u}" ${i === 1 ? 'selected' : ''}>${u}</option>`).join('');
+  }
+
+  function calculate() {
+    const value = parseFloat(valueEl.value);
+    const from = fromEl.value;
+    const to = toEl.value;
+    if (isNaN(value)) { resultEl.textContent = '--'; return; }
+
+    let result: number;
+    switch (currentTab) {
+      case 'distance': result = convertDistance(value, from as DistanceUnit, to as DistanceUnit); break;
+      case 'speed': result = convertSpeed(value, from as SpeedUnit, to as SpeedUnit); break;
+      case 'depth': result = convertDepth(value, from as DepthUnit, to as DepthUnit); break;
+      case 'pressure': result = convertPressure(value, from as PressureUnit, to as PressureUnit); break;
+      default: result = 0;
+    }
+    resultEl.textContent = `${result.toFixed(4)} ${to}`;
+  }
+
+  function renderBeaufort() {
+    beaufortBody.innerHTML = BEAUFORT_SCALE.map(entry => `
+      <tr>
+        <td>${entry.force}</td>
+        <td>${entry.minKnots}–${entry.maxKnots === 999 ? '63+' : entry.maxKnots} kn</td>
+        <td>${entry.description}</td>
+      </tr>
+    `).join('');
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentTab = (btn as HTMLElement).dataset.tab || 'distance';
+      populateSelects(currentTab);
+      calculate();
+    });
+  });
+
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(resultEl.textContent || '');
+    const original = copyBtn.textContent;
+    copyBtn.textContent = copyBtn.dataset.copied || 'Copied';
+    setTimeout(() => { copyBtn.textContent = original; }, 1500);
+  });
+
+  valueEl.addEventListener('input', calculate);
+  fromEl.addEventListener('change', calculate);
+  toEl.addEventListener('change', calculate);
+
+  populateSelects(currentTab);
+  renderBeaufort();
+  calculate();
+</script>

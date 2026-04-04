@@ -1,0 +1,188 @@
+---
+import './style.css';
+import type { EnduranceUI } from './index';
+
+interface Props {
+  ui: EnduranceUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section id="endurance" class="endurance-calc">
+  <div class="mode-tabs">
+    <button class="mode-btn active" data-mode="normal">{ui.modeNormal}</button>
+    <button class="mode-btn" data-mode="inverse">{ui.modeInverse}</button>
+  </div>
+
+  <div class="endurance-card">
+    <div class="endurance-sidebar">
+      <div id="mode-normal" class="mode-inputs">
+        <div class="field">
+          <label class="field-label">{ui.labelTank} (L)</label>
+          <input type="number" id="tank" value="200" step="10" min="0" />
+        </div>
+        <div class="field">
+          <label class="field-label">{ui.labelConsumption} (L/h)</label>
+          <input type="number" id="consumption" value="8" step="0.5" min="0" />
+        </div>
+        <div class="field">
+          <label class="field-label">{ui.labelReserve} (%)</label>
+          <input type="number" id="reserve" value="20" step="1" min="0" max="50" />
+        </div>
+        <div class="field">
+          <label class="field-label">{ui.labelSpeed} (kn)</label>
+          <input type="number" id="speed" value="7" step="0.5" min="0" />
+        </div>
+      </div>
+
+      <div id="mode-inverse" class="mode-inputs hidden">
+        <div class="field">
+          <label class="field-label">{ui.labelDistance} (NM)</label>
+          <input type="number" id="distance" value="120" step="10" min="0" />
+        </div>
+        <div class="field">
+          <label class="field-label">{ui.labelSpeed} (kn)</label>
+          <input type="number" id="speed-inv" value="7" step="0.5" min="0" />
+        </div>
+        <div class="field">
+          <label class="field-label">{ui.labelConsumption} (L/h)</label>
+          <input type="number" id="consumption-inv" value="8" step="0.5" min="0" />
+        </div>
+        <div class="field">
+          <label class="field-label">{ui.labelReserve} (%)</label>
+          <input type="number" id="reserve-inv" value="20" step="1" min="0" max="50" />
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button id="calculate-btn" class="btn-primary">{ui.btnCalculate}</button>
+        <button id="reset-btn" class="btn-secondary">{ui.btnReset}</button>
+      </div>
+    </div>
+
+    <div class="endurance-results">
+      <div id="results-normal" class="results-section">
+        <div class="result-block">
+          <span class="result-label">{ui.labelUsableFuel}</span>
+          <div class="result-value-box">
+            <span id="res-usable">--</span>
+            <small>L</small>
+          </div>
+        </div>
+        <div class="result-block highlight">
+          <span class="result-label">{ui.resultHours}</span>
+          <div class="result-value-box">
+            <span id="res-hours">--</span>
+            <small>h</small>
+          </div>
+        </div>
+        <div class="result-block highlight">
+          <span class="result-label">{ui.resultMiles}</span>
+          <div class="result-value-box">
+            <span id="res-miles">--</span>
+            <small>NM</small>
+          </div>
+        </div>
+      </div>
+
+      <div id="results-inverse" class="results-section hidden">
+        <div class="result-block highlight">
+          <span class="result-label">{ui.labelRequiredFuel}</span>
+          <div class="result-value-box">
+            <span id="res-required">--</span>
+            <small>L</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="gauge-wrapper">
+        <svg id="fuel-gauge" viewBox="0 0 200 120" width="200" height="120">
+          <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--color-border,#e2e8f0)" stroke-width="16" stroke-linecap="round"/>
+          <path id="gauge-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--color-primary,#0074B7)" stroke-width="16" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+          <text id="gauge-label" x="100" y="90" text-anchor="middle" font-size="18" font-weight="800" fill="var(--color-text-base,#1e293b)">--</text>
+          <text x="100" y="108" text-anchor="middle" font-size="10" fill="var(--color-text-muted,#64748b)">NM</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { calcUsableFuel, calcEnduranceHours, calcEnduranceMiles, calcRequiredFuel } from './logic';
+
+  let currentMode = 'normal';
+
+  const GAUGE_MAX_NM = 500;
+  const GAUGE_ARC = 251;
+
+  function updateGauge(miles: number) {
+    const arc = document.getElementById('gauge-arc') as SVGPathElement | null;
+    const label = document.getElementById('gauge-label') as SVGTextElement | null;
+    if (!arc || !label) return;
+    const pct = Math.min(miles / GAUGE_MAX_NM, 1);
+    arc.setAttribute('stroke-dashoffset', String(GAUGE_ARC * (1 - pct)));
+    label.textContent = miles.toFixed(0);
+  }
+
+  function getVal(id: string): number {
+    return parseFloat((document.getElementById(id) as HTMLInputElement).value) || 0;
+  }
+
+  function calculateNormal() {
+    const usable = calcUsableFuel(getVal('tank'), getVal('reserve'));
+    const hours = calcEnduranceHours(usable, getVal('consumption'));
+    const miles = calcEnduranceMiles(hours, getVal('speed'));
+    (document.getElementById('res-usable') as HTMLElement).textContent = usable.toFixed(1);
+    (document.getElementById('res-hours') as HTMLElement).textContent = hours.toFixed(1);
+    (document.getElementById('res-miles') as HTMLElement).textContent = miles.toFixed(1);
+    updateGauge(miles);
+  }
+
+  function calculateInverse() {
+    const dist = getVal('distance');
+    const required = calcRequiredFuel(dist, getVal('speed-inv'), getVal('consumption-inv'), getVal('reserve-inv'));
+    (document.getElementById('res-required') as HTMLElement).textContent = required.toFixed(1);
+    updateGauge(dist);
+  }
+
+  function calculate() {
+    if (currentMode === 'normal') {
+      calculateNormal();
+    } else {
+      calculateInverse();
+    }
+  }
+
+  function reset() {
+    (document.getElementById('tank') as HTMLInputElement).value = '200';
+    (document.getElementById('consumption') as HTMLInputElement).value = '8';
+    (document.getElementById('reserve') as HTMLInputElement).value = '20';
+    (document.getElementById('speed') as HTMLInputElement).value = '7';
+    (document.getElementById('distance') as HTMLInputElement).value = '120';
+    (document.getElementById('speed-inv') as HTMLInputElement).value = '7';
+    (document.getElementById('consumption-inv') as HTMLInputElement).value = '8';
+    (document.getElementById('reserve-inv') as HTMLInputElement).value = '20';
+    calculate();
+  }
+
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentMode = (btn as HTMLElement).dataset.mode || 'normal';
+
+      document.getElementById('mode-normal')?.classList.toggle('hidden', currentMode !== 'normal');
+      document.getElementById('mode-inverse')?.classList.toggle('hidden', currentMode !== 'inverse');
+      document.getElementById('results-normal')?.classList.toggle('hidden', currentMode !== 'normal');
+      document.getElementById('results-inverse')?.classList.toggle('hidden', currentMode !== 'inverse');
+      calculate();
+    });
+  });
+
+  document.getElementById('calculate-btn')?.addEventListener('click', calculate);
+  document.getElementById('reset-btn')?.addEventListener('click', reset);
+  document.querySelectorAll('input[type="number"]').forEach(el => el.addEventListener('input', calculate));
+
+  calculate();
+</script>

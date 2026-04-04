@@ -55,3 +55,4 @@ Un <SEODiagnostic> para ayudar al usuario a interpretar sus resultados.
 
 Formato de Salida:
 Devuelve exclusivamente el código para un archivo .astro. No incluyas explicaciones innecesarias fuera del código. Usa las props correctamente (ej: <SEOTitle level={2}>).
+
