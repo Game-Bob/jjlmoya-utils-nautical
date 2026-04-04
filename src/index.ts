@@ -1,5 +1,6 @@
 export * from './tool/tideCalculator';
 export * from './tool/underKeel';
+export * from './tool/nauticalConverter';
 
 export type {
   KnownLocale,

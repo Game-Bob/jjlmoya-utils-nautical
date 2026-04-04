@@ -1,0 +1,470 @@
+---
+import './style.css';
+import type { NauticalConverterUI } from './index';
+
+interface Props {
+  ui: NauticalConverterUI;
+}
+
+const { ui } = Astro.props;
+
+const beaufortEs = [
+  { name: 'Calma', sea: 'Mar como un espejo' },
+  { name: 'Ventolina', sea: 'Rizos sin espuma' },
+  { name: 'Flojito', sea: 'Olas pequeñas' },
+  { name: 'Flojo', sea: 'Ovejas blancas' },
+  { name: 'Bonancible', sea: 'Borreguillos frecuentes' },
+  { name: 'Fresquito', sea: 'Olas moderadas con crestas' },
+  { name: 'Fresco', sea: 'Crestas blancas extensas' },
+  { name: 'Frescachon', sea: 'Espuma en hileras' },
+  { name: 'Temporal', sea: 'Rompientes en crestas' },
+  { name: 'Temporal fuerte', sea: 'Olas muy altas' },
+  { name: 'Temporal duro', sea: 'Mar blanca' },
+  { name: 'Temporal muy duro', sea: 'Espuma cubre el mar' },
+  { name: 'Huracan', sea: 'Aire lleno de espuma' },
+];
+
+const beaufortEn = [
+  { name: 'Calm', sea: 'Flat sea' },
+  { name: 'Light air', sea: 'Ripples without crests' },
+  { name: 'Light breeze', sea: 'Small wavelets' },
+  { name: 'Gentle breeze', sea: 'Scattered whitecaps' },
+  { name: 'Moderate breeze', sea: 'Frequent whitecaps' },
+  { name: 'Fresh breeze', sea: 'Moderate waves' },
+  { name: 'Strong breeze', sea: 'Large waves' },
+  { name: 'Near gale', sea: 'Sea heaps up' },
+  { name: 'Gale', sea: 'High waves' },
+  { name: 'Strong gale', sea: 'Very high waves' },
+  { name: 'Storm', sea: 'Exceptionally high waves' },
+  { name: 'Violent storm', sea: 'Phenomenal' },
+  { name: 'Hurricane', sea: 'Air filled with foam' },
+];
+
+const beaufortFr = [
+  { name: 'Calme', sea: 'Mer comme un miroir' },
+  { name: 'Vent tres leger', sea: 'Rides' },
+  { name: 'Legere brise', sea: 'Petites vaguelettes' },
+  { name: 'Petite brise', sea: 'Quelques moutons' },
+  { name: 'Jolie brise', sea: 'Moutons frequents' },
+  { name: 'Bonne brise', sea: 'Vagues moderees' },
+  { name: 'Vent frais', sea: 'Grandes vagues' },
+  { name: 'Grand frais', sea: 'Lames deferlantes' },
+  { name: 'Coup de vent', sea: 'Vagues tres hautes' },
+  { name: 'Fort coup de vent', sea: 'Enormes vagues' },
+  { name: 'Tempete', sea: 'Tres grosses vagues' },
+  { name: 'Violente tempete', sea: 'Phenomenal' },
+  { name: 'Ouragan', sea: 'Air plein d\'ecume' },
+];
+
+const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
+---
+
+<section
+  id="nautical-converter"
+  class="nautical-converter"
+  data-ui={JSON.stringify(ui)}
+  data-beaufort={JSON.stringify(allBeaufort)}
+>
+  <div class="category-tabs" role="tablist">
+    <button class="tab-btn active" data-tab="distance" role="tab">{ui.distanceCategoryLabel}</button>
+    <button class="tab-btn" data-tab="speed" role="tab">{ui.speedCategoryLabel}</button>
+    <button class="tab-btn" data-tab="depth" role="tab">{ui.depthCategoryLabel}</button>
+    <button class="tab-btn" data-tab="pressure" role="tab">{ui.pressureCategoryLabel}</button>
+  </div>
+
+  <div id="tab-distance" class="tab-panel active">
+    <div class="converter-card">
+      <div class="input-grid">
+        <div class="input-group">
+          <label>{ui.nmLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="dist-nm" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="dist-nm" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.kmLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="dist-km" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="dist-km" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.miLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="dist-mi" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="dist-mi" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.cableLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="dist-cable" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="dist-cable" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-speed" class="tab-panel">
+    <div class="converter-card">
+      <div class="input-grid">
+        <div class="input-group">
+          <label>{ui.knLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="speed-kn" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="speed-kn" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.kmhLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="speed-kmh" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="speed-kmh" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.msLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="speed-ms" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="speed-ms" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.mphLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="speed-mph" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="speed-mph" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="beaufort-card" id="beaufort-card">
+        <div class="beaufort-badge" id="beaufort-badge">0</div>
+        <div class="beaufort-info">
+          <span class="beaufort-name" id="beaufort-name"></span>
+          <span class="beaufort-sea" id="beaufort-sea"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-depth" class="tab-panel">
+    <div class="converter-card">
+      <div class="input-grid">
+        <div class="input-group">
+          <label>{ui.brozaLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="depth-braza" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="depth-braza" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.mLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="depth-m" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="depth-m" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.ftLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="depth-ft" step="any" placeholder="0" />
+            <button class="copy-btn" data-copy="depth-ft" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tab-pressure" class="tab-panel">
+    <div class="converter-card">
+      <div class="input-grid">
+        <div class="input-group">
+          <label>{ui.mbarLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="pres-mbar" step="any" placeholder="1013" />
+            <button class="copy-btn" data-copy="pres-mbar" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.mmhgLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="pres-mmhg" step="any" placeholder="760" />
+            <button class="copy-btn" data-copy="pres-mmhg" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.inhgLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="pres-inhg" step="any" placeholder="29.92" />
+            <button class="copy-btn" data-copy="pres-inhg" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>{ui.atmLabel}</label>
+          <div class="input-wrapper">
+            <input class="elegant-input" type="number" id="pres-atm" step="any" placeholder="1" />
+            <button class="copy-btn" data-copy="pres-atm" title={ui.copyLabel}>
+              <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const section = document.getElementById('nautical-converter') as HTMLElement;
+  const ui = JSON.parse(section.dataset.ui as string);
+  const allBeaufort = JSON.parse(section.dataset.beaufort as string) as Record<string, { name: string; sea: string }[]>;
+
+  const BEAUFORT_THRESHOLDS = [1, 3, 6, 10, 16, 21, 27, 33, 40, 47, 55, 63];
+  const BEAUFORT_COLORS = [
+    '#3b82f6', '#60a5fa', '#34d399', '#a3e635',
+    '#facc15', '#fb923c', '#f87171', '#ef4444',
+    '#dc2626', '#b91c1c', '#7f1d1d', '#4c0519', '#1a0010',
+  ];
+
+  function detectLocale(): string {
+    const html = document.documentElement.lang || 'es';
+    const short = html.split('-')[0] ?? 'es';
+    return ['es', 'en', 'fr'].includes(short) ? short : 'es';
+  }
+
+  function getBeaufortForce(knots: number): number {
+    const idx = BEAUFORT_THRESHOLDS.findIndex((t) => knots < t);
+    return idx === -1 ? 12 : idx;
+  }
+
+  function fmt(n: number): string {
+    if (Math.abs(n) >= 1000) return n.toFixed(2);
+    if (Math.abs(n) >= 10) return n.toFixed(3);
+    return n.toFixed(4);
+  }
+
+  function setVal(id: string, val: number) {
+    const el = document.getElementById(id) as HTMLInputElement;
+    if (el) el.value = fmt(val);
+  }
+
+  function getVal(id: string): number {
+    const el = document.getElementById(id) as HTMLInputElement;
+    return parseFloat(el?.value ?? '');
+  }
+
+  interface BeaufortElements {
+    card: HTMLElement;
+    badge: HTMLElement;
+    nameEl: HTMLElement;
+    seaEl: HTMLElement;
+    knots: number;
+    locale: string;
+  }
+
+  function renderBeaufort(opts: BeaufortElements) {
+    const { card, badge, nameEl, seaEl, knots, locale } = opts;
+    const force = getBeaufortForce(Math.abs(knots));
+    const data = (allBeaufort[locale] ?? allBeaufort['es'] ?? [])[force];
+    card.classList.add('visible');
+    badge.textContent = String(force);
+    badge.style.background = BEAUFORT_COLORS[force] ?? '#3b82f6';
+    nameEl.textContent = `${ui.forceLabel} ${force} - ${data?.name ?? ''}`;
+    seaEl.textContent = `${ui.windSeaLabel}: ${data?.sea ?? ''}`;
+  }
+
+  function bindSpeedFromKnots(kn: number, onBeaufort: (k: number) => void) {
+    setVal('speed-kmh', kn * 1.852);
+    setVal('speed-ms', kn * 0.514444);
+    setVal('speed-mph', kn * 1.15078);
+    onBeaufort(kn);
+  }
+
+  function bindSpeedInputs(onBeaufort: (kn: number) => void) {
+    document.getElementById('speed-kn')?.addEventListener('input', () => {
+      const v = getVal('speed-kn');
+      if (!isNaN(v)) bindSpeedFromKnots(v, onBeaufort);
+    });
+    document.getElementById('speed-kmh')?.addEventListener('input', () => {
+      const v = getVal('speed-kmh');
+      if (isNaN(v)) return;
+      const kn = v / 1.852;
+      setVal('speed-kn', kn); setVal('speed-ms', kn * 0.514444); setVal('speed-mph', kn * 1.15078);
+      onBeaufort(kn);
+    });
+    document.getElementById('speed-ms')?.addEventListener('input', () => {
+      const v = getVal('speed-ms');
+      if (isNaN(v)) return;
+      const kn = v / 0.514444;
+      setVal('speed-kn', kn); setVal('speed-kmh', kn * 1.852); setVal('speed-mph', kn * 1.15078);
+      onBeaufort(kn);
+    });
+    document.getElementById('speed-mph')?.addEventListener('input', () => {
+      const v = getVal('speed-mph');
+      if (isNaN(v)) return;
+      const kn = v / 1.15078;
+      setVal('speed-kn', kn); setVal('speed-kmh', kn * 1.852); setVal('speed-ms', kn * 0.514444);
+      onBeaufort(kn);
+    });
+  }
+
+  function bindDepthInputs() {
+    const bToM = 1.8288;
+    const ftToM = 0.3048;
+    document.getElementById('depth-braza')?.addEventListener('input', () => {
+      const v = getVal('depth-braza');
+      if (isNaN(v)) return;
+      const m = v * bToM;
+      setVal('depth-m', m); setVal('depth-ft', m / ftToM);
+    });
+    document.getElementById('depth-m')?.addEventListener('input', () => {
+      const v = getVal('depth-m');
+      if (isNaN(v)) return;
+      setVal('depth-braza', v / bToM); setVal('depth-ft', v / ftToM);
+    });
+    document.getElementById('depth-ft')?.addEventListener('input', () => {
+      const v = getVal('depth-ft');
+      if (isNaN(v)) return;
+      const m = v * ftToM;
+      setVal('depth-m', m); setVal('depth-braza', m / bToM);
+    });
+  }
+
+  function bindPressureFromMbar(mb: number) {
+    setVal('pres-mmhg', mb / 1.33322);
+    setVal('pres-inhg', mb / 33.8639);
+    setVal('pres-atm', mb / 1013.25);
+  }
+
+  function bindPressureInputs() {
+    document.getElementById('pres-mbar')?.addEventListener('input', () => {
+      const v = getVal('pres-mbar');
+      if (!isNaN(v)) bindPressureFromMbar(v);
+    });
+    document.getElementById('pres-mmhg')?.addEventListener('input', () => {
+      const v = getVal('pres-mmhg');
+      if (isNaN(v)) return;
+      const mb = v * 1.33322;
+      setVal('pres-mbar', mb); setVal('pres-inhg', mb / 33.8639); setVal('pres-atm', mb / 1013.25);
+    });
+    document.getElementById('pres-inhg')?.addEventListener('input', () => {
+      const v = getVal('pres-inhg');
+      if (isNaN(v)) return;
+      const mb = v * 33.8639;
+      setVal('pres-mbar', mb); setVal('pres-mmhg', mb / 1.33322); setVal('pres-atm', mb / 1013.25);
+    });
+    document.getElementById('pres-atm')?.addEventListener('input', () => {
+      const v = getVal('pres-atm');
+      if (isNaN(v)) return;
+      const mb = v * 1013.25;
+      setVal('pres-mbar', mb); setVal('pres-mmhg', mb / 1.33322); setVal('pres-inhg', mb / 33.8639);
+    });
+  }
+
+  class NauticalConverter {
+    private locale: string;
+
+    constructor() {
+      this.locale = detectLocale();
+      this.setupTabs();
+      this.setupDistance();
+      this.setupSpeed();
+      this.setupDepth();
+      this.setupPressure();
+      this.setupCopyButtons();
+    }
+
+    private setupTabs() {
+      const tabs = section.querySelectorAll<HTMLButtonElement>('.tab-btn');
+      tabs.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          tabs.forEach((t) => t.classList.remove('active'));
+          section.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
+          btn.classList.add('active');
+          const panel = section.querySelector(`#tab-${btn.dataset.tab}`);
+          panel?.classList.add('active');
+        });
+      });
+    }
+
+    private setupDistance() {
+      const ids = ['dist-nm', 'dist-km', 'dist-mi', 'dist-cable'];
+      const toMeters = [1852, 1000, 1609.34, 185.2];
+      ids.forEach((id, i) => {
+        document.getElementById(id)?.addEventListener('input', () => {
+          const v = getVal(id);
+          if (isNaN(v)) return;
+          const meters = v * (toMeters[i] ?? 1);
+          ids.forEach((tid, j) => {
+            if (tid !== id) setVal(tid, meters / (toMeters[j] ?? 1));
+          });
+        });
+      });
+    }
+
+    private updateBeaufort(knots: number) {
+      const card = document.getElementById('beaufort-card');
+      const badge = document.getElementById('beaufort-badge');
+      const nameEl = document.getElementById('beaufort-name');
+      const seaEl = document.getElementById('beaufort-sea');
+      if (!card || !badge || !nameEl || !seaEl) return;
+      if (isNaN(knots)) { card.classList.remove('visible'); return; }
+      renderBeaufort({ card, badge, nameEl, seaEl, knots, locale: this.locale });
+    }
+
+    private setupSpeed() {
+      bindSpeedInputs((kn: number) => this.updateBeaufort(kn));
+    }
+
+    private setupDepth() {
+      bindDepthInputs();
+    }
+
+    private setupPressure() {
+      bindPressureInputs();
+    }
+
+    private setupCopyButtons() {
+      section.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.dataset.copy;
+          if (!targetId) return;
+          const input = document.getElementById(targetId) as HTMLInputElement;
+          if (!input?.value) return;
+          navigator.clipboard.writeText(input.value).catch(() => null);
+        });
+      });
+    }
+  }
+
+  new NauticalConverter();
+</script>
