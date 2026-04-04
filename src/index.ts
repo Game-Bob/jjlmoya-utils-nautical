@@ -5,6 +5,7 @@ export * from './tool/sailArea';
 export * from './tool/speedConverter';
 export * from './tool/endurance';
 export * from './category';
+export { default as NauticalCategorySEO } from './category/seo.astro';
 
 export type {
   KnownLocale,

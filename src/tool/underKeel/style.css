@@ -13,6 +13,9 @@
   --n-success: #10b981;
   --n-warning: #f59e0b;
   --n-error: #f43f5e;
+  --ukc-label-size: 0.75rem;
+  --ukc-label-weight: 800;
+  --ukc-label-spacing: 0.06em;
 
   display: flex;
   flex-direction: column;
@@ -85,9 +88,12 @@
 }
 
 .ukc-input-block label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  opacity: 0.7;
+  font-size: var(--ukc-label-size);
+  font-weight: var(--ukc-label-weight);
+  color: var(--n-primary-on);
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: var(--ukc-label-spacing);
 }
 
 .ukc-unit-input {
@@ -112,7 +118,7 @@
   right: 12px;
   font-size: 0.85rem;
   font-weight: 700;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .ukc-hr-divider {

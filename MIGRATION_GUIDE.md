@@ -435,7 +435,72 @@ btn.addEventListener('click', async () => {
 
 ---
 
-## 10. Checklist — ejecutar antes de `npm run minor`
+## 10. Categoria y data.ts
+
+Cada libreria tiene una categoria que agrupa sus tools y un `data.ts` para el consumidor.
+
+### category/index.ts — patron exacto
+
+```ts
+import type { NauticalCategoryEntry, CategoryLocaleContent } from '../types';
+import { miTool } from '../tool/mi-tool';
+import { otroTool } from '../tool/otro-tool';
+
+export type { CategoryLocaleContent };
+
+export const miCategoria: NauticalCategoryEntry = {
+  icon: 'mdi:ICONO',
+  tools: [miTool, otroTool],   // todos los tools de la categoria
+  i18n: {
+    es: () => import('./i18n/es').then((m) => m.content),
+    en: () => import('./i18n/en').then((m) => m.content),
+    fr: () => import('./i18n/fr').then((m) => m.content),
+  },
+};
+```
+
+### category/i18n/es|en|fr.ts — CategoryLocaleContent
+
+La categoria NO tiene `seo.astro` separado — el SEO va inline en los ficheros i18n:
+
+```ts
+import type { CategoryLocaleContent } from '../index';
+
+export const content: CategoryLocaleContent = {
+  slug: 'mi-categoria',
+  title: 'Mi Categoria',
+  description: 'Descripcion de la categoria.',
+  seo: [
+    { type: 'title', text: 'Titulo SEO', level: 2 },
+    { type: 'paragraph', html: 'Contenido SEO...' },
+  ],
+};
+```
+
+### data.ts — exports publicos para el consumidor
+
+```ts
+export { miCategoria } from './category';
+export type { CategoryLocaleContent } from './category';
+
+export { miTool } from './tool/mi-tool';
+export { otroTool } from './tool/otro-tool';
+
+export type { MiToolUI, MiToolLocaleContent } from './tool/mi-tool';
+export type { OtroToolUI, OtroToolLocaleContent } from './tool/otro-tool';
+
+export type {
+  KnownLocale,
+  ToolLocaleContent,
+  LocaleMap,
+  NauticalToolEntry,
+  NauticalCategoryEntry,
+} from './types';
+```
+
+---
+
+## 11. Checklist — ejecutar antes de `npm run minor`
 
 Puedes pasarle este checklist a Claude en la proxima sesion junto con el codigo.
 

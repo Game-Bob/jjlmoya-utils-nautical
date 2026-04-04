@@ -13,6 +13,8 @@
   --n-success: #10b981;
   --n-warning: #f59e0b;
   --n-error: #f43f5e;
+  --ec-hero-bg: #0f172a;
+  --ec-hero-label: #22d3ee;
 
   max-width: 1000px;
   margin: 0 auto;
@@ -33,6 +35,8 @@
   --n-success: #34d399;
   --n-warning: #fbbf24;
   --n-error: #fb7185;
+  --ec-hero-bg: #020617;
+  --ec-hero-label: #22d3ee;
 }
 
 .ec-main-container {
@@ -137,7 +141,7 @@
 }
 
 .ec-hero-display {
-  background: var(--n-primary);
+  background: var(--ec-hero-bg);
   border-radius: 1rem;
   padding: 2rem;
   color: var(--n-primary-on);
@@ -156,7 +160,7 @@
   font-size: 0.65rem;
   font-weight: 900;
   text-transform: uppercase;
-  color: var(--n-cyan);
+  color: var(--ec-hero-label);
   letter-spacing: 0.1em;
 }
 
@@ -167,7 +171,7 @@
 }
 
 .ec-main-value {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 900;
   color: var(--n-primary-on);
   line-height: 1;
@@ -181,10 +185,10 @@
 }
 
 .ec-fuel-badge {
-  font-size: 1.5rem;
+  font-size: 0.85rem;
   font-weight: 900;
-  color: var(--n-primary-on);
-  opacity: 0.7;
+  color: var(--ec-hero-label);
+  letter-spacing: 0.05em;
 }
 
 .ec-progress-track {
