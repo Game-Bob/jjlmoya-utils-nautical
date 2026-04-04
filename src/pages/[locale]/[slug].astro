@@ -91,7 +91,7 @@ const titleBase = words.slice(1).join(" ") || "";
   />
   <Fragment slot="head">
     {
-      content.schemas.map((schema) => (
+      content.schemas.map((schema: unknown) => (
         <script
           is:inline
           type="application/ld+json"
@@ -117,11 +117,11 @@ const titleBase = words.slice(1).join(" ") || "";
     </section>
 
     <section class="section-faq">
-      <FAQSection items={content.faq} inLanguage={locale} />
+      <FAQSection items={content.faq} title={content.ui.faqTitle} inLanguage={locale} />
     </section>
 
     <section class="section-bibliography">
-      <Bibliography links={content.bibliography} />
+      <Bibliography links={content.bibliography} title={content.ui.bibliographyTitle} />
     </section>
   </div>
 </PreviewLayout>

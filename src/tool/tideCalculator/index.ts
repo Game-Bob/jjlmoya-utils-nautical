@@ -5,23 +5,24 @@ import TideCalculatorBibliography from './bibliography.astro';
 
 export interface TideCalculatorUI {
   [key: string]: string;
-  parametros: string;
-  pleamar: string;
-  bajamar: string;
-  horaConsulta: string;
-  alturaEstimada: string;
-  metros: string;
-  amplitud: string;
-  duracion: string;
-  desglosePorDozavos: string;
-  hora: string;
-  estado: string;
-  altura: string;
-  subiendo: string;
-  bajando: string;
-  fueraDeRango: string;
-  inicio: string;
-  final: string;
+  parametersLabel: string;
+  highTideLabel: string;
+  lowTideLabel: string;
+  targetTimeLabel: string;
+  estimatedHeightLabel: string;
+  metersLabel: string;
+  amplitudeLabel: string;
+  durationLabel: string;
+  tableBreakdownLabel: string;
+  tableHourLabel: string;
+  tableStateLabel: string;
+  tableStartLabel: string;
+  tableEndLabel: string;
+  statusUpLabel: string;
+  statusDownLabel: string;
+  statusOutOfRange: string;
+  faqTitle: string;
+  bibliographyTitle: string;
 }
 
 export type TideCalculatorLocaleContent = ToolLocaleContent<TideCalculatorUI>;
