@@ -38,7 +38,7 @@
   --n-error: #fb7185;
 }
 
-.input-grid {
+.sc-input-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
@@ -48,20 +48,20 @@
   padding: 2rem;
 }
 
-.input-group {
+.sc-input-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.input-group label {
+.sc-input-group label {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--n-text-muted);
   text-transform: uppercase;
 }
 
-.input-wrapper {
+.sc-input-wrapper {
   background: var(--n-bg-muted);
   border: 2px solid var(--n-border);
   border-radius: 0.8rem;
@@ -69,11 +69,11 @@
   transition: border-color 0.2s;
 }
 
-.input-wrapper:focus-within {
+.sc-input-wrapper:focus-within {
   border-color: var(--n-cyan);
 }
 
-.input-wrapper input {
+.sc-input-wrapper input {
   background: transparent;
   border: none;
   outline: none;
@@ -83,12 +83,12 @@
   width: 100%;
 }
 
-.input-wrapper input::-webkit-outer-spin-button,
-.input-wrapper input::-webkit-inner-spin-button {
+.sc-input-wrapper input::-webkit-outer-spin-button,
+.sc-input-wrapper input::-webkit-inner-spin-button {
   appearance: none;
 }
 
-.beaufort-summary {
+.sc-beaufort-summary {
   background: var(--n-primary);
   color: var(--n-primary-on);
   border-radius: 1.5rem;
@@ -99,7 +99,7 @@
   align-items: center;
 }
 
-.force-circle {
+.sc-force-circle {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -109,38 +109,38 @@
   justify-content: center;
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--n-accent);
+  color: var(--n-primary-on);
   flex-shrink: 0;
 }
 
-.force-text-box {
+.sc-force-text-box {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-.force-name {
+.sc-force-name {
   margin: 0;
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--n-primary-on);
 }
 
-.force-detail {
+.sc-force-detail {
   margin: 0;
   opacity: 0.8;
   font-size: 0.9rem;
   color: var(--n-primary-on);
 }
 
-.sea-state-box {
+.sc-sea-state-box {
   grid-column: 1 / -1;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1rem 1.5rem;
 }
 
-.sea-text .label {
+.sc-sea-text .label {
   font-size: 0.7rem;
   text-transform: uppercase;
   opacity: 0.7;
@@ -148,20 +148,20 @@
   font-weight: 700;
 }
 
-.sea-text p {
+.sc-sea-text p {
   margin: 0.2rem 0 0;
   font-weight: 600;
   color: var(--n-primary-on);
 }
 
-.table-container {
+.sc-table-container {
   background: var(--n-bg);
   border: 1px solid var(--n-border);
   border-radius: 1.5rem;
   overflow: hidden;
 }
 
-.table-container h3 {
+.sc-table-container h3 {
   padding: 1.5rem;
   margin: 0;
   font-size: 1rem;
@@ -170,16 +170,16 @@
   font-weight: 700;
 }
 
-.scroll-area {
+.sc-scroll-area {
   overflow-x: auto;
 }
 
-.beaufort-table {
+.sc-beaufort-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.beaufort-table th {
+.sc-beaufort-table th {
   text-align: left;
   padding: 0.8rem 1rem;
   font-size: 0.75rem;
@@ -188,31 +188,31 @@
   border-bottom: 2px solid var(--n-border);
 }
 
-.beaufort-table td {
+.sc-beaufort-table td {
   padding: 0.8rem 1rem;
   font-size: 0.9rem;
   color: var(--n-text-muted);
   border-bottom: 1px solid var(--n-border);
 }
 
-.clickable-row {
+.sc-clickable-row {
   cursor: pointer;
   transition: background 0.15s;
 }
 
-.clickable-row:hover {
+.sc-clickable-row:hover {
   background: var(--n-bg-muted);
 }
 
-.clickable-row.active {
+.sc-clickable-row.active {
   background: var(--n-primary);
 }
 
-.clickable-row.active td {
+.sc-clickable-row.active td {
   color: var(--n-primary-on);
 }
 
-.force-tag {
+.sc-force-tag {
   background: var(--n-bg-muted);
   padding: 0.2rem 0.5rem;
   border-radius: 0.4rem;
@@ -221,17 +221,17 @@
   color: var(--n-text);
 }
 
-.clickable-row.active .force-tag {
+.sc-clickable-row.active .sc-force-tag {
   background: rgba(255, 255, 255, 0.2);
   color: var(--n-primary-on);
 }
 
 @media (max-width: 640px) {
-  .beaufort-summary {
+  .sc-beaufort-summary {
     grid-template-columns: 1fr;
   }
 
-  .force-circle {
+  .sc-force-circle {
     width: 60px;
     height: 60px;
     font-size: 2rem;

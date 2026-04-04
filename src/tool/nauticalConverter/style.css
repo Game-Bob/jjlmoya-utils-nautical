@@ -38,7 +38,7 @@
   --n-error: #fb7185;
 }
 
-.category-tabs {
+.nc-category-tabs {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
@@ -48,7 +48,7 @@
   padding: 0.5rem;
 }
 
-.tab-btn {
+.nc-tab-btn {
   flex: 1;
   min-width: 120px;
   padding: 0.7rem 1.2rem;
@@ -62,25 +62,25 @@
   transition: background 0.2s, color 0.2s;
 }
 
-.tab-btn:hover {
+.nc-tab-btn:hover {
   background: var(--n-bg-muted);
   color: var(--n-text);
 }
 
-.tab-btn.active {
+.nc-tab-btn.active {
   background: var(--n-primary);
   color: var(--n-primary-on);
 }
 
-.tab-panel {
+.nc-tab-panel {
   display: none;
 }
 
-.tab-panel.active {
+.nc-tab-panel.active {
   display: block;
 }
 
-.converter-card {
+.nc-converter-card {
   background: var(--n-bg);
   border: 1px solid var(--n-border);
   border-radius: 1.5rem;
@@ -88,19 +88,19 @@
   box-shadow: 0 8px 24px var(--n-shadow);
 }
 
-.input-grid {
+.nc-input-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1.2rem;
 }
 
-.input-group {
+.nc-input-group {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.input-group label {
+.nc-input-group label {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--n-text-muted);
@@ -108,13 +108,13 @@
   letter-spacing: 0.05em;
 }
 
-.input-wrapper {
+.nc-input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.elegant-input {
+.nc-elegant-input {
   width: 100%;
   background: var(--n-bg);
   color: var(--n-text);
@@ -126,11 +126,11 @@
   transition: border-color 0.2s;
 }
 
-.elegant-input:focus {
+.nc-elegant-input:focus {
   border-color: var(--n-cyan);
 }
 
-.copy-btn {
+.nc-copy-btn {
   position: absolute;
   right: 0.5rem;
   background: none;
@@ -144,11 +144,11 @@
   transition: opacity 0.2s;
 }
 
-.copy-btn:hover {
+.nc-copy-btn:hover {
   opacity: 1;
 }
 
-.beaufort-card {
+.nc-beaufort-card {
   margin-top: 1.5rem;
   background: var(--n-bg);
   border: 1px solid var(--n-border);
@@ -159,11 +159,11 @@
   gap: 1.2rem;
 }
 
-.beaufort-card.visible {
+.nc-beaufort-card.visible {
   display: flex;
 }
 
-.beaufort-badge {
+.nc-beaufort-badge {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,29 +176,29 @@
   flex-shrink: 0;
 }
 
-.beaufort-info {
+.nc-beaufort-info {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
 
-.beaufort-name {
+.nc-beaufort-name {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--n-text);
 }
 
-.beaufort-sea {
+.nc-beaufort-sea {
   font-size: 0.9rem;
   color: var(--n-text-muted);
 }
 
 @media (max-width: 600px) {
-  .input-grid {
+  .nc-input-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .tab-btn {
+  .nc-tab-btn {
     font-size: 0.8rem;
     padding: 0.6rem 0.8rem;
   }

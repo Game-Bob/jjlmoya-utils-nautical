@@ -38,7 +38,7 @@
   --n-error: #fb7185;
 }
 
-.main-card {
+.ukc-main-card {
   background: var(--n-bg);
   border: 1px solid var(--n-border);
   border-radius: 2rem;
@@ -49,12 +49,12 @@
 }
 
 @media (max-width: 850px) {
-  .main-card {
+  .ukc-main-card {
     grid-template-columns: 1fr;
   }
 }
 
-.calc-sidebar {
+.ukc-calc-sidebar {
   background: var(--n-primary);
   color: var(--n-primary-on);
   padding: 2rem;
@@ -63,7 +63,7 @@
   gap: 2rem;
 }
 
-.sidebar-header h3 {
+.ukc-sidebar-header h3 {
   font-size: 1.1rem;
   margin: 0;
   font-weight: 700;
@@ -72,31 +72,31 @@
   opacity: 0.9;
 }
 
-.input-set {
+.ukc-input-set {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.input-block {
+.ukc-input-block {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-.input-block label {
+.ukc-input-block label {
   font-size: 0.8rem;
   font-weight: 600;
   opacity: 0.7;
 }
 
-.unit-input {
+.ukc-unit-input {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.unit-input input {
+.ukc-unit-input input {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -107,7 +107,7 @@
   outline: none;
 }
 
-.unit-input span {
+.ukc-unit-input span {
   position: absolute;
   right: 12px;
   font-size: 0.85rem;
@@ -115,13 +115,13 @@
   opacity: 0.4;
 }
 
-.hr-divider {
+.ukc-hr-divider {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   margin: 0.5rem 0;
 }
 
-.row {
+.ukc-row {
   display: flex;
   gap: 0.5rem;
 }
@@ -137,11 +137,11 @@
   outline: none;
 }
 
-.mini-num {
+.ukc-mini-num {
   width: 80px;
 }
 
-.calc-content {
+.ukc-calc-content {
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -149,19 +149,19 @@
   background: var(--n-bg-muted);
 }
 
-.top-row {
+.ukc-top-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.result-display {
+.ukc-result-display {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.result-display .label {
+.ukc-result-display .label {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--n-text-muted);
@@ -169,7 +169,7 @@
   letter-spacing: 0.05em;
 }
 
-.time-range {
+.ukc-time-range {
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -179,12 +179,12 @@
   line-height: 1;
 }
 
-.arrow-sep {
+.ukc-arrow-sep {
   color: var(--n-cyan);
   opacity: 0.4;
 }
 
-.status-indicator {
+.ukc-status-indicator {
   padding: 0.4rem 1.2rem;
   border-radius: 2rem;
   font-size: 0.9rem;
@@ -194,28 +194,28 @@
   color: var(--n-text-dim);
 }
 
-.status-indicator.success {
+.ukc-status-indicator.success {
   background: color-mix(in srgb, var(--n-success), transparent 80%);
   color: var(--n-success);
 }
 
-.status-indicator.warning {
+.ukc-status-indicator.warning {
   background: color-mix(in srgb, var(--n-warning), transparent 80%);
   color: var(--n-warning);
 }
 
-.status-indicator.danger {
+.ukc-status-indicator.danger {
   background: color-mix(in srgb, var(--n-error), transparent 80%);
   color: var(--n-error);
 }
 
-.data-group {
+.ukc-data-group {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.stat-pill {
+.ukc-stat-pill {
   background: var(--n-bg);
   padding: 0.5rem 1rem;
   border-radius: 0.8rem;
@@ -226,17 +226,17 @@
   font-size: 0.9rem;
 }
 
-.stat-pill span {
+.ukc-stat-pill span {
   color: var(--n-text-muted);
   font-weight: 500;
 }
 
-.stat-pill strong {
+.ukc-stat-pill strong {
   color: var(--n-text);
   font-weight: 700;
 }
 
-.visual-container {
+.ukc-visual-container {
   background: var(--n-bg);
   border: 1px solid var(--n-border);
   border-radius: 1.5rem;
@@ -247,7 +247,7 @@
   position: relative;
 }
 
-.ocean-frame {
+.ukc-ocean-frame {
   width: 200px;
   height: 100%;
   background: var(--n-bg-muted);
@@ -257,7 +257,7 @@
   overflow: hidden;
 }
 
-.water-volume {
+.ukc-water-volume {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -266,7 +266,7 @@
   transition: height 0.6s ease;
 }
 
-.surface-line {
+.ukc-surface-line {
   position: absolute;
   top: 0;
   width: 100%;
@@ -274,7 +274,7 @@
   background: var(--n-cyan);
 }
 
-.ship-silhouette {
+.ukc-ship-silhouette {
   position: absolute;
   left: 20px;
   right: 20px;
@@ -284,7 +284,7 @@
   transition: bottom 0.6s ease;
 }
 
-.sand-bottom {
+.ukc-sand-bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -301,11 +301,11 @@
 }
 
 @media (max-width: 640px) {
-  .time-range {
+  .ukc-time-range {
     font-size: 2.2rem;
   }
 
-  .top-row {
+  .ukc-top-row {
     flex-direction: column;
     gap: 2rem;
   }

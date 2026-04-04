@@ -10,17 +10,17 @@ const { ui } = Astro.props;
 ---
 
 <div id="sail-area-calculator-root" class="sail-area-calculator" data-ui={JSON.stringify(ui)}>
-  <div class="calculator-wrapper" id="calculator-capture-area">
-    <div class="main-controls">
+  <div class="sa-calculator-wrapper" id="calculator-capture-area">
+    <div class="sa-main-controls">
 
-      <div class="section-group">
+      <div class="sa-section-group">
         <h3>{ui.hullSectionLabel}</h3>
-        <div class="compact-grid">
-          <div class="input-row">
+        <div class="sa-compact-grid">
+          <div class="sa-input-row">
             <label for="displacement">{ui.totalMassLabel}</label>
-            <div class="input-with-unit">
-              <input type="number" id="displacement" class="elegant-input" placeholder="8500" />
-              <div class="unit-tag">
+            <div class="sa-input-with-unit">
+              <input type="number" id="displacement" class="sa-elegant-input" placeholder="8500" />
+              <div class="sa-unit-tag">
                 <select id="disp-unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="kg">KG</option>
                   <option value="lbs">LBS</option>
@@ -28,17 +28,17 @@ const { ui } = Astro.props;
               </div>
             </div>
           </div>
-          <div class="input-row">
+          <div class="sa-input-row">
             <label for="rig-type">{ui.sailConfigLabel}</label>
-            <select id="rig-type" class="elegant-input">
+            <select id="rig-type" class="sa-elegant-input">
               <option value="sloop">{ui.sloopLabel}</option>
               <option value="cutter">{ui.cutterLabel}</option>
               <option value="ketch">{ui.ketchLabel}</option>
             </select>
           </div>
-          <div class="input-row">
+          <div class="sa-input-row">
             <label for="boat-type">{ui.intendedUseLabel}</label>
-            <select id="boat-type" class="elegant-input">
+            <select id="boat-type" class="sa-elegant-input">
               <option value="cruiser">{ui.cruiserLabel}</option>
               <option value="performance">{ui.performanceTypeLabel}</option>
               <option value="racer">{ui.racerLabel}</option>
@@ -47,51 +47,51 @@ const { ui } = Astro.props;
         </div>
       </div>
 
-      <div class="section-group">
+      <div class="sa-section-group">
         <h3>{ui.rigGeometryLabel}</h3>
-        <div class="compact-grid">
-          <div class="input-row">
+        <div class="sa-compact-grid">
+          <div class="sa-input-row">
             <label>P (m)</label>
-            <div class="input-with-unit">
-              <input type="number" id="val-p" class="elegant-input" placeholder="12.5" />
-              <div class="unit-tag">
-                <select class="len-unit" data-for="val-p" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+            <div class="sa-input-with-unit">
+              <input type="number" id="val-p" class="sa-elegant-input" placeholder="12.5" />
+              <div class="sa-unit-tag">
+                <select class="sa-len-unit" data-for="val-p" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
               </div>
             </div>
           </div>
-          <div class="input-row">
+          <div class="sa-input-row">
             <label>E (m)</label>
-            <div class="input-with-unit">
-              <input type="number" id="val-e" class="elegant-input" placeholder="4.2" />
-              <div class="unit-tag">
-                <select class="len-unit" data-for="val-e" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+            <div class="sa-input-with-unit">
+              <input type="number" id="val-e" class="sa-elegant-input" placeholder="4.2" />
+              <div class="sa-unit-tag">
+                <select class="sa-len-unit" data-for="val-e" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
               </div>
             </div>
           </div>
-          <div class="input-row">
+          <div class="sa-input-row">
             <label>I (m)</label>
-            <div class="input-with-unit">
-              <input type="number" id="val-i" class="elegant-input" placeholder="14.0" />
-              <div class="unit-tag">
-                <select class="len-unit" data-for="val-i" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+            <div class="sa-input-with-unit">
+              <input type="number" id="val-i" class="sa-elegant-input" placeholder="14.0" />
+              <div class="sa-unit-tag">
+                <select class="sa-len-unit" data-for="val-i" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
               </div>
             </div>
           </div>
-          <div class="input-row">
+          <div class="sa-input-row">
             <label>J (m)</label>
-            <div class="input-with-unit">
-              <input type="number" id="val-j" class="elegant-input" placeholder="4.5" />
-              <div class="unit-tag">
-                <select class="len-unit" data-for="val-j" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+            <div class="sa-input-with-unit">
+              <input type="number" id="val-j" class="sa-elegant-input" placeholder="4.5" />
+              <div class="sa-unit-tag">
+                <select class="sa-len-unit" data-for="val-j" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
@@ -100,25 +100,25 @@ const { ui } = Astro.props;
           </div>
         </div>
 
-        <div id="mizzen-row" style="display: none; margin-top: 1.5rem;" class="compact-grid">
-          <div class="input-row">
+        <div id="mizzen-row" style="display: none; margin-top: 1.5rem;" class="sa-compact-grid">
+          <div class="sa-input-row">
             <label>Py (m)</label>
-            <div class="input-with-unit">
-              <input type="number" id="val-py" class="elegant-input" placeholder="8.5" />
-              <div class="unit-tag">
-                <select class="len-unit" data-for="val-py" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+            <div class="sa-input-with-unit">
+              <input type="number" id="val-py" class="sa-elegant-input" placeholder="8.5" />
+              <div class="sa-unit-tag">
+                <select class="sa-len-unit" data-for="val-py" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
               </div>
             </div>
           </div>
-          <div class="input-row">
+          <div class="sa-input-row">
             <label>Ey (m)</label>
-            <div class="input-with-unit">
-              <input type="number" id="val-ey" class="elegant-input" placeholder="3.0" />
-              <div class="unit-tag">
-                <select class="len-unit" data-for="val-ey" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+            <div class="sa-input-with-unit">
+              <input type="number" id="val-ey" class="sa-elegant-input" placeholder="3.0" />
+              <div class="sa-unit-tag">
+                <select class="sa-len-unit" data-for="val-ey" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
@@ -128,16 +128,16 @@ const { ui } = Astro.props;
         </div>
       </div>
 
-      <div class="section-group">
+      <div class="sa-section-group">
         <h3>{ui.genoaOverlapLabel}</h3>
-        <div class="slider-box">
-          <div class="slider-header">
+        <div class="sa-slider-box">
+          <div class="sa-slider-header">
             <label for="genoa-overlap">{ui.genoaOverlapLabel} (LP/J)</label>
-            <span id="overlap-val" class="percentage-badge">130%</span>
+            <span id="overlap-val" class="sa-percentage-badge">130%</span>
           </div>
-          <div class="slider-wrapper">
-            <input type="range" id="genoa-overlap" class="modern-slider" min="100" max="155" value="130" step="1" />
-            <div class="slider-ticks">
+          <div class="sa-slider-wrapper">
+            <input type="range" id="genoa-overlap" class="sa-modern-slider" min="100" max="155" value="130" step="1" />
+            <div class="sa-slider-ticks">
               <span>100% ({ui.foqueLabel})</span>
               <span>155% ({ui.genovaLabel} G.)</span>
             </div>
@@ -147,27 +147,27 @@ const { ui } = Astro.props;
 
     </div>
 
-    <aside class="sidebar-results">
+    <aside class="sa-sidebar-results">
       <span class="sad-label">{ui.sadRatioLabel}</span>
       <span id="sad-ratio-val" class="sad-value-large">0.0</span>
-      <div class="gauge-track">
-        <div id="gauge-marker-el" class="gauge-indicator" style="left: 0%"></div>
+      <div class="sa-gauge-track">
+        <div id="gauge-marker-el" class="sa-gauge-indicator" style="left: 0%"></div>
       </div>
-      <div class="verdict-box">
+      <div class="sa-verdict-box">
         <h4 id="verdict-title-el">-</h4>
         <p id="verdict-text-el">-</p>
       </div>
-      <div class="stats-summary">
-        <div class="stat-item">
+      <div class="sa-stats-summary">
+        <div class="sa-stat-item">
           <span>{ui.totalAreaLabel}</span>
           <span id="total-area-el">0.0 m²</span>
         </div>
-        <div class="stat-item">
+        <div class="sa-stat-item">
           <span>{ui.performanceLabel}</span>
           <span id="power-indicator-el">-</span>
         </div>
       </div>
-      <button id="btn-export-pdf-premium" class="export-btn-premium ignore-capture">
+      <button id="btn-export-pdf-premium" class="sa-export-btn-premium sa-ignore-capture">
         {ui.exportPdfLabel}
       </button>
     </aside>
@@ -196,11 +196,11 @@ const { ui } = Astro.props;
   const gaugeMarker = document.getElementById('gauge-marker-el') as HTMLElement;
   const powerIndicator = document.getElementById('power-indicator-el') as HTMLElement;
   const mizzenRow = document.getElementById('mizzen-row') as HTMLElement;
-  const lenUnits = document.querySelectorAll<HTMLSelectElement>('.len-unit');
+  const lenUnits = document.querySelectorAll<HTMLSelectElement>('.sa-len-unit');
 
   function getValInM(id: string): number {
     const el = document.getElementById(id) as HTMLInputElement;
-    const unitEl = document.querySelector<HTMLSelectElement>(`.len-unit[data-for="${id}"]`);
+    const unitEl = document.querySelector<HTMLSelectElement>(`.sa-len-unit[data-for="${id}"]`);
     const val = parseFloat(el.value) || 0;
     return unitEl?.value === 'ft' ? val * 0.3048 : val;
   }
@@ -226,7 +226,7 @@ const { ui } = Astro.props;
     const areaSqFt = totalA * 10.7639;
     const dispLbs = dispKg * 2.20462;
     if (dispLbs > 100 && areaSqFt > 1) {
-      const sad = areaSqFt / Math.pow(dispLbs / 64, 2 / 3);
+      const sad = Math.min(99.9, areaSqFt / Math.pow(dispLbs / 64, 2 / 3));
       sadRatioDisplay.textContent = sad.toFixed(1);
       updateUI(sad);
     }
@@ -290,7 +290,7 @@ const { ui } = Astro.props;
     genoaOverlap.value = d.overlap || '130';
     overlapLabel.textContent = `${genoaOverlap.value}%`;
     (d.lenUnits || []).forEach((u) => {
-      const el = document.querySelector<HTMLSelectElement>(`.len-unit[data-for="${u.id}"]`);
+      const el = document.querySelector<HTMLSelectElement>(`.sa-len-unit[data-for="${u.id}"]`);
       if (el) el.value = u.val;
     });
     mizzenRow.style.display = d.rig === 'ketch' ? 'grid' : 'none';
@@ -322,7 +322,7 @@ const { ui } = Astro.props;
   lenUnits.forEach((u) => u.addEventListener('change', () => { calculate(); saveToLocal(); }));
 
   function getLenUnit(id: string): string {
-    return document.querySelector<HTMLSelectElement>(`.len-unit[data-for="${id}"]`)?.value ?? 'm';
+    return document.querySelector<HTMLSelectElement>(`.sa-len-unit[data-for="${id}"]`)?.value ?? 'm';
   }
 
   function buildMizzenRows(): string {
@@ -341,7 +341,7 @@ const { ui } = Astro.props;
     return `<table style="width:100%;border-collapse:collapse;margin-bottom:30px;">
       <thead><tr ${th}><th ${thCell}>Parametro</th><th ${thCell}>Valor</th></tr></thead>
       <tbody>
-        <tr><td ${td}>Tipo de Aparejo</td><td ${tdB}>${rigType.options[rigType.selectedIndex].text}</td></tr>
+        <tr><td ${td}>Tipo de Aparejo</td><td ${tdB}>${rigType.options[rigType.selectedIndex]?.text ?? ''}</td></tr>
         <tr><td ${td}>Desplazamiento</td><td ${tdB}>${displacement.value} ${dispUnit.value}</td></tr>
         <tr><td ${td}>P (Mastil Mayor)</td><td ${tdB}>${valP.value} ${getLenUnit('val-p')}</td></tr>
         <tr><td ${td}>E (Botavara Mayor)</td><td ${tdB}>${valE.value} ${getLenUnit('val-e')}</td></tr>
@@ -398,7 +398,7 @@ const { ui } = Astro.props;
         scale: 2,
         useCORS: true,
         backgroundColor: '#ffffff',
-        ignoreElements: (el) => el.classList.contains('ignore-capture'),
+        ignoreElements: (el) => el.classList.contains('sa-ignore-capture'),
         onclone: (clonedDoc) => {
           const clonedEl = clonedDoc.getElementById('calculator-capture-area');
           if (clonedEl) clonedEl.innerHTML = buildPdfHtml();

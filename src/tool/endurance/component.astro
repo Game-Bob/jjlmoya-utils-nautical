@@ -10,44 +10,44 @@ const { ui } = Astro.props;
 ---
 
 <section id="endurance-calculator" class="endurance-calculator" data-ui={JSON.stringify(ui)}>
-  <div class="main-container">
-    <aside class="sidebar-inputs">
-      <div class="compact-group">
+  <div class="ec-main-container">
+    <aside class="ec-sidebar-inputs">
+      <div class="ec-compact-group">
         <label>{ui.tankCapacityLabel}</label>
-        <div class="dual-row">
+        <div class="ec-dual-row">
           <div>
-            <span class="sub-label">{ui.mainTankLabel}</span>
-            <div class="field-wrapper">
-              <span class="field-icon icon-fuel"></span>
-              <input type="number" id="tank1" class="compact-input" value="200" min="0" step="10" />
-              <span class="unit-tag">L</span>
+            <span class="ec-sub-label">{ui.mainTankLabel}</span>
+            <div class="ec-field-wrapper">
+              <span class="ec-field-icon icon-fuel"></span>
+              <input type="number" id="tank1" class="ec-compact-input" value="200" min="0" step="10" />
+              <span class="ec-unit-tag">L</span>
             </div>
           </div>
           <div>
-            <span class="sub-label">{ui.auxTankLabel}</span>
-            <div class="field-wrapper">
-              <span class="field-icon icon-fuel"></span>
-              <input type="number" id="tank2" class="compact-input" value="0" min="0" step="10" />
-              <span class="unit-tag">L</span>
+            <span class="ec-sub-label">{ui.auxTankLabel}</span>
+            <div class="ec-field-wrapper">
+              <span class="ec-field-icon icon-fuel"></span>
+              <input type="number" id="tank2" class="ec-compact-input" value="0" min="0" step="10" />
+              <span class="ec-unit-tag">L</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="compact-group">
+      <div class="ec-compact-group">
         <label>{ui.currentFuelLabel}</label>
-        <div class="field-wrapper">
-          <span class="field-icon icon-bucket"></span>
-          <input type="number" id="f-current" class="compact-input" value="150" min="0" step="5" />
-          <span class="unit-tag">L</span>
+        <div class="ec-field-wrapper">
+          <span class="ec-field-icon icon-bucket"></span>
+          <input type="number" id="f-current" class="ec-compact-input" value="150" min="0" step="5" />
+          <span class="ec-unit-tag">L</span>
         </div>
       </div>
 
-      <div class="compact-group">
+      <div class="ec-compact-group">
         <label>{ui.seaConditionsLabel}</label>
-        <div class="field-wrapper">
-          <span class="field-icon icon-wave"></span>
-          <select id="sea-s" class="compact-select">
+        <div class="ec-field-wrapper">
+          <span class="ec-field-icon icon-wave"></span>
+          <select id="sea-s" class="ec-compact-select">
             <option value="1.0">{ui.seaCalm}</option>
             <option value="1.15">{ui.seaLight}</option>
             <option value="1.30">{ui.seaModerate}</option>
@@ -56,103 +56,103 @@ const { ui } = Astro.props;
         </div>
       </div>
 
-      <div class="compact-group">
+      <div class="ec-compact-group">
         <label>{ui.consumptionLabel}</label>
-        <div class="field-wrapper">
-          <span class="field-icon icon-fire"></span>
-          <input type="number" id="f-cons" class="compact-input" value="25" min="0.1" step="1" />
-          <span class="unit-tag">L/h</span>
+        <div class="ec-field-wrapper">
+          <span class="ec-field-icon icon-fire"></span>
+          <input type="number" id="f-cons" class="ec-compact-input" value="25" min="0.1" step="1" />
+          <span class="ec-unit-tag">L/h</span>
         </div>
       </div>
 
-      <div class="compact-group">
+      <div class="ec-compact-group">
         <label>{ui.cruiseSpeedLabel}</label>
-        <div class="field-wrapper">
-          <span class="field-icon icon-wind"></span>
-          <input type="number" id="v-cruiser" class="compact-input" value="8" min="0.1" step="0.5" />
-          <span class="unit-tag">kn</span>
+        <div class="ec-field-wrapper">
+          <span class="ec-field-icon icon-wind"></span>
+          <input type="number" id="v-cruiser" class="ec-compact-input" value="8" min="0.1" step="0.5" />
+          <span class="ec-unit-tag">kn</span>
         </div>
       </div>
 
-      <div class="compact-group">
+      <div class="ec-compact-group">
         <label>{ui.reserveLabel}</label>
-        <div class="field-wrapper">
-          <span class="field-icon icon-shield"></span>
-          <input type="number" id="f-res" class="compact-input" value="20" min="0" max="50" step="5" />
-          <span class="unit-tag">%</span>
+        <div class="ec-field-wrapper">
+          <span class="ec-field-icon icon-shield"></span>
+          <input type="number" id="f-res" class="ec-compact-input" value="20" min="0" max="50" step="5" />
+          <span class="ec-unit-tag">%</span>
         </div>
       </div>
 
-      <div class="compact-group">
+      <div class="ec-compact-group">
         <label>{ui.fuelPriceLabel}</label>
-        <div class="field-wrapper">
-          <span class="field-icon">€</span>
-          <input type="number" id="f-price" class="compact-input" value="1.8" min="0" step="0.05" />
-          <span class="unit-tag">€/L</span>
+        <div class="ec-field-wrapper">
+          <span class="ec-field-icon">€</span>
+          <input type="number" id="f-price" class="ec-compact-input" value="1.8" min="0" step="0.05" />
+          <span class="ec-unit-tag">€/L</span>
         </div>
       </div>
     </aside>
 
-    <div class="dashboard-panel">
-      <div class="hero-display">
-        <div class="hero-top">
+    <div class="ec-dashboard-panel">
+      <div class="ec-hero-display">
+        <div class="ec-hero-top">
           <div>
-            <div class="display-title">{ui.maxRangeLabel}</div>
-            <div class="main-value-row">
-              <span class="main-value" id="out-dist">--</span>
-              <span class="main-unit">MN</span>
+            <div class="ec-display-title">{ui.maxRangeLabel}</div>
+            <div class="ec-main-value-row">
+              <span class="ec-main-value" id="out-dist">--</span>
+              <span class="ec-main-unit">MN</span>
             </div>
           </div>
-          <div class="fuel-badge" id="out-fuel-pct">--%</div>
+          <div class="ec-fuel-badge" id="out-fuel-pct">--%</div>
         </div>
-        <div class="progress-track">
-          <div class="progress-fill" id="progress-fill"></div>
-          <div class="marker" id="reserve-marker" style="left: 80%"></div>
-        </div>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-label">{ui.realPerformanceLabel}</span>
-          <span class="stat-value" id="out-perf">--</span>
-          <span class="stat-label">L/MN</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">{ui.hoursLabel}</span>
-          <span class="stat-value" id="out-hours">--</span>
-          <span class="stat-label">h</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">{ui.safeMilesLabel}</span>
-          <span class="stat-value danger" id="out-safe">--</span>
-          <span class="stat-label">MN</span>
-        </div>
-        <div class="stat-card hidden" id="card-cost">
-          <span class="stat-label">{ui.tankValueLabel}</span>
-          <span class="stat-value" id="out-cost">--</span>
-          <span class="stat-label">€</span>
+        <div class="ec-progress-track">
+          <div class="ec-progress-fill" id="progress-fill"></div>
+          <div class="ec-marker" id="reserve-marker" style="left: 80%"></div>
         </div>
       </div>
 
-      <div class="inverter-card">
-        <div class="inverter-header">{ui.inverseCalcLabel}</div>
-        <div class="inverter-row">
+      <div class="ec-stats-grid">
+        <div class="ec-stat-card">
+          <span class="ec-stat-label">{ui.realPerformanceLabel}</span>
+          <span class="ec-stat-value" id="out-perf">--</span>
+          <span class="ec-stat-label">L/MN</span>
+        </div>
+        <div class="ec-stat-card">
+          <span class="ec-stat-label">{ui.hoursLabel}</span>
+          <span class="ec-stat-value" id="out-hours">--</span>
+          <span class="ec-stat-label">h</span>
+        </div>
+        <div class="ec-stat-card">
+          <span class="ec-stat-label">{ui.safeMilesLabel}</span>
+          <span class="ec-stat-value danger" id="out-safe">--</span>
+          <span class="ec-stat-label">MN</span>
+        </div>
+        <div class="ec-stat-card hidden" id="card-cost">
+          <span class="ec-stat-label">{ui.tankValueLabel}</span>
+          <span class="ec-stat-value" id="out-cost">--</span>
+          <span class="ec-stat-label">€</span>
+        </div>
+      </div>
+
+      <div class="ec-inverter-card">
+        <div class="ec-inverter-header">{ui.inverseCalcLabel}</div>
+        <div class="ec-inverter-row">
           <div>
-            <div class="inverter-label">{ui.desiredDistLabel}</div>
-            <div class="field-wrapper">
-              <input type="number" id="inv-dist" class="compact-input" value="50" min="0" step="5" />
-              <span class="unit-tag">MN</span>
+            <div class="ec-inverter-label">{ui.desiredDistLabel}</div>
+            <div class="ec-field-wrapper">
+              <input type="number" id="inv-dist" class="ec-compact-input" value="50" min="0" step="5" />
+              <span class="ec-unit-tag">MN</span>
             </div>
           </div>
           <div>
-            <div class="inverter-label">{ui.minFuelLabel}</div>
-            <div class="inverter-value" id="inv-res">-- <span class="inverter-unit">L</span></div>
+            <div class="ec-inverter-label">{ui.minFuelLabel}</div>
+            <div class="ec-inverter-value" id="inv-res">-- <span class="ec-inverter-unit">L</span></div>
           </div>
         </div>
       </div>
 
-      <div class="warning-bar">
-        <span class="warning-icon">!</span>
+      <div class="ec-warning-bar">
+        <span class="ec-warning-icon">!</span>
         <span>{ui.warningLabel}</span>
       </div>
     </div>

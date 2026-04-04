@@ -6,41 +6,41 @@ const { ui } = Astro.props;
 const bd = JSON.parse(ui.beaufortDataJson) as { force: number; name: string; sea: string; effect: string; kn: string }[];
 ---
 <section id="speed-converter-root" class="speed-converter" data-ui={JSON.stringify(ui)}>
-  <div class="input-grid">
-    <div class="input-group">
+  <div class="sc-input-grid">
+    <div class="sc-input-group">
       <label for="val-kn">{ui.knLabel}</label>
-      <div class="input-wrapper"><input type="number" id="val-kn" placeholder="0.0" step="0.1" /></div>
+      <div class="sc-input-wrapper"><input type="number" id="val-kn" placeholder="0.0" step="0.1" /></div>
     </div>
-    <div class="input-group">
+    <div class="sc-input-group">
       <label for="val-kmh">{ui.kmhLabel}</label>
-      <div class="input-wrapper"><input type="number" id="val-kmh" placeholder="0.0" step="0.1" /></div>
+      <div class="sc-input-wrapper"><input type="number" id="val-kmh" placeholder="0.0" step="0.1" /></div>
     </div>
-    <div class="input-group">
+    <div class="sc-input-group">
       <label for="val-ms">{ui.msLabel}</label>
-      <div class="input-wrapper"><input type="number" id="val-ms" placeholder="0.0" step="0.1" /></div>
+      <div class="sc-input-wrapper"><input type="number" id="val-ms" placeholder="0.0" step="0.1" /></div>
     </div>
-    <div class="input-group">
+    <div class="sc-input-group">
       <label for="val-mph">{ui.mphLabel}</label>
-      <div class="input-wrapper"><input type="number" id="val-mph" placeholder="0.0" step="0.1" /></div>
+      <div class="sc-input-wrapper"><input type="number" id="val-mph" placeholder="0.0" step="0.1" /></div>
     </div>
   </div>
-  <div class="beaufort-summary">
-    <div class="force-circle" id="f-num">0</div>
-    <div class="force-text-box">
-      <h2 id="f-desc" class="force-name">{bd[0]?.name ?? ''}</h2>
-      <p id="f-effect" class="force-detail">{bd[0]?.effect ?? ''}</p>
+  <div class="sc-beaufort-summary">
+    <div class="sc-force-circle" id="f-num">0</div>
+    <div class="sc-force-text-box">
+      <h2 id="f-desc" class="sc-force-name">{bd[0]?.name ?? ''}</h2>
+      <p id="f-effect" class="sc-force-detail">{bd[0]?.effect ?? ''}</p>
     </div>
-    <div class="sea-state-box">
-      <div class="sea-text">
+    <div class="sc-sea-state-box">
+      <div class="sc-sea-text">
         <span class="label">{ui.seaStateLabel}</span>
         <p id="f-sea">{bd[0]?.sea ?? ''}</p>
       </div>
     </div>
   </div>
-  <div class="table-container">
+  <div class="sc-table-container">
     <h3>{ui.beaufortTitle}</h3>
-    <div class="scroll-area">
-      <table class="beaufort-table">
+    <div class="sc-scroll-area">
+      <table class="sc-beaufort-table">
         <thead>
           <tr>
             <th>{ui.forceLabel}</th><th>{ui.descriptionLabel}</th>
@@ -49,8 +49,8 @@ const bd = JSON.parse(ui.beaufortDataJson) as { force: number; name: string; sea
         </thead>
         <tbody>
           {bd.map((b) => (
-            <tr data-force={b.force} class="clickable-row">
-              <td><span class="force-tag">F{b.force}</span></td>
+            <tr data-force={b.force} class="sc-clickable-row">
+              <td><span class="sc-force-tag">F{b.force}</span></td>
               <td><strong>{b.name}</strong></td>
               <td>{b.kn}</td>
               <td>{b.sea}</td>
@@ -73,7 +73,7 @@ const bd = JSON.parse(ui.beaufortDataJson) as { force: number; name: string; sea
   const fDesc = document.getElementById('f-desc') as HTMLElement;
   const fEff = document.getElementById('f-effect') as HTMLElement;
   const fSea = document.getElementById('f-sea') as HTMLElement;
-  const rows = document.querySelectorAll<HTMLTableRowElement>('.clickable-row');
+  const rows = document.querySelectorAll<HTMLTableRowElement>('.sc-clickable-row');
   const KMH = 1.852, MS = 0.514444, MPH = 1.15078;
 
   function getForce(kn: number): number {

@@ -65,48 +65,48 @@ const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
   data-ui={JSON.stringify(ui)}
   data-beaufort={JSON.stringify(allBeaufort)}
 >
-  <div class="category-tabs" role="tablist">
-    <button class="tab-btn active" data-tab="distance" role="tab">{ui.distanceCategoryLabel}</button>
-    <button class="tab-btn" data-tab="speed" role="tab">{ui.speedCategoryLabel}</button>
-    <button class="tab-btn" data-tab="depth" role="tab">{ui.depthCategoryLabel}</button>
-    <button class="tab-btn" data-tab="pressure" role="tab">{ui.pressureCategoryLabel}</button>
+  <div class="nc-category-tabs" role="tablist">
+    <button class="nc-tab-btn active" data-tab="distance" role="tab">{ui.distanceCategoryLabel}</button>
+    <button class="nc-tab-btn" data-tab="speed" role="tab">{ui.speedCategoryLabel}</button>
+    <button class="nc-tab-btn" data-tab="depth" role="tab">{ui.depthCategoryLabel}</button>
+    <button class="nc-tab-btn" data-tab="pressure" role="tab">{ui.pressureCategoryLabel}</button>
   </div>
 
-  <div id="tab-distance" class="tab-panel active">
-    <div class="converter-card">
-      <div class="input-grid">
-        <div class="input-group">
+  <div id="tab-distance" class="nc-tab-panel active">
+    <div class="nc-converter-card">
+      <div class="nc-input-grid">
+        <div class="nc-input-group">
           <label>{ui.nmLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="dist-nm" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="dist-nm" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="dist-nm" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="dist-nm" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.kmLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="dist-km" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="dist-km" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="dist-km" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="dist-km" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.miLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="dist-mi" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="dist-mi" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="dist-mi" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="dist-mi" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.cableLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="dist-cable" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="dist-cable" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="dist-cable" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="dist-cable" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
@@ -115,82 +115,82 @@ const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
     </div>
   </div>
 
-  <div id="tab-speed" class="tab-panel">
-    <div class="converter-card">
-      <div class="input-grid">
-        <div class="input-group">
+  <div id="tab-speed" class="nc-tab-panel">
+    <div class="nc-converter-card">
+      <div class="nc-input-grid">
+        <div class="nc-input-group">
           <label>{ui.knLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="speed-kn" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="speed-kn" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="speed-kn" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="speed-kn" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.kmhLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="speed-kmh" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="speed-kmh" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="speed-kmh" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="speed-kmh" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.msLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="speed-ms" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="speed-ms" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="speed-ms" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="speed-ms" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.mphLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="speed-mph" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="speed-mph" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="speed-mph" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="speed-mph" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
       </div>
-      <div class="beaufort-card" id="beaufort-card">
-        <div class="beaufort-badge" id="beaufort-badge">0</div>
-        <div class="beaufort-info">
-          <span class="beaufort-name" id="beaufort-name"></span>
-          <span class="beaufort-sea" id="beaufort-sea"></span>
+      <div class="nc-beaufort-card" id="beaufort-card">
+        <div class="nc-beaufort-badge" id="beaufort-badge">0</div>
+        <div class="nc-beaufort-info">
+          <span class="nc-beaufort-name" id="beaufort-name"></span>
+          <span class="nc-beaufort-sea" id="beaufort-sea"></span>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="tab-depth" class="tab-panel">
-    <div class="converter-card">
-      <div class="input-grid">
-        <div class="input-group">
+  <div id="tab-depth" class="nc-tab-panel">
+    <div class="nc-converter-card">
+      <div class="nc-input-grid">
+        <div class="nc-input-group">
           <label>{ui.brozaLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="depth-braza" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="depth-braza" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="depth-braza" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="depth-braza" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.mLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="depth-m" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="depth-m" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="depth-m" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="depth-m" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.ftLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="depth-ft" step="any" placeholder="0" />
-            <button class="copy-btn" data-copy="depth-ft" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="depth-ft" step="any" placeholder="0" />
+            <button class="nc-copy-btn" data-copy="depth-ft" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
@@ -199,41 +199,41 @@ const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
     </div>
   </div>
 
-  <div id="tab-pressure" class="tab-panel">
-    <div class="converter-card">
-      <div class="input-grid">
-        <div class="input-group">
+  <div id="tab-pressure" class="nc-tab-panel">
+    <div class="nc-converter-card">
+      <div class="nc-input-grid">
+        <div class="nc-input-group">
           <label>{ui.mbarLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="pres-mbar" step="any" placeholder="1013" />
-            <button class="copy-btn" data-copy="pres-mbar" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="pres-mbar" step="any" placeholder="1013" />
+            <button class="nc-copy-btn" data-copy="pres-mbar" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.mmhgLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="pres-mmhg" step="any" placeholder="760" />
-            <button class="copy-btn" data-copy="pres-mmhg" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="pres-mmhg" step="any" placeholder="760" />
+            <button class="nc-copy-btn" data-copy="pres-mmhg" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.inhgLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="pres-inhg" step="any" placeholder="29.92" />
-            <button class="copy-btn" data-copy="pres-inhg" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="pres-inhg" step="any" placeholder="29.92" />
+            <button class="nc-copy-btn" data-copy="pres-inhg" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
         </div>
-        <div class="input-group">
+        <div class="nc-input-group">
           <label>{ui.atmLabel}</label>
-          <div class="input-wrapper">
-            <input class="elegant-input" type="number" id="pres-atm" step="any" placeholder="1" />
-            <button class="copy-btn" data-copy="pres-atm" title={ui.copyLabel}>
+          <div class="nc-input-wrapper">
+            <input class="nc-elegant-input" type="number" id="pres-atm" step="any" placeholder="1" />
+            <button class="nc-copy-btn" data-copy="pres-atm" title={ui.copyLabel}>
               <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"/></svg>
             </button>
           </div>
@@ -404,12 +404,12 @@ const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
     }
 
     private setupTabs() {
-      const tabs = section.querySelectorAll<HTMLButtonElement>('.tab-btn');
+      const tabs = section.querySelectorAll<HTMLButtonElement>('.nc-tab-btn');
       const lastCat = localStorage.getItem('nautical-last-category');
       if (lastCat) {
         tabs.forEach((t) => t.classList.remove('active'));
-        section.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
-        const active = section.querySelector<HTMLButtonElement>(`.tab-btn[data-tab="${lastCat}"]`);
+        section.querySelectorAll('.nc-tab-panel').forEach((p) => p.classList.remove('active'));
+        const active = section.querySelector<HTMLButtonElement>(`.nc-tab-btn[data-tab="${lastCat}"]`);
         if (active) {
           active.classList.add('active');
           section.querySelector(`#tab-${lastCat}`)?.classList.add('active');
@@ -418,7 +418,7 @@ const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
       tabs.forEach((btn) => {
         btn.addEventListener('click', () => {
           tabs.forEach((t) => t.classList.remove('active'));
-          section.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
+          section.querySelectorAll('.nc-tab-panel').forEach((p) => p.classList.remove('active'));
           btn.classList.add('active');
           const panel = section.querySelector(`#tab-${btn.dataset.tab}`);
           panel?.classList.add('active');
@@ -465,7 +465,7 @@ const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
     }
 
     private setupCopyButtons() {
-      section.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
+      section.querySelectorAll<HTMLButtonElement>('.nc-copy-btn').forEach((btn) => {
         btn.addEventListener('click', () => {
           const targetId = btn.dataset.copy;
           if (!targetId) return;

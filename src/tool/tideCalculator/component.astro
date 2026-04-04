@@ -10,76 +10,76 @@ const { ui } = Astro.props;
 ---
 
 <section id="tide-calculator" class="tide-calculator" data-ui={JSON.stringify(ui)}>
-    <div class="main-card">
-        <div class="calc-sidebar">
-            <div class="sidebar-header">
+    <div class="tc-main-card">
+        <div class="tc-calc-sidebar">
+            <div class="tc-sidebar-header">
                 <h3>{ui.parametersLabel}</h3>
                 <button id="invert-btn" title="Invertir ciclo">
                     <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18 18V22H16V18H13L17 14L21 18H18M8 6V2H10V6H13L9 10L5 6H8M3 15V13H5V15H3M3 11V9H5V11H3M3 7V5H5V7H3M19 11V9H21V11H19M19 15V13H21V15H19M19 19V17H21V19H19M3 19V17H5V19H3Z"/></svg>
                 </button>
             </div>
 
-            <div class="input-set">
-                <div class="input-block">
+            <div class="tc-input-set">
+                <div class="tc-input-block">
                     <label>{ui.highTideLabel}</label>
                     <div class="row">
                         <input type="time" id="high-tide-time" value="12:00" />
-                        <div class="unit-input">
+                        <div class="tc-unit-input">
                             <input type="number" id="high-tide-height" value="3.5" step="0.1" />
                             <span>m</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="input-block">
+                <div class="tc-input-block">
                     <label>{ui.lowTideLabel}</label>
                     <div class="row">
                         <input type="time" id="low-tide-time" value="06:00" />
-                        <div class="unit-input">
+                        <div class="tc-unit-input">
                             <input type="number" id="low-tide-height" value="0.5" step="0.1" />
                             <span>m</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="input-block featured">
+                <div class="tc-input-block tc-featured">
                     <label>{ui.targetTimeLabel}</label>
                     <input type="time" id="target-time" value="09:00" class="large-time" />
                 </div>
             </div>
         </div>
 
-        <div class="calc-content">
-            <div class="top-row">
-                <div class="result-display">
+        <div class="tc-calc-content">
+            <div class="tc-top-row">
+                <div class="tc-result-display">
                     <span class="label">{ui.estimatedHeightLabel}</span>
-                    <div class="value-box">
+                    <div class="tc-value-box">
                         <span id="target-value">--</span>
                         <small>{ui.metersLabel}</small>
                     </div>
-                    <span id="tide-status" class="status-indicator">--</span>
+                    <span id="tide-status" class="tc-status-indicator">--</span>
                 </div>
-                <div class="summary-info">
-                    <div class="stat">
-                        <span class="s-label">{ui.amplitudeLabel}</span>
+                <div class="tc-summary-info">
+                    <div class="tc-stat">
+                        <span class="tc-s-label">{ui.amplitudeLabel}</span>
                         <span id="amplitude-val">--</span>
                     </div>
-                    <div class="stat">
-                        <span class="s-label">{ui.durationLabel}</span>
+                    <div class="tc-stat">
+                        <span class="tc-s-label">{ui.durationLabel}</span>
                         <span id="duration-val">--</span>
                     </div>
                 </div>
             </div>
 
-            <div class="chart-area">
+            <div class="tc-chart-area">
                 <canvas id="tide-chart"></canvas>
             </div>
         </div>
     </div>
 
-    <div class="table-card">
+    <div class="tc-table-card">
         <h4>{ui.tableBreakdownLabel}</h4>
-        <div class="table-wrapper">
+        <div class="tc-table-wrapper">
             <table id="twelfths-table">
                 <thead>
                     <tr>
@@ -217,11 +217,11 @@ const { ui } = Astro.props;
                 const h = sH + (cum + (idx < 6 ? (doz[idx] ?? 0) : 0) * rem) * amp * mult;
                 this.displayValue.textContent = h.toFixed(2);
                 this.displayStatus.textContent = mult > 0 ? ui.statusUpLabel : ui.statusDownLabel;
-                this.displayStatus.className = `status-indicator ${mult > 0 ? 'up' : 'down'}`;
+                this.displayStatus.className = `tc-status-indicator ${mult > 0 ? 'up' : 'down'}`;
             } else {
                 this.displayValue.textContent = '--';
                 this.displayStatus.textContent = ui.statusOutOfRange;
-                this.displayStatus.className = 'status-indicator';
+                this.displayStatus.className = 'tc-status-indicator';
             }
         }
 

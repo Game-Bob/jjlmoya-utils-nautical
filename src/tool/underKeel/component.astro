@@ -10,95 +10,95 @@ const { ui } = Astro.props;
 ---
 
 <section id="under-keel-calculator" class="under-keel-calculator" data-ui={JSON.stringify(ui)}>
-  <div class="main-card">
-    <div class="calc-sidebar">
-      <div class="sidebar-header">
+  <div class="ukc-main-card">
+    <div class="ukc-calc-sidebar">
+      <div class="ukc-sidebar-header">
         <h3>{ui.parametersLabel}</h3>
       </div>
 
-      <div class="input-set">
-        <div class="input-block">
+      <div class="ukc-input-set">
+        <div class="ukc-input-block">
           <label>{ui.boatDraftLabel}</label>
-          <div class="unit-input">
+          <div class="ukc-unit-input">
             <input type="number" id="boat-draft" value="2.0" step="0.1" />
             <span>m</span>
           </div>
         </div>
 
-        <div class="input-block">
+        <div class="ukc-input-block">
           <label>{ui.chartDepthLabel}</label>
-          <div class="unit-input">
+          <div class="ukc-unit-input">
             <input type="number" id="chart-depth" value="1.5" step="0.1" />
             <span>m</span>
           </div>
         </div>
 
-        <div class="input-block">
+        <div class="ukc-input-block">
           <label>{ui.safetyMarginLabel}</label>
-          <div class="unit-input">
+          <div class="ukc-unit-input">
             <input type="number" id="safety-margin" value="0.5" step="0.1" />
             <span>m</span>
           </div>
         </div>
 
-        <div class="hr-divider"></div>
+        <div class="ukc-hr-divider"></div>
 
-        <div class="input-block">
+        <div class="ukc-input-block">
           <label>{ui.highTideLabel}</label>
-          <div class="row">
+          <div class="ukc-row">
             <input type="time" id="high-tide-time" value="12:00" />
-            <input type="number" id="high-tide-height" value="3.5" step="0.1" class="mini-num" />
+            <input type="number" id="high-tide-height" value="3.5" step="0.1" class="ukc-mini-num" />
           </div>
         </div>
 
-        <div class="input-block">
+        <div class="ukc-input-block">
           <label>{ui.lowTideLabel}</label>
-          <div class="row">
+          <div class="ukc-row">
             <input type="time" id="low-tide-time" value="06:00" />
-            <input type="number" id="low-tide-height" value="0.5" step="0.1" class="mini-num" />
+            <input type="number" id="low-tide-height" value="0.5" step="0.1" class="ukc-mini-num" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="calc-content">
-      <div class="top-row">
-        <div class="result-display">
+    <div class="ukc-calc-content">
+      <div class="ukc-top-row">
+        <div class="ukc-result-display">
           <span class="label">{ui.passWindowLabel}</span>
-          <div class="time-range">
+          <div class="ukc-time-range">
             <span id="pass-start">--:--</span>
-            <div class="arrow-sep">
+            <div class="ukc-arrow-sep">
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path fill="currentColor" d="M12,4L10.59,5.41L16.17,11H4V13H16.17L10.59,18.59L12,20L20,12L12,4Z"></path>
               </svg>
             </div>
             <span id="pass-end">--:--</span>
           </div>
-          <span id="pass-status" class="status-indicator">--</span>
+          <span id="pass-status" class="ukc-status-indicator">--</span>
         </div>
 
-        <div class="data-group">
-          <div class="stat-pill">
+        <div class="ukc-data-group">
+          <div class="ukc-stat-pill">
             <span>{ui.neededLabel}</span>
             <strong id="needed-depth">--</strong>
           </div>
-          <div class="stat-pill">
+          <div class="ukc-stat-pill">
             <span>{ui.tideRequiredLabel}</span>
             <strong id="needed-tide">--</strong>
           </div>
         </div>
       </div>
 
-      <div class="visual-container">
-        <div class="ocean-frame">
-          <div class="surface-line"></div>
-          <div class="ship-silhouette" id="viz-boat">
+      <div class="ukc-visual-container">
+        <div class="ukc-ocean-frame">
+          <div class="ukc-surface-line"></div>
+          <div class="ukc-ship-silhouette" id="viz-boat">
             <svg viewBox="0 0 100 40" preserveAspectRatio="none">
               <path fill="currentColor" d="M10,20 L90,20 L80,35 L20,35 Z"></path>
             </svg>
           </div>
-          <div class="water-volume" id="viz-water"></div>
-          <div class="sand-bottom">
+          <div class="ukc-water-volume" id="viz-water"></div>
+          <div class="ukc-sand-bottom">
             <span>{ui.bottomLabel}</span>
           </div>
         </div>
@@ -194,7 +194,7 @@ const { ui } = Astro.props;
 
     private updateUI(txt: string, s: string, e: string, cls: string) {
       this.statusInd.textContent = txt;
-      this.statusInd.className = `status-indicator ${cls}`;
+      this.statusInd.className = `ukc-status-indicator ${cls}`;
       this.startSpan.textContent = s;
       this.endSpan.textContent = e;
     }

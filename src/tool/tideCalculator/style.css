@@ -38,7 +38,7 @@
   --n-error: #fb7185;
 }
 
-.main-card {
+.tc-main-card {
   background: var(--n-bg);
   border: 1px solid var(--n-border);
   border-radius: 2rem;
@@ -49,12 +49,12 @@
 }
 
 @media (max-width: 850px) {
-  .main-card {
+  .tc-main-card {
     grid-template-columns: 1fr;
   }
 }
 
-.calc-sidebar {
+.tc-calc-sidebar {
   background: var(--n-primary);
   color: var(--n-primary-on);
   padding: 2rem;
@@ -63,13 +63,13 @@
   gap: 2rem;
 }
 
-.sidebar-header {
+.tc-sidebar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.sidebar-header h3 {
+.tc-sidebar-header h3 {
   font-size: 1.1rem;
   margin: 0;
   font-weight: 700;
@@ -96,25 +96,26 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-.input-set {
+.tc-input-set {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.input-block {
+.tc-input-block {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.input-block label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  opacity: 0.7;
+.tc-input-block label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--n-primary-on);
+  opacity: 0.85;
 }
 
-.input-block .row {
+.tc-input-block .row {
   display: flex;
   gap: 0.5rem;
 }
@@ -130,27 +131,28 @@
   outline: none;
 }
 
-.unit-input {
+.tc-unit-input {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.unit-input input {
+.tc-unit-input input {
   width: 80px;
   padding-right: 25px;
 }
 
-.unit-input span {
+.tc-unit-input span {
   position: absolute;
   right: 10px;
   font-size: 0.8rem;
   opacity: 0.5;
 }
 
-.featured label {
-  color: var(--n-accent);
+.tc-featured label {
+  color: var(--n-primary-on);
   opacity: 1;
+  font-size: 0.95rem;
 }
 
 .tide-calculator input[type='time'].large-time {
@@ -161,7 +163,7 @@
   text-align: center;
 }
 
-.calc-content {
+.tc-calc-content {
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -169,18 +171,18 @@
   background: var(--n-bg-muted);
 }
 
-.top-row {
+.tc-top-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.result-display {
+.tc-result-display {
   display: flex;
   flex-direction: column;
 }
 
-.result-display .label {
+.tc-result-display .label {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--n-text-muted);
@@ -188,7 +190,7 @@
   letter-spacing: 0.05em;
 }
 
-.value-box {
+.tc-value-box {
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
@@ -202,13 +204,13 @@
   line-height: 1;
 }
 
-.value-box small {
+.tc-value-box small {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--n-text-dim);
 }
 
-.status-indicator {
+.tc-status-indicator {
   padding: 0.4rem 1rem;
   border-radius: 2rem;
   font-size: 0.85rem;
@@ -219,41 +221,41 @@
   color: var(--n-text-dim);
 }
 
-.status-indicator.up {
+.tc-status-indicator.up {
   background: color-mix(in srgb, var(--n-success), transparent 80%);
   color: var(--n-success);
 }
 
-.status-indicator.down {
+.tc-status-indicator.down {
   background: color-mix(in srgb, var(--n-error), transparent 80%);
   color: var(--n-error);
 }
 
-.summary-info {
+.tc-summary-info {
   display: flex;
   gap: 1.5rem;
 }
 
-.stat {
+.tc-stat {
   display: flex;
   flex-direction: column;
   text-align: right;
 }
 
-.s-label {
+.tc-s-label {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--n-text-muted);
   text-transform: uppercase;
 }
 
-.stat span:last-child {
+.tc-stat span:last-child {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--n-text);
 }
 
-.chart-area {
+.tc-chart-area {
   background: var(--n-bg);
   border: 1px solid var(--n-border);
   border-radius: 1.5rem;
@@ -262,29 +264,29 @@
   position: relative;
 }
 
-.table-card {
+.tc-table-card {
   background: var(--n-bg);
   border: 1px solid var(--n-border);
   border-radius: 1.5rem;
   padding: 1.5rem;
 }
 
-.table-card h4 {
+.tc-table-card h4 {
   margin: 0 0 1rem;
   font-size: 1rem;
   color: var(--n-text-muted);
 }
 
-.table-wrapper {
+.tc-table-wrapper {
   overflow-x: auto;
 }
 
-table {
+.tide-calculator table {
   width: 100%;
   border-collapse: collapse;
 }
 
-th {
+.tide-calculator th {
   text-align: left;
   padding: 1rem;
   font-size: 0.8rem;
@@ -293,7 +295,7 @@ th {
   border-bottom: 2px solid var(--n-bg-muted);
 }
 
-td {
+.tide-calculator td {
   padding: 1rem;
   font-size: 0.95rem;
   color: var(--n-text-muted);
@@ -301,7 +303,7 @@ td {
 }
 
 @media (max-width: 640px) {
-  .top-row {
+  .tc-top-row {
     flex-direction: column;
     gap: 1.5rem;
   }
