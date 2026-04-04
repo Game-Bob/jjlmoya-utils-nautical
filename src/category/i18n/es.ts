@@ -39,7 +39,7 @@ const seo: CategoryLocaleContent['seo'] = [
       'Precision en la entrada de datos: Errores tipograficos minimos pueden alejarte kilometros de tu destino.',
       'Compatibilidad entre dispositivos: Permite sincronizar la planificacion en tablet con los sistemas del puente de mando.',
       'Respaldo ante fallos de hardware: Las apps web ligeras son un seguro si el plotter de abordo falla.',
-      'Planificacion de travesias (Passage Planning): Las calculadoras nauticas permiten estimar consumos y distancias con precision matematica.',
+      'Planificacion de travesias (Passage Planning): Las calculadorasnáuticas permiten estimar consumos y distancias con precision matematica.',
     ],
   },
   {

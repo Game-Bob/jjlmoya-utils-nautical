@@ -170,7 +170,7 @@ const seo: TideCalculatorLocaleContent['seo'] = [
       },
       {
         term: 'Cero de la carta (Datum)',
-        definition: 'Nivel de referencia a partir del cual se miden todas las profundidades en las cartas nauticas. Las sondas reales casi nunca son menores a las indicadas.',
+        definition: 'Nivel de referencia a partir del cual se miden todas las profundidades en las cartasnáuticas. Las sondas reales casi nunca son menores a las indicadas.',
       },
     ],
   },

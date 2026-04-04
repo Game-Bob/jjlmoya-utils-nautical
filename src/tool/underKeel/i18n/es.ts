@@ -100,7 +100,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'En las cartas nauticas, las profundidades indicadas (sondas) estan referidas al <strong>Cero de la Carta</strong> o Datum. Este nivel es, por convencion, el nivel mas bajo que puede alcanzar la marea en condiciones normales. La profundidad real que encontrara tu barco en un momento dado es la suma de esa sonda mas la altura de la marea en ese instante, calculada con la Regla de los Dozavos.',
+    html: 'En las cartasnáuticas, las profundidades indicadas (sondas) estan referidas al <strong>Cero de la Carta</strong> o Datum. Este nivel es, por convencion, el nivel mas bajo que puede alcanzar la marea en condiciones normales. La profundidad real que encontrara tu barco en un momento dado es la suma de esa sonda mas la altura de la marea en ese instante, calculada con la Regla de los Dozavos.',
   },
   {
     type: 'title',

@@ -174,12 +174,12 @@ const seo: EnduranceLocaleContent['seo'] = [
   },
   {
     type: 'title',
-    text: 'Diferencia entre Millas Nauticas (MN) y Kilometros',
+    text: 'Diferencia entre Millas Náuticas (MN) y Kilometros',
     level: 3,
   },
   {
     type: 'paragraph',
-    html: 'Una <strong>milla nautica</strong> equivale a 1.852 metros (1,852 km), y es la unidad de distancia universal en navegacion maritima y aerea. Esta basada en el arco de un minuto de grado geografico, lo que la hace ideal para la navegacion con cartas en coordenadas geograficas. La velocidad en millas nauticas por hora se denomina nudo (kn).',
+    html: 'Una <strong>milla nautica</strong> equivale a 1.852 metros (1,852 km), y es la unidad de distancia universal en navegacion maritima y aerea. Esta basada en el arco de un minuto de grado geografico, lo que la hace ideal para la navegacion con cartas en coordenadas geograficas. La velocidad en millasnáuticas por hora se denomina nudo (kn).',
   },
   {
     type: 'comparative',

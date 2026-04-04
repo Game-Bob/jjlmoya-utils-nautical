@@ -2,9 +2,9 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
 const slug = 'conversor-unidades-nauticas';
-const title = 'Conversor de Unidades Nauticas';
+const title = 'Conversor de Unidades Náuticas';
 const description =
-  'Convierte millas nauticas, nudos, brazas y presion atmosferica. Incluye escala Beaufort interactiva para velocidad del viento.';
+  'Convierte millasnáuticas, nudos, brazas y presion atmosferica. Incluye escala Beaufort interactiva para velocidad del viento.';
 
 const ui: NauticalConverterUI = {
   distanceCategoryLabel: 'Distancia',
@@ -44,7 +44,7 @@ const faq: NauticalConverterLocaleContent['faq'] = [
     answer: 'Un nudo equivale a 1.852 km/h, ya que un nudo es igual a una milla nautica por hora. Para convertir nudos a km/h basta con multiplicar por 1.852.',
   },
   {
-    question: '¿Por que se usan millas nauticas en lugar de kilometros en el mar?',
+    question: '¿Por que se usan millasnáuticas en lugar de kilometros en el mar?',
     answer: 'Porque la milla nautica corresponde a un minuto de arco de latitud, lo que facilita enormemente los calculos de navegacion con carta y compas. Un cambio de un minuto de latitud equivale exactamente a una milla nautica.',
   },
   {
@@ -57,7 +57,7 @@ const faq: NauticalConverterLocaleContent['faq'] = [
   },
   {
     question: '¿Cuantos pies tiene una braza?',
-    answer: 'Una braza equivale exactamente a 6 pies, es decir, 1.8288 metros. Se usa principalmente en paises anglosajones para expresar profundidades en cartas nauticas antiguas.',
+    answer: 'Una braza equivale exactamente a 6 pies, es decir, 1.8288 metros. Se usa principalmente en paises anglosajones para expresar profundidades en cartasnáuticas antiguas.',
   },
 ];
 
@@ -94,12 +94,12 @@ const bibliography: NauticalConverterLocaleContent['bibliography'] = [
 const seo: NauticalConverterLocaleContent['seo'] = [
   {
     type: 'title',
-    text: 'La importancia de la precision en las unidades nauticas',
+    text: 'La importancia de la precision en las unidadesnáuticas',
     level: 2,
   },
   {
     type: 'paragraph',
-    html: 'Navegar por el mar requiere un lenguaje propio, un sistema de medidas que ha sido refinado durante siglos de exploracion maritima. Las unidades nauticas no son un capricho historico, sino herramientas matematicamente coherentes con la geometria de la Tierra y las necesidades practicas del navegante.',
+    html: 'Navegar por el mar requiere un lenguaje propio, un sistema de medidas que ha sido refinado durante siglos de exploracion maritima. Las unidadesnáuticas no son un capricho historico, sino herramientas matematicamente coherentes con la geometria de la Tierra y las necesidades practicas del navegante.',
   },
   {
     type: 'paragraph',
@@ -107,11 +107,11 @@ const seo: NauticalConverterLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Cuando nos alejamos de la costa, la escasez de referencias visuales hace que la posicion calculada sea la unica realidad sobre la que podemos actuar. Saber convertir con exactitud entre millas nauticas, kilometros, nudos y metros no es opcional para el navegante responsable.',
+    html: 'Cuando nos alejamos de la costa, la escasez de referencias visuales hace que la posicion calculada sea la unica realidad sobre la que podemos actuar. Saber convertir con exactitud entre millasnáuticas, kilometros, nudos y metros no es opcional para el navegante responsable.',
   },
   {
     type: 'title',
-    text: '¿Por que usamos millas nauticas en lugar de kilometros?',
+    text: '¿Por que usamos millasnáuticas en lugar de kilometros?',
     level: 3,
   },
   {
@@ -146,7 +146,7 @@ const seo: NauticalConverterLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Sin embargo, la globalizacion y la tecnologia han introducido el uso constante de los metros en la mayoria de cartas y ecosondas modernas. El navegante actual debe saber moverse con soltura entre brazas, metros y pies, especialmente cuando consulta cartas nauticas antiguas o instrumentos calibrados en unidades imperiales.',
+    html: 'Sin embargo, la globalizacion y la tecnologia han introducido el uso constante de los metros en la mayoria de cartas y ecosondas modernas. El navegante actual debe saber moverse con soltura entre brazas, metros y pies, especialmente cuando consulta cartasnáuticas antiguas o instrumentos calibrados en unidades imperiales.',
   },
   {
     type: 'title',
