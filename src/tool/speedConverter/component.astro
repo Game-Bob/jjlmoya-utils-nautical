@@ -1,0 +1,125 @@
+---
+import './style.css';
+import type { SpeedConverterUI } from './index';
+interface Props { ui: SpeedConverterUI; }
+const { ui } = Astro.props;
+const bd = JSON.parse(ui.beaufortDataJson) as { force: number; name: string; sea: string; effect: string; kn: string }[];
+---
+<section id="speed-converter-root" class="speed-converter" data-ui={JSON.stringify(ui)}>
+  <div class="input-grid">
+    <div class="input-group">
+      <label for="val-kn">{ui.knLabel}</label>
+      <div class="input-wrapper"><input type="number" id="val-kn" placeholder="0.0" step="0.1" /></div>
+    </div>
+    <div class="input-group">
+      <label for="val-kmh">{ui.kmhLabel}</label>
+      <div class="input-wrapper"><input type="number" id="val-kmh" placeholder="0.0" step="0.1" /></div>
+    </div>
+    <div class="input-group">
+      <label for="val-ms">{ui.msLabel}</label>
+      <div class="input-wrapper"><input type="number" id="val-ms" placeholder="0.0" step="0.1" /></div>
+    </div>
+    <div class="input-group">
+      <label for="val-mph">{ui.mphLabel}</label>
+      <div class="input-wrapper"><input type="number" id="val-mph" placeholder="0.0" step="0.1" /></div>
+    </div>
+  </div>
+  <div class="beaufort-summary">
+    <div class="force-circle" id="f-num">0</div>
+    <div class="force-text-box">
+      <h2 id="f-desc" class="force-name">{bd[0]?.name ?? ''}</h2>
+      <p id="f-effect" class="force-detail">{bd[0]?.effect ?? ''}</p>
+    </div>
+    <div class="sea-state-box">
+      <div class="sea-text">
+        <span class="label">{ui.seaStateLabel}</span>
+        <p id="f-sea">{bd[0]?.sea ?? ''}</p>
+      </div>
+    </div>
+  </div>
+  <div class="table-container">
+    <h3>{ui.beaufortTitle}</h3>
+    <div class="scroll-area">
+      <table class="beaufort-table">
+        <thead>
+          <tr>
+            <th>{ui.forceLabel}</th><th>{ui.descriptionLabel}</th>
+            <th>{ui.knotsLabel}</th><th>{ui.effectLabel}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {bd.map((b) => (
+            <tr data-force={b.force} class="clickable-row">
+              <td><span class="force-tag">F{b.force}</span></td>
+              <td><strong>{b.name}</strong></td>
+              <td>{b.kn}</td>
+              <td>{b.sea}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<script>
+  const root = document.getElementById('speed-converter-root') as HTMLElement;
+  const ui = JSON.parse(root.dataset.ui as string);
+  const bd = JSON.parse(ui.beaufortDataJson) as { force: number; name: string; sea: string; effect: string; kn: string }[];
+  const iKn = document.getElementById('val-kn') as HTMLInputElement;
+  const iKmh = document.getElementById('val-kmh') as HTMLInputElement;
+  const iMs = document.getElementById('val-ms') as HTMLInputElement;
+  const iMph = document.getElementById('val-mph') as HTMLInputElement;
+  const fNum = document.getElementById('f-num') as HTMLElement;
+  const fDesc = document.getElementById('f-desc') as HTMLElement;
+  const fEff = document.getElementById('f-effect') as HTMLElement;
+  const fSea = document.getElementById('f-sea') as HTMLElement;
+  const rows = document.querySelectorAll<HTMLTableRowElement>('.clickable-row');
+  const KMH = 1.852, MS = 0.514444, MPH = 1.15078;
+
+  function getForce(kn: number): number {
+    const lim = [1,4,7,11,17,22,28,34,41,48,56,64];
+    for (let i = 0; i < lim.length; i++) { if (kn < (lim[i] ?? 999)) return i; }
+    return 12;
+  }
+
+  function renderBeaufort(kn: number) {
+    const f = getForce(kn);
+    const d = bd[f];
+    if (!d) return;
+    fNum.textContent = String(f);
+    fDesc.textContent = d.name;
+    fEff.textContent = d.effect;
+    fSea.textContent = d.sea;
+    rows.forEach((r) => r.classList.toggle('active', parseInt(r.dataset.force ?? '-1') === f));
+  }
+
+  function sync(skip: string, kn: number) {
+    if (skip !== 'val-kn') iKn.value = kn.toFixed(1);
+    if (skip !== 'val-kmh') iKmh.value = (kn * KMH).toFixed(1);
+    if (skip !== 'val-ms') iMs.value = (kn * MS).toFixed(2);
+    if (skip !== 'val-mph') iMph.value = (kn * MPH).toFixed(2);
+    renderBeaufort(kn);
+    localStorage.setItem('jjlmoya-nautical-speed', String(kn));
+  }
+
+  iKn.addEventListener('input', (e) => sync('val-kn', parseFloat((e.target as HTMLInputElement).value)||0));
+  iKmh.addEventListener('input', (e) => sync('val-kmh', (parseFloat((e.target as HTMLInputElement).value)||0)/KMH));
+  iMs.addEventListener('input', (e) => sync('val-ms', (parseFloat((e.target as HTMLInputElement).value)||0)/MS));
+  iMph.addEventListener('input', (e) => sync('val-mph', (parseFloat((e.target as HTMLInputElement).value)||0)/MPH));
+
+  rows.forEach((row) => {
+    row.addEventListener('click', () => {
+      const f = parseInt(row.dataset.force ?? '0');
+      const d = bd[f];
+      let kn = 0;
+      if (f === 12) { kn = 65; }
+      else if (f > 0) { kn = parseFloat(d?.kn.split('-')[0] ?? '0') || 0; }
+      iKn.value = String(kn);
+      sync('val-kn', kn);
+    });
+  });
+
+  const savedKn = parseFloat(localStorage.getItem('jjlmoya-nautical-speed') ?? '0') || 0;
+  iKn.value = savedKn > 0 ? String(savedKn) : '';
+  sync('val-kn', savedKn);
+</script>

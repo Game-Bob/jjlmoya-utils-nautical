@@ -405,6 +405,16 @@ const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
 
     private setupTabs() {
       const tabs = section.querySelectorAll<HTMLButtonElement>('.tab-btn');
+      const lastCat = localStorage.getItem('nautical-last-category');
+      if (lastCat) {
+        tabs.forEach((t) => t.classList.remove('active'));
+        section.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
+        const active = section.querySelector<HTMLButtonElement>(`.tab-btn[data-tab="${lastCat}"]`);
+        if (active) {
+          active.classList.add('active');
+          section.querySelector(`#tab-${lastCat}`)?.classList.add('active');
+        }
+      }
       tabs.forEach((btn) => {
         btn.addEventListener('click', () => {
           tabs.forEach((t) => t.classList.remove('active'));
@@ -412,6 +422,7 @@ const allBeaufort = { es: beaufortEs, en: beaufortEn, fr: beaufortFr };
           btn.classList.add('active');
           const panel = section.querySelector(`#tab-${btn.dataset.tab}`);
           panel?.classList.add('active');
+          localStorage.setItem('nautical-last-category', btn.dataset.tab ?? '');
         });
       });
     }

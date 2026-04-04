@@ -1,6 +1,10 @@
 export * from './tool/tideCalculator';
 export * from './tool/underKeel';
 export * from './tool/nauticalConverter';
+export * from './tool/sailArea';
+export * from './tool/speedConverter';
+export * from './tool/endurance';
+export * from './category';
 
 export type {
   KnownLocale,

@@ -1,0 +1,310 @@
+---
+import './style.css';
+import type { EnduranceUI } from './index';
+
+interface Props {
+  ui: EnduranceUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section id="endurance-calculator" class="endurance-calculator" data-ui={JSON.stringify(ui)}>
+  <div class="main-container">
+    <aside class="sidebar-inputs">
+      <div class="compact-group">
+        <label>{ui.tankCapacityLabel}</label>
+        <div class="dual-row">
+          <div>
+            <span class="sub-label">{ui.mainTankLabel}</span>
+            <div class="field-wrapper">
+              <span class="field-icon icon-fuel"></span>
+              <input type="number" id="tank1" class="compact-input" value="200" min="0" step="10" />
+              <span class="unit-tag">L</span>
+            </div>
+          </div>
+          <div>
+            <span class="sub-label">{ui.auxTankLabel}</span>
+            <div class="field-wrapper">
+              <span class="field-icon icon-fuel"></span>
+              <input type="number" id="tank2" class="compact-input" value="0" min="0" step="10" />
+              <span class="unit-tag">L</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="compact-group">
+        <label>{ui.currentFuelLabel}</label>
+        <div class="field-wrapper">
+          <span class="field-icon icon-bucket"></span>
+          <input type="number" id="f-current" class="compact-input" value="150" min="0" step="5" />
+          <span class="unit-tag">L</span>
+        </div>
+      </div>
+
+      <div class="compact-group">
+        <label>{ui.seaConditionsLabel}</label>
+        <div class="field-wrapper">
+          <span class="field-icon icon-wave"></span>
+          <select id="sea-s" class="compact-select">
+            <option value="1.0">{ui.seaCalm}</option>
+            <option value="1.15">{ui.seaLight}</option>
+            <option value="1.30">{ui.seaModerate}</option>
+            <option value="1.60">{ui.seaStorm}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="compact-group">
+        <label>{ui.consumptionLabel}</label>
+        <div class="field-wrapper">
+          <span class="field-icon icon-fire"></span>
+          <input type="number" id="f-cons" class="compact-input" value="25" min="0.1" step="1" />
+          <span class="unit-tag">L/h</span>
+        </div>
+      </div>
+
+      <div class="compact-group">
+        <label>{ui.cruiseSpeedLabel}</label>
+        <div class="field-wrapper">
+          <span class="field-icon icon-wind"></span>
+          <input type="number" id="v-cruiser" class="compact-input" value="8" min="0.1" step="0.5" />
+          <span class="unit-tag">kn</span>
+        </div>
+      </div>
+
+      <div class="compact-group">
+        <label>{ui.reserveLabel}</label>
+        <div class="field-wrapper">
+          <span class="field-icon icon-shield"></span>
+          <input type="number" id="f-res" class="compact-input" value="20" min="0" max="50" step="5" />
+          <span class="unit-tag">%</span>
+        </div>
+      </div>
+
+      <div class="compact-group">
+        <label>{ui.fuelPriceLabel}</label>
+        <div class="field-wrapper">
+          <span class="field-icon">€</span>
+          <input type="number" id="f-price" class="compact-input" value="1.8" min="0" step="0.05" />
+          <span class="unit-tag">€/L</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="dashboard-panel">
+      <div class="hero-display">
+        <div class="hero-top">
+          <div>
+            <div class="display-title">{ui.maxRangeLabel}</div>
+            <div class="main-value-row">
+              <span class="main-value" id="out-dist">--</span>
+              <span class="main-unit">MN</span>
+            </div>
+          </div>
+          <div class="fuel-badge" id="out-fuel-pct">--%</div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+          <div class="marker" id="reserve-marker" style="left: 80%"></div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">{ui.realPerformanceLabel}</span>
+          <span class="stat-value" id="out-perf">--</span>
+          <span class="stat-label">L/MN</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">{ui.hoursLabel}</span>
+          <span class="stat-value" id="out-hours">--</span>
+          <span class="stat-label">h</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">{ui.safeMilesLabel}</span>
+          <span class="stat-value danger" id="out-safe">--</span>
+          <span class="stat-label">MN</span>
+        </div>
+        <div class="stat-card hidden" id="card-cost">
+          <span class="stat-label">{ui.tankValueLabel}</span>
+          <span class="stat-value" id="out-cost">--</span>
+          <span class="stat-label">€</span>
+        </div>
+      </div>
+
+      <div class="inverter-card">
+        <div class="inverter-header">{ui.inverseCalcLabel}</div>
+        <div class="inverter-row">
+          <div>
+            <div class="inverter-label">{ui.desiredDistLabel}</div>
+            <div class="field-wrapper">
+              <input type="number" id="inv-dist" class="compact-input" value="50" min="0" step="5" />
+              <span class="unit-tag">MN</span>
+            </div>
+          </div>
+          <div>
+            <div class="inverter-label">{ui.minFuelLabel}</div>
+            <div class="inverter-value" id="inv-res">-- <span class="inverter-unit">L</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="warning-bar">
+        <span class="warning-icon">!</span>
+        <span>{ui.warningLabel}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const section = document.getElementById('endurance-calculator') as HTMLElement;
+  JSON.parse(section.dataset.ui as string);
+
+  const SEA_FACTORS = [1.0, 1.15, 1.30, 1.60];
+
+  class EnduranceCalculator {
+    private t1: HTMLInputElement;
+    private t2: HTMLInputElement;
+    private fCur: HTMLInputElement;
+    private seaSel: HTMLSelectElement;
+    private fCons: HTMLInputElement;
+    private vCruise: HTMLInputElement;
+    private fRes: HTMLInputElement;
+    private fPrice: HTMLInputElement;
+    private invDist: HTMLInputElement;
+
+    constructor() {
+      this.t1 = document.getElementById('tank1') as HTMLInputElement;
+      this.t2 = document.getElementById('tank2') as HTMLInputElement;
+      this.fCur = document.getElementById('f-current') as HTMLInputElement;
+      this.seaSel = document.getElementById('sea-s') as HTMLSelectElement;
+      this.fCons = document.getElementById('f-cons') as HTMLInputElement;
+      this.vCruise = document.getElementById('v-cruiser') as HTMLInputElement;
+      this.fRes = document.getElementById('f-res') as HTMLInputElement;
+      this.fPrice = document.getElementById('f-price') as HTMLInputElement;
+      this.invDist = document.getElementById('inv-dist') as HTMLInputElement;
+      this.init();
+    }
+
+    private init() {
+      const inputs = [this.t1, this.t2, this.fCur, this.fCons, this.vCruise, this.fRes, this.fPrice];
+      inputs.forEach((el) => el.addEventListener('input', () => { this.calculate(); this.save(); }));
+      this.seaSel.addEventListener('change', () => { this.calculate(); this.save(); });
+      this.invDist.addEventListener('input', () => { this.updateInverse(); this.save(); });
+      this.load();
+    }
+
+    private save() {
+      localStorage.setItem('jjlmoya-nautical-endurance', JSON.stringify({
+        t1: this.t1.value, t2: this.t2.value, fuel: this.fCur.value,
+        cons: this.fCons.value, speed: this.vCruise.value,
+        state: this.seaSel.value, res: this.fRes.value,
+        price: this.fPrice.value, inv: this.invDist.value,
+      }));
+    }
+
+    private restoreInputs(d: Record<string, string>) {
+      if (d.t1) this.t1.value = d.t1;
+      if (d.t2) this.t2.value = d.t2;
+      if (d.fuel) this.fCur.value = d.fuel;
+      if (d.cons) this.fCons.value = d.cons;
+    }
+
+    private restoreSettings(d: Record<string, string>) {
+      if (d.speed) this.vCruise.value = d.speed;
+      if (d.state) this.seaSel.value = d.state;
+      if (d.res) this.fRes.value = d.res;
+      if (d.price) this.fPrice.value = d.price;
+      if (d.inv) this.invDist.value = d.inv;
+    }
+
+    private restoreFields(d: Record<string, string>) {
+      this.restoreInputs(d);
+      this.restoreSettings(d);
+    }
+
+    private load() {
+      try {
+        const raw = localStorage.getItem('jjlmoya-nautical-endurance');
+        if (raw) this.restoreFields(JSON.parse(raw) as Record<string, string>);
+      } catch { }
+      this.calculate();
+    }
+
+    private readTanks() {
+      return {
+        tank1: parseFloat(this.t1.value) || 0,
+        tank2: parseFloat(this.t2.value) || 0,
+        fuelCurrent: parseFloat(this.fCur.value) || 0,
+      };
+    }
+
+    private readInputs() {
+      const tanks = this.readTanks();
+      return {
+        ...tanks,
+        seaFactor: parseFloat(this.seaSel.value) || 1.0,
+        consumption: parseFloat(this.fCons.value) || 0,
+        speed: parseFloat(this.vCruise.value) || 0,
+        reserve: parseFloat(this.fRes.value) || 0,
+        price: parseFloat(this.fPrice.value) || 0,
+      };
+    }
+
+    private calculate() {
+      const p = this.readInputs();
+      const realCons = p.consumption * p.seaFactor;
+      const lpmn = p.speed > 0 ? realCons / p.speed : 0;
+      const hTotal = realCons > 0 ? p.fuelCurrent / realCons : 0;
+      const maxDist = hTotal * p.speed;
+      const safeFuel = p.fuelCurrent * (1 - p.reserve / 100);
+      const safeHours = realCons > 0 ? safeFuel / realCons : 0;
+      const safeDist = safeHours * p.speed;
+      const tCap = p.tank1 + p.tank2;
+      const fuelPct = tCap > 0 ? (p.fuelCurrent / tCap) * 100 : 0;
+      this.updateDisplay({ maxDist, safeHours, safeDist, lpmn, fuelPct, price: p.price, fuelCurrent: p.fuelCurrent, reserve: p.reserve });
+      this.updateInverse();
+    }
+
+    private updateDisplay(r: { maxDist: number; safeHours: number; safeDist: number; lpmn: number; fuelPct: number; price: number; fuelCurrent: number; reserve: number }) {
+      this.setText('out-dist', r.maxDist.toFixed(1));
+      this.setText('out-fuel-pct', `${r.fuelPct.toFixed(0)}%`);
+      this.setText('out-perf', r.lpmn.toFixed(2));
+      this.setText('out-hours', r.safeHours.toFixed(1));
+      this.setText('out-safe', r.safeDist.toFixed(1));
+      const fill = document.getElementById('progress-fill') as HTMLElement;
+      fill.style.width = `${Math.min(100, r.fuelPct)}%`;
+      const marker = document.getElementById('reserve-marker') as HTMLElement;
+      marker.style.left = `${Math.max(0, Math.min(100, 100 - r.reserve))}%`;
+      const cost = r.price > 0 ? r.fuelCurrent * r.price : 0;
+      const cardCost = document.getElementById('card-cost') as HTMLElement;
+      if (r.price > 0) {
+        cardCost.classList.remove('hidden');
+        this.setText('out-cost', `${cost.toFixed(2)} €`);
+      } else {
+        cardCost.classList.add('hidden');
+      }
+    }
+
+    private updateInverse() {
+      const p = this.readInputs();
+      const realCons = p.consumption * p.seaFactor;
+      const lpmn = p.speed > 0 ? realCons / p.speed : 0;
+      const dist = parseFloat(this.invDist.value) || 0;
+      const reserveFactor = 1 - p.reserve / 100;
+      const needed = reserveFactor > 0 ? (dist * lpmn) / reserveFactor : 0;
+      this.setText('inv-res', `${needed.toFixed(1)} L`);
+    }
+
+    private setText(id: string, val: string) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    }
+  }
+
+  void SEA_FACTORS;
+  new EnduranceCalculator();
+</script>

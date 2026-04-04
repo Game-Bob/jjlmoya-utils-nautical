@@ -1,4 +1,19 @@
 .nautical-converter {
+  --n-bg: #fff;
+  --n-bg-muted: #f1f5f9;
+  --n-text: #0f172a;
+  --n-text-muted: #475569;
+  --n-text-dim: #64748b;
+  --n-border: #e2e8f0;
+  --n-shadow: rgba(0, 0, 0, 0.05);
+  --n-primary: #3b82f6;
+  --n-primary-on: #fff;
+  --n-accent: #6366f1;
+  --n-cyan: #0891b2;
+  --n-success: #10b981;
+  --n-warning: #f59e0b;
+  --n-error: #f43f5e;
+
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -6,12 +21,29 @@
   margin: 0 auto;
 }
 
+.theme-dark .nautical-converter {
+  --n-bg: #0f172a;
+  --n-bg-muted: #1e293b;
+  --n-text: #f8fafc;
+  --n-text-muted: #94a3b8;
+  --n-text-dim: #64748b;
+  --n-border: #334155;
+  --n-shadow: rgba(0, 0, 0, 0.3);
+  --n-primary: #60a5fa;
+  --n-primary-on: #fff;
+  --n-accent: #818cf8;
+  --n-cyan: #22d3ee;
+  --n-success: #34d399;
+  --n-warning: #fbbf24;
+  --n-error: #fb7185;
+}
+
 .category-tabs {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--n-bg);
+  border: 1px solid var(--n-border);
   border-radius: 1rem;
   padding: 0.5rem;
 }
@@ -23,7 +55,7 @@
   border: none;
   border-radius: 0.7rem;
   background: transparent;
-  color: var(--text-muted);
+  color: var(--n-text-muted);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -31,13 +63,13 @@
 }
 
 .tab-btn:hover {
-  background: var(--bg-muted);
-  color: var(--text-base);
+  background: var(--n-bg-muted);
+  color: var(--n-text);
 }
 
 .tab-btn.active {
-  background: var(--primary-base);
-  color: var(--text-on-primary);
+  background: var(--n-primary);
+  color: var(--n-primary-on);
 }
 
 .tab-panel {
@@ -49,11 +81,11 @@
 }
 
 .converter-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--n-bg);
+  border: 1px solid var(--n-border);
   border-radius: 1.5rem;
   padding: 2rem;
-  box-shadow: 0 8px 24px var(--shadow-base);
+  box-shadow: 0 8px 24px var(--n-shadow);
 }
 
 .input-grid {
@@ -71,7 +103,7 @@
 .input-group label {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--n-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -84,9 +116,9 @@
 
 .elegant-input {
   width: 100%;
-  background: var(--bg-surface);
-  color: var(--text-base);
-  border: 2px solid var(--border-color);
+  background: var(--n-bg);
+  color: var(--n-text);
+  border: 2px solid var(--n-border);
   border-radius: 0.8rem;
   padding: 0.75rem 2.8rem 0.75rem 1rem;
   font-size: 1rem;
@@ -95,7 +127,7 @@
 }
 
 .elegant-input:focus {
-  border-color: var(--cyan);
+  border-color: var(--n-cyan);
 }
 
 .copy-btn {
@@ -104,7 +136,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--cyan);
+  color: var(--n-cyan);
   padding: 0.2rem;
   display: flex;
   align-items: center;
@@ -118,8 +150,8 @@
 
 .beaufort-card {
   margin-top: 1.5rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--n-bg);
+  border: 1px solid var(--n-border);
   border-radius: 1rem;
   padding: 1.2rem 1.5rem;
   display: none;
@@ -140,7 +172,7 @@
   border-radius: 50%;
   font-size: 1.6rem;
   font-weight: 900;
-  color: var(--text-on-primary);
+  color: var(--n-primary-on);
   flex-shrink: 0;
 }
 
@@ -153,12 +185,12 @@
 .beaufort-name {
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--text-base);
+  color: var(--n-text);
 }
 
 .beaufort-sea {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--n-text-muted);
 }
 
 @media (max-width: 600px) {
