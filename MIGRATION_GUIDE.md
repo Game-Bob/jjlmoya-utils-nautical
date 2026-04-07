@@ -439,6 +439,61 @@ btn.addEventListener('click', async () => {
 
 Cada libreria tiene una categoria que agrupa sus tools y un `data.ts` para el consumidor.
 
+### Estructura completa de category/
+
+```
+src/category/
+  index.ts       ← NauticalCategoryEntry con los tools y i18n loaders
+  seo.astro      ← componente SEO que renderiza el seo[] de i18n
+  i18n/
+    es.ts
+    en.ts
+    fr.ts        ← CategoryLocaleContent: slug, title, description, seo[]
+```
+
+### category/seo.astro — patron exacto
+
+A diferencia de los tools, la categoria NO tiene `component.astro` ni `bibliography.astro`.
+Solo necesita `seo.astro` para que el host renderice el contenido SEO de la categoria:
+
+```astro
+---
+import { SEOTitle, SEOTip, SEOArticle, SEOList } from '@jjlmoya/utils-shared';
+import { miCategoria } from './index';
+import type { KnownLocale } from '../types';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'es' } = Astro.props;
+const content = await miCategoria.i18n[locale]?.();
+if (!content) return null;
+
+const { seo } = content;
+---
+
+<SEOArticle>
+  {seo.map((section: any) => {
+    switch (section.type) {
+      case 'title':
+        return <SEOTitle title={section.text} level={section.level || 2} />;
+      case 'paragraph':
+        return <p set:html={section.html} />;
+      case 'list':
+        return <SEOList items={section.items} />;
+      case 'tip':
+        return <SEOTip title={section.title}><Fragment set:html={section.html} /></SEOTip>;
+      default:
+        return null;
+    }
+  })}
+</SEOArticle>
+```
+
+Añade solo los tipos de seccion que uses en tus i18n. Si añades `stats`, `table`, etc.,
+importa el componente correspondiente de `@jjlmoya/utils-shared` y añade el case.
+
 ### category/index.ts — patron exacto
 
 ```ts
@@ -475,6 +530,23 @@ export const content: CategoryLocaleContent = {
     { type: 'paragraph', html: 'Contenido SEO...' },
   ],
 };
+```
+
+### src/index.ts — exportar el SEO de categoria
+
+```ts
+export * from './category';
+export { default as MiCategoriaSEO } from './category/seo.astro';
+```
+
+El consumidor lo importa como componente Astro normal:
+
+```ts
+import { MiCategoriaSEO } from '@jjlmoya/utils-mi-categoria';
+```
+
+```astro
+<MiCategoriaSEO locale={locale} />
 ```
 
 ### data.ts — exports publicos para el consumidor
@@ -537,6 +609,12 @@ Puedes pasarle este checklist a Claude en la proxima sesion junto con el codigo.
 - [ ] `save()` solo en event listeners — nunca en `calculate()` ni en `load()`
 - [ ] Key localStorage unica: `jjlmoya-CATEGORIA-NOMBRE`
 - [ ] Dependencias opcionales con `import()` dinamico dentro del handler
+
+### Categoria
+- [ ] `src/category/index.ts` tiene todos los tools en el array `tools: []`
+- [ ] `src/category/seo.astro` creado con los tipos de seccion que usa el i18n
+- [ ] `src/index.ts` exporta `{ default as MiCategoriaSEO } from './category/seo.astro'`
+- [ ] `src/data.ts` exporta la categoria, todos los tools y todos los tipos
 
 ### Final
 - [ ] `npm run lint` → 0 errores, 0 warnings
