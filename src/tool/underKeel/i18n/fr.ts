@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
 const slug = 'calculateur-passage-haut-fond';
-const title = 'Calculateur de Passage sur Haut-Fond';
+const title = 'Calculateur de Passage sur Haut Fond';
 const description =
   "Calculez la feneˆtre de temps sure pour franchir des barres, chenaux ou points a tirant d'eau restreint. Entrez le tirant d'eau de votre bateau, la sonde de la carte et les donnees de maree pour obtenir l'intervalle de passage sur.";
 
@@ -86,7 +86,7 @@ const bibliography: UnderKeelLocaleContent['bibliography'] = [
 const seo: UnderKeelLocaleContent['seo'] = [
   {
     type: 'title',
-    text: 'Passage sur Haut-Fond : Naviguer en Securite au-dessus des Obstacles',
+    text: 'Passage sur Haut Fond : Naviguer en Securite au-dessus des Obstacles',
     level: 2,
   },
   {

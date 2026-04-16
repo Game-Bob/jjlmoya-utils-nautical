@@ -1,0 +1,176 @@
+import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
+import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
+
+const slug = 'ukc-kalkulator-ru';
+const title = 'Калькулятор запаса глубины под килем UKC';
+const description =
+  'Рассчитайте безопасное временное окно для прохода через мели, каналы или точки с ограниченной осадкой. Введите осадку судна, глубину по карте и данные о приливах.';
+
+const ui: UnderKeelUI = {
+  parametersLabel: 'Параметры',
+  boatDraftLabel: 'Осадка судна',
+  chartDepthLabel: 'Глубина по карте',
+  safetyMarginLabel: 'Запас безопасности',
+  highTideLabel: 'Полная вода',
+  lowTideLabel: 'Малая вода',
+  metersLabel: 'метров',
+  passWindowLabel: 'Окно прохода',
+  neededLabel: 'Необходимая глубина',
+  tideRequiredLabel: 'Минимальный уровень прилива',
+  statusNeverLabel: 'Недостаточно глубины в этом цикле',
+  statusAlwaysLabel: 'Безопасно на протяжении всего цикла',
+  statusFromLabel: 'Проход возможен с:',
+  statusUntilLabel: 'Проход возможен до:',
+  bottomLabel: 'ДНО',
+  faqTitle: 'Часто задаваемые вопросы',
+  bibliographyTitle: 'Библиография',
+};
+
+const faq: UnderKeelLocaleContent['faq'] = [
+  {
+    question: 'Что такое расчет запаса глубины под килем (under-keel clearance)?',
+    answer: 'Это расчет момента, когда в критической точке (например, на мели или в узком канале) будет достаточно глубины для безопасного прохода судна с учетом его осадки.',
+  },
+  {
+    question: 'Какой запас безопасности рекомендуется?',
+    answer: 'Для прогулочных судов обычно рекомендуется минимальный запас от 0,5 до 1 метра сверх осадки судна. Этот запас компенсирует возможные ошибки в расчетах приливов или изменения давления.',
+  },
+  {
+    question: 'Как волнение влияет на запас глубины под килем?',
+    answer: 'Волнение вызывает вертикальные колебания корпуса. В нижней точке волны судно находится ближе к дну, чем в состоянии покоя. При проходе участков с волнением запас должен быть увеличен.',
+  },
+  {
+    question: 'Что такое глубина по карте (chart sounding)?',
+    answer: 'Это минимальная глубина в точке при уровне моря, соответствующем «нулю глубин» карты (Chart Datum). Она суммируется с высотой прилива для получения полной доступной глубины.',
+  },
+  {
+    question: 'Что означает подчеркнутое значение глубины на карте?',
+    answer: 'Это означает, что данная точка осушается при «нуле глубин». Вам потребуется достаточная высота прилива, чтобы пройти над ней.',
+  },
+  {
+    question: 'Что такое эффект просадки (Squat effect)?',
+    answer: 'Это гидродинамическое явление, при котором судно, идущее по мелководному каналу, стремится «сесть» глубже относительно ватерлинии. Чем быстрее вы идете, тем меньше воды остается под килем.',
+  },
+];
+
+const howTo: UnderKeelLocaleContent['howTo'] = [
+  {
+    name: 'Определите осадку и запас',
+    text: 'Измерьте осадку вашего судна в максимальной точке и добавьте разумный запас безопасности (например, 0,5 м).',
+  },
+  {
+    name: 'Найдите глубину по карте',
+    text: 'Найдите значение глубины для критической точки вашего маршрута. Учтите характер дна (песок или камни).',
+  },
+  {
+    name: 'Введите данные о приливе',
+    text: 'Используйте время и высоту полной и малой воды из ближайшего официального ежегодника приливов.',
+  },
+  {
+    name: 'Проверьте окно прохода',
+    text: 'Инструмент покажет точный временной интервал, в течение которого глубина будет достаточной для безопасной навигации.',
+  },
+];
+
+const bibliography: UnderKeelLocaleContent['bibliography'] = [
+  {
+    name: 'Ministerio de Transportes - Recreational Boating',
+    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
+  },
+  {
+    name: 'Portos de Galicia - Tide Tables',
+    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
+  },
+];
+
+const seo: UnderKeelLocaleContent['seo'] = [
+  {
+    type: 'title',
+    text: 'Запас глубины под килем: безопасная навигация на мелководье',
+    level: 2,
+  },
+  {
+    type: 'paragraph',
+    html: 'Планирование перехода не ограничивается прокладкой курса. Для прибрежного навигатора одним из важнейших расчетов является <strong>запас глубины под килем (UKC)</strong>: знание того, в какое время будет достаточно глубины для прохода критической точки без посадки на мель.',
+  },
+  {
+    type: 'title',
+    text: 'Глубина по карте и прилив',
+    level: 3,
+  },
+  {
+    type: 'paragraph',
+    html: 'На морских картах глубины привязаны к <strong>«нулю глубин» (Chart Datum)</strong>. Реальная глубина, которую встретит ваше судно, — это сумма этой глубины и высоты прилива в данный момент.',
+  },
+  {
+    type: 'title',
+    text: 'Элементы расчета: Осадка и Запас',
+    level: 3,
+  },
+  {
+    type: 'list',
+    items: [
+      { term: 'Максимальная осадка в грузу', definition: 'Глубина, которой достигает самая нижняя точка судна (киль) при полной загрузке.' },
+      { term: 'Глубина по карте', definition: 'Число на карте для точки, в которой вы хотите пройти.' },
+      { term: 'Запас безопасности', definition: 'Дополнительное свободное пространство (не менее 0,5 – 1 метра) поверх осадки.' },
+    ],
+  },
+  {
+    type: 'title',
+    text: 'Факторы, влияющие на проход',
+    level: 3,
+  },
+  {
+    type: 'table',
+    headers: ['Фактор', 'Эффект', 'Рекомендация'],
+    rows: [
+      ['<strong>Волнение</strong>', 'Уменьшает слой воды под корпусом', 'Значительно увеличьте запас безопасности'],
+      ['<strong>Эффект просадки</strong>', 'Увеличивает осадку за счет присасывания', 'Снизьте скорость на критических участках'],
+      ['<strong>Песчаное дно</strong>', 'Глубина меняется после штормов', 'Держите эхолот включенным'],
+    ],
+  },
+  {
+    type: 'tip',
+    title: 'Совет по навигации',
+    html: 'Если окно прохода слишком узкое или погода ухудшается, самым мудрым решением будет подождать, пока прилив не поднимется выше.',
+  },
+];
+
+const schemas: UnderKeelLocaleContent['schemas'] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: title,
+    description,
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  } as WithContext<SoftwareApplication>,
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  } as WithContext<FAQPage>,
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `Как пользоваться: ${title}`,
+    step: howTo.map((s) => ({ '@type': 'HowToStep', name: s.name, text: s.text })),
+  } as WithContext<HowTo>,
+];
+
+export const content: UnderKeelLocaleContent = {
+  slug,
+  title,
+  description,
+  ui,
+  seo,
+  faq,
+  bibliography,
+  howTo,
+  schemas,
+};

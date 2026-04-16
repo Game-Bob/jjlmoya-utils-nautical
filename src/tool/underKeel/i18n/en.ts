@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dt
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
 const slug = 'under-keel-clearance-calculator';
-const title = 'Under-Keel Clearance Calculator';
+const title = 'Under Keel Clearance Calculator';
 const description =
   'Calculate the safe time window to cross bars, channels or draft-restricted points. Enter your boat draft, chart depth and tidal data to get the exact safe passage interval.';
 
@@ -86,7 +86,7 @@ const bibliography: UnderKeelLocaleContent['bibliography'] = [
 const seo: UnderKeelLocaleContent['seo'] = [
   {
     type: 'title',
-    text: 'Under-Keel Clearance: Navigating Safely Over Shoals',
+    text: 'Under Keel Clearance: Navigating Safely Over Shoals',
     level: 2,
   },
   {

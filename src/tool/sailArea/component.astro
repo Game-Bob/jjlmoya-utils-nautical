@@ -373,7 +373,7 @@ const { ui } = Astro.props;
   function buildPdfHtml(): string {
     const date = new Date().toLocaleDateString();
     const header = `<div style="border-bottom:3px solid #003b73;padding-bottom:20px;margin-bottom:30px;display:flex;justify-content:space-between;align-items:flex-end;">
-      <div><h1 style="margin:0;color:#003b73;font-size:28px;text-transform:uppercase;">Informe Tecnico de Superficie Velica</h1>
+      <div><h2 style="margin:0;color:#003b73;font-size:28px;text-transform:uppercase;">Informe Tecnico de Superficie Velica</h2>
       <p style="margin:5px 0 0;color:#666;font-size:14px;">Generado por jjlmoya.es • ${date}</p></div>
       <div style="text-align:right;"><span style="font-size:12px;font-weight:bold;color:#003b73;">VERSION PROFESIONAL</span></div>
     </div>`;
