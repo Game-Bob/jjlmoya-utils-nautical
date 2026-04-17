@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-hesaplayici-tr';
+const slug = 'ukc-hesaplayici';
 const title = 'Omurga Altı Boşluğu UKC Hesaplayıcı';
 const description =
   'Sığlıkları, kanalları veya su çekimi (draft) kısıtlı noktaları geçmek için güvenli zaman aralığını hesaplayın. Teknenizin draftını, harita derinliğini ve gelgit verilerini girin.';

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
-const slug = 'zeiloppervlak-calculator-nl';
+const slug = 'zeiloppervlak-calculator';
 const title = 'Zeiloppervlak en SA/D Ratio Calculator';
 const description =
   'Bereken het totale zeiloppervlak en de verhouding zeiloppervlak tot deplacement van uw boot. Nautische prestatieanalyse op basis van I, J, P en E metingen.';

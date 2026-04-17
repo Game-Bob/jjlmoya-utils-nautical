@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-kalkulator-id';
+const slug = 'kalkulator-ruang-bebas-kapal';
 const title = 'Kalkulator Ruang Bebas di Bawah Lunas UKC';
 const description =
   'Hitung jendela waktu aman untuk melintasi gosong pasir, kanal, atau titik dengan draf terbatas. Masukkan draf kapal, kedalaman peta, dan data pasang surut Anda.';

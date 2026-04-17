@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'units-converter-ru';
+const slug = 'konverter-morskikh-edinits';
 const title = 'Конвертер морских единиц';
 const description =
   'Конвертируйте морские мили, узлы, сажени и атмосферное давление. Включает интерактивную шкалу Бофорта для скорости ветра.';

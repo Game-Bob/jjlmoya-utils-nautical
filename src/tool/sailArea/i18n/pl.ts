@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
-const slug = 'kalkulator-powierzchni-zagli-pl';
+const slug = 'kalkulator-powierzchni-zagli';
 const title = 'Kalkulator Powierzchni Żagli i Współczynnika SA/D';
 const description =
   'Oblicz całkowitą powierzchnię żagli i współczynnik powierzchni żagli do wyporności Twojego jachtu. Analiza osiągów morskich na podstawie wymiarów I, J, P i E.';

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'gezeiten-rechner-de';
+const slug = 'gezeiten-rechner';
 const title = 'Gezeitenhöhenrechner';
 const description =
   'Schätzen Sie die Wassertiefe zu jedem Zeitpunkt des Gezeitenzyklus mithilfe der nautischen Zwölftel-Regel. Ideal für die Küstenplanung und das Studium für den Sportbootführerschein.';

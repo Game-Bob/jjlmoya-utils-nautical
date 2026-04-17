@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
-const slug = 'yelken-alani-hesaplayici-tr';
+const slug = 'yelken-alani-hesaplayici';
 const title = 'Yelken Alanı ve SA/D Oranı Hesaplayıcı';
 const description =
   'Teknenizin toplam yelken alanını ve yelken alanının deplasmana oranını (SA/D) hesaplayın. I, J, P ve E ölçümlerine dayalı denizcilik performansı analizi.';

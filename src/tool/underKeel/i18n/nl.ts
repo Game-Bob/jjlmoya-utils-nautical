@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-calculator-nl';
+const slug = 'ukc-calculator';
 const title = 'Kielspeling UKC Calculator';
 const description =
   'Bereken het veilige tijdvenster om drempels, kanalen of diepgang-beperkte punten te passeren. Voer de diepgang van uw boot, de kaartdiepte en getijdegegevens in.';

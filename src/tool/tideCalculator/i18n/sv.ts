@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'tidvattens-kalkylator-sv';
+const slug = 'tidvattens-kalkylator';
 const title = 'Kalkylator för tidvattenhöjd';
 const description =
   'Uppskatta vattennivån vid valfri tidpunkt i tidvattencykeln med den nautiska tolftedelsregeln. Idealisk för kustnära planering och studier för förarintyg.';

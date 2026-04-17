@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-kalkulator-pl';
+const slug = 'kalkulator-rezerwy-pod-stepka';
 const title = 'Kalkulator Rezerwy pod Stępką UKC';
 const description =
   'Oblicz bezpieczne okno czasowe na pokonanie mielizn, kanałów lub punktów z ograniczonym zanurzeniem. Wprowadź zanurzenie łodzi, głębokość z mapy i dane pływowe.';

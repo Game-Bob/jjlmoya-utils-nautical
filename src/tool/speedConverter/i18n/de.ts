@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
-const slug = 'geschwindigkeits-umrechner-de';
+const slug = 'geschwindigkeits-umrechner';
 const title = 'Nautischer Geschwindigkeitsumrechner und Beaufort Skala';
 const description =
   'Rechnen Sie sofort zwischen Knoten, km/h, m/s und mph um. Inklusive vollständiger Beaufort-Tabelle mit Beschreibungen des Seegangs und Windeffekten.';

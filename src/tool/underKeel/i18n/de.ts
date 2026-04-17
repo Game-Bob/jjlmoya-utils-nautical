@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-rechner-de';
+const slug = 'ukc-rechner';
 const title = 'Kalkulator für die Kielfreiheit UKC';
 const description =
   'Berechnen Sie das sichere Zeitfenster zum Überqueren von Untiefen, Kanälen oder tiefgangsbeschränkten Stellen. Geben Sie den Tiefgang Ihres Bootes, die Kartentiefe und Gezeitendaten ein, um das genaue sichere Durchfahrtsintervall zu erhalten.';

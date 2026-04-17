@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'nautische-einheiten-umrechner-de';
+const slug = 'nautische-einheiten-umrechner';
 const title = 'Einheitenumrechner für die Seefahrt';
 const description =
   'Rechnen Sie Seemeilen, Knoten, Faden und Luftdruck um. Enthält eine interaktive Beaufort-Skala für die Windgeschwindigkeit.';

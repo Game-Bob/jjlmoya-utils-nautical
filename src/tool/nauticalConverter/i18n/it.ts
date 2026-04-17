@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'convertitore-unita-it';
+const slug = 'convertitore-unita';
 const title = 'Convertitore di Unità Nautiche';
 const description =
   'Converti miglia nautiche, nodi, braccia e pressione atmosferica. Include la scala Beaufort interattiva per la velocità del vento.';

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'menzil-hesaplayici-tr';
+const slug = 'menzil-hesaplayici';
 const title = 'Denizcilik Menzil Hesaplayıcı';
 const description =
   'Yakıt tüketimi, depo kapasitesi ve seyir hızına dayalı olarak maksimum menzilinizi ve güvenli mesafenizi hesaplayın. Motorlu tekneler için yakıt yönetimi.';

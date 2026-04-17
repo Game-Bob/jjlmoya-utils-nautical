@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'actieradius-calculator-nl';
+const slug = 'calcolatore-autonomia-motore';
 const title = 'Nautische Actieradius Calculator';
 const description =
   'Bereken uw maximale bereik und veilige afstand op basis van brandstofverbruik, tankinhoud en kruissnelheid. Brandstofbeheer voor motorboten.';

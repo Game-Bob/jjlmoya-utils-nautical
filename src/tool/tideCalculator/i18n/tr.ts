@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'gelgit-hesaplayici-tr';
+const slug = 'gelgit-hesaplayici';
 const title = 'Gelgit Yüksekliği Hesaplayıcı';
 const description =
   'Nautik "On İkide Bir" (Rule of Twelfths) kuralını kullanarak gelgit döngüsünün herhangi bir noktasındaki su derinliğini tahmin edin. Kıyı planlaması ve amatör denizci belgesi çalışmaları için idealdir.';

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'kalkulator-jarak-tempuh-id';
+const slug = 'kalkulator-daya-jelajah-kapal';
 const title = 'Kalkulator Daya Jelajah Kapal';
 const description =
   'Hitung jangkauan maksimum dan jarak aman kapal Anda berdasarkan konsumsi bahan bakar, kapasitas tangki, dan kecepatan jelajah. Manajemen bahan bakar untuk kapal motor.';

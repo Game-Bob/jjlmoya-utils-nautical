@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'tide-calculator-ru';
+const slug = 'kalkulator-vysoty-priliva';
 const title = 'Калькулятор высоты прилива';
 const description =
   'Оцените глубину воды в любой момент приливного цикла с помощью морского «правила двенадцатых». Идеально подходит для прибрежного планирования и подготовки к сдаче на судоводительские права.';

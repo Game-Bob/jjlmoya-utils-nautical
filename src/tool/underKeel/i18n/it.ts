@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-calcolatore-it';
+const slug = 'ukc-calcolatore';
 const title = 'Calcolatore del Franchezza Sotto la Chiglia UKC';
 const description =
   'Calcola la finestra temporale sicura per attraversare secche, canali o punti con pescaggio limitato. Inserisci il pescaggio della barca, la profondità della carta e i dati di marea.';

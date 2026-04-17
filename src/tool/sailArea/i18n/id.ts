@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
-const slug = 'kalkulator-luas-layar-id';
+const slug = 'kalkulator-luas-layar';
 const title = 'Kalkulator Luas Layar dan Rasio SA/D';
 const description =
   'Hitung total luas layar dan rasio luas layar terhadap berat kapal (SA/D) Anda. Analisis performa bahari berdasarkan pengukuran I, J, P, dan E.';

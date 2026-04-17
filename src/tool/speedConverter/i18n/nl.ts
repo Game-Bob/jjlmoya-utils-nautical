@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
-const slug = 'snelheidsomzetter-nl';
+const slug = 'snelheidsomzetter';
 const title = 'Nautische Snelheidsomzetter en Beaufort schaal';
 const description =
   'Reken direct om tussen knopen, km/u, m/s en mph. Inclusief volledige Beaufort-tabel met beschrijvingen van de zeetoestand en windeffecten.';

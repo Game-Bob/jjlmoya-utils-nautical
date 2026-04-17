@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-kalkulator-ru';
+const slug = 'kalkulyator-zapasa-glubiny';
 const title = 'Калькулятор запаса глубины под килем UKC';
 const description =
   'Рассчитайте безопасное временное окно для прохода через мели, каналы или точки с ограниченной осадкой. Введите осадку судна, глубину по карте и данные о приливах.';

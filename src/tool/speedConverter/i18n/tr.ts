@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
-const slug = 'hiz-donusturucu-tr';
+const slug = 'hiz-donusturucu';
 const title = 'Nautik Hız Dönüştürücü ve Beaufort Ölçeği';
 const description =
   'Knot, km/s, m/s ve mph birimleri arasında anında dönüştürme yapın. Deniz durumu açıklamaları ve rüzgar etkilerini içeren tam Beaufort tablosu dahildir.';

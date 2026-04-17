@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
-const slug = 'calcolatore-superficie-velica-it';
+const slug = 'calcolatore-superficie-velica';
 const title = 'Calcolatore Area Velica e Rapporto SA/D';
 const description =
   'Calcola l\'area velica totale e il rapporto area velica/dislocamento della tua barca. Analisi delle prestazioni nautiche basata sulle misure I, J, P ed E.';

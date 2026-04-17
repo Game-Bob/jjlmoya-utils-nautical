@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
-const slug = 'conversor-velocidade-pt';
+const slug = 'conversor-velocidade';
 const title = 'Conversor de Velocidade Náutica e Escala Beaufort';
 const description =
   'Converta instantaneamente entre nós, km/h, m/s e mph. Inclui a tabela de Beaufort completa com descrições do estado do mar e efeitos do vento.';

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'reichweiten-rechner-de';
+const slug = 'reichweiten-rechner';
 const title = 'Reichweiten Rechner für Motorboote';
 const description =
   'Berechnen Sie Ihre maximale Reichweite und Sicherheitsdistanz basierend auf Kraftstoffverbrauch, Tankkapazität und Reisegeschwindigkeit. Kraftstoffmanagement für Motorboote.';

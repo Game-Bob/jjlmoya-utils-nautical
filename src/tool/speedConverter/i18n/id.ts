@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
-const slug = 'pengonversi-kecepatan-id';
+const slug = 'pengonversi-kecepatan';
 const title = 'Konverter Kecepatan Bahari dan Skala Beaufort';
 const description =
   'Konversi antara knot, km/jam, m/s, dan mph secara instan. Termasuk tabel Beaufort lengkap dengan deskripsi kondisi laut dan efek angin.';

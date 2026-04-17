@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
-const slug = 'hastighets-omvandlare-sv';
+const slug = 'hastighets-omvandlare';
 const title = 'Nautisk hastighetsomvandlare och Beaufortskalan';
 const description =
   'Konvertera omedelbart mellan knop, km/h, m/s och mph. Inkluderar fullständig Beaufort-tabell med beskrivningar av sjötillstånd och vindeffekter.';

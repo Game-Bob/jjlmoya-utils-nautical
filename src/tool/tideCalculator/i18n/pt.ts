@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'calculadora-mare-pt';
+const slug = 'calculadora-mare';
 const title = 'Calculadora de Altura de Marés';
 const description =
   'Estime a profundidade da água em qualquer ponto do ciclo de maré usando a Regra dos Dozeavos náutica. Ideal para planeamento costeiro e estudo para cartas de marinheiro.';

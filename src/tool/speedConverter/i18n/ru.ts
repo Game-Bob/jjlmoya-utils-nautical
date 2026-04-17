@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
-const slug = 'speed-converter-ru';
+const slug = 'morskoi-konverter-skorosti';
 const title = 'Морской конвертер скорости и шкала Бофорта';
 const description =
   'Мгновенно конвертируйте узлы, км/ч, м/с и мили/ч. Включает полную таблицу Бофорта с описанием состояния моря и воздействия ветра.';

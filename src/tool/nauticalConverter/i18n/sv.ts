@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'nautiska-enheter-omvandlare-sv';
+const slug = 'nautiska-enheter-omvandlare';
 const title = 'Nautisk Enhetsomvandlare';
 const description =
   'Omvandla sjömil, knop, famnar och atmosfäriskt tryck. Inkluderar interaktiv Beaufort-skala för vindhastighet.';

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'calculadora-autonomia-pt';
+const slug = 'calculadora-alcance-motor';
 const title = 'Calculadora de Autonomia Náutica';
 const description =
   'Calcule a sua autonomia máxima e distância de segurança com base no consumo de combustível, capacidade do tanque e velocidade de cruzeiro. Gestão de combustível para barcos a motor.';

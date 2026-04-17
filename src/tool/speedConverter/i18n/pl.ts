@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
-const slug = 'kalkulator-predkosci-pl';
+const slug = 'kalkulator-predkosci';
 const title = 'Kalkulator Prędkości Morskiej i Skala Beauforta';
 const description =
   'Natychmiastowe przeliczanie między węzłami, km/h, m/s i mph. Zawiera pełną tabelę Beauforta z opisami stanu morza i efektami wiatru.';

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'endurance-calculator-ru';
+const slug = 'kalkulator-morskoi-avtonomnosti';
 const title = 'Калькулятор морской автономности';
 const description =
   'Рассчитайте максимальный запас хода и безопасную дистанцию на основе расхода топлива, емкости бака и крейсерской скорости. Управление топливом для моторных судов.';

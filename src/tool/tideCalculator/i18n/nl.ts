@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'getijde-calculator-nl';
+const slug = 'getijde-calculator';
 const title = 'Getijdenhoogte Calculator';
 const description =
   'Schat de waterdiepte op elk punt in de getijdencyclus met behulp van de nautische Zwölftel-Regel. Ideaal voor kustplanning en studie voor vaarbewijzen.';

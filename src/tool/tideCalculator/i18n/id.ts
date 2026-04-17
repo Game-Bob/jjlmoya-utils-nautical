@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'kalkulator-pasang-surut-id';
+const slug = 'kalkulator-pasang-surut';
 const title = 'Kalkulator Ketinggian Pasang Surut';
 const description =
   'Estimasi kedalaman air pada titik mana pun dalam siklus pasang surut menggunakan Aturan Seperdua Belas (Rule of Twelfths). Ideal untuk perencanaan pesisir dan studi lisensi nautika.';

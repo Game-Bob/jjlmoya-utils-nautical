@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-calculadora-pt';
+const slug = 'ukc-calculadora';
 const title = 'Calculadora de Margem sob a Quilha UKC';
 const description =
   'Calcule a janela de tempo segura para cruzar bancos de areia, canais ou pontos com restrição de calado. Insira o calado do seu barco, a profundidade da carta e os dados de maré.';

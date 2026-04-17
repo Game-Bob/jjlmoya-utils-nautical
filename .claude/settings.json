@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find src/tool/*/i18n -name \"*.ts\" -exec sed -i \"s/const slug = '\\\\\\(.*\\\\\\)-de'$/const slug = '\\\\1'/g\" {} \\\\;)",
+      "Bash(find src/tool/*/i18n -name \"*.ts\" -exec sed -i \"s/const slug = '\\\\\\(.*\\\\\\)-id'$/const slug = '\\\\1'/g\" {} \\\\;)",
+      "Bash(find src/tool/*/i18n -name \"*.ts\" -exec sed -i \"s/const slug = '\\\\\\(.*\\\\\\)-it'$/const slug = '\\\\1'/g\" {} \\\\;)",
+      "Bash(find src/tool/*/i18n -name \"*.ts\" -exec sed -i \"s/const slug = '\\\\\\(.*\\\\\\)-nl'$/const slug = '\\\\1'/g\" {} \\\\;)",
+      "Bash(find src/tool/*/i18n -name \"*.ts\" -exec sed -i \"s/const slug = '\\\\\\(.*\\\\\\)-pl'$/const slug = '\\\\1'/g\" {} \\\\;)",
+      "Bash(python /tmp/fix_slugs.py)"
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'konwerter-jednostek-pl';
+const slug = 'konwerter-jednostek';
 const title = 'Konwerter Jednostek Morskich';
 const description =
   'Konwertuj mile morskie, węzły, sążnie i ciśnienie atmosferyczne. Zawiera interaktywną skalę Beauforta dla prędkości wiatru.';

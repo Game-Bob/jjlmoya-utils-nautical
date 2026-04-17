@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'calcolatore-autonomia-it';
+const slug = 'calcolatore-autonomia';
 const title = 'Calcolatore Autonomia Nautica';
 const description =
   'Calcola la tua autonomia massima e la distanza di sicurezza in base al consumo di carburante, alla capacità del serbatoio e alla velocità di crociera. Gestione del carburante per barche a motore.';

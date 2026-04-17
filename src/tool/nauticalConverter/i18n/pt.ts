@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'conversor-unidades-pt';
+const slug = 'conversor-unidades';
 const title = 'Conversor de Unidades Náuticas';
 const description =
   'Converta milhas náuticas, nós, braças e pressão atmosférica. Inclui escala Beaufort interativa para a velocidade do vento.';

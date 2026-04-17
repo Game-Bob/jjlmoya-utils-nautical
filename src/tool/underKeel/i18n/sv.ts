@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
-const slug = 'ukc-kalkylator-sv';
+const slug = 'ukc-kalkylator';
 const title = 'Kalkylator för kielspeling UKC';
 const description =
   'Beräkna det säkra tidsfönstret för att passera grund, kanaler eller punkter med begränsat djupgående. Ange båtens djupgående, sjökortsdjup och tidvattensdata.';

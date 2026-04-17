@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'calcolatore-marea-it';
+const slug = 'calcolatore-marea';
 const title = 'Calcolatore dell\'Altezza della Marea';
 const description =
   'Stima la profondità dell\'acqua in qualsiasi punto del ciclo di marea usando la Regola dei Dodicesimi. Ideale per la pianificazione costiera e lo studio per la patente nautica.';

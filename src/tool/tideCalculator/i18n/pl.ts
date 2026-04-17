@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
-const slug = 'kalkulator-plywow-pl';
+const slug = 'kalkulator-plywow';
 const title = 'Kalkulator Wysokości Pływów';
 const description =
   'Oszacuj głębokość wody w dowolnym punkcie cyklu pływów za pomocą nawigacyjnej zasady dwunastu części. Idealny do planowania przybrzeżnego i nauki do licencji morskiej.';

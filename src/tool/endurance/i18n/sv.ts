@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'rackvidds-kalkylator-sv';
+const slug = 'rackvidds-kalkylator';
 const title = 'Kalkylator för Maritim Räckvidd';
 const description =
   'Beräkna din maximala räckvidd och säkerhetsdistans baserat på bränsleförbrukning, tankkapacitet och marschfart. Bränslehantering för motorbåtar.';

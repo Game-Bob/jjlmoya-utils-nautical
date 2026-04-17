@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
-const slug = 'kalkulator-autonomii-pl';
+const slug = 'calcolatore-autonomia-polacco';
 const title = 'Kalkulator Autonomii Jachtu';
 const description =
   'Oblicz maksymalny zasięg i bezpieczny dystans na podstawie zużycia paliwa, pojemności zbiornika i prędkości przelotowej. Zarządzanie paliwem dla łodzi motorowych.';

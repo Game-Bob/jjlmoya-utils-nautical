@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
-const slug = 'segelyte-kalkylator-sv';
+const slug = 'segelyte-kalkylator';
 const title = 'Segelyte och SAD förhållande kalkylator';
 const description =
   'Beräkna den totala segelytan och förhållandet mellan segelyta och deplacement (SA/D) för din båt. Nautisk prestandaanalys baserad på I-, J-, P- och E-mått.';

@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'birim-donusturucu-tr';
+const slug = 'birim-donusturucu';
 const title = 'Denizcilik Birim Dönüştürücü';
 const description =
   'Deniz mili, knot, kulaç ve atmosferik basınç birimlerini dönüştürün. Rüzgar hızı için etkileşimli Beaufort ölçeğini içerir.';

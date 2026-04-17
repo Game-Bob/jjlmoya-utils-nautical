@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'nautische-eenheden-omzetter-nl';
+const slug = 'nautische-eenheden-omzetter';
 const title = 'Nautische Eenheden Omzetter';
 const description =
   'Reken zeemijlen, knopen, vamen en luchtdruk om. Inclusief interactieve Beaufort-schaal voor windsnelheid.';

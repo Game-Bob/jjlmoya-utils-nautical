@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
-const slug = 'konverter-satuan-nautika-id';
+const slug = 'konverter-satuan-nautika';
 const title = 'Konverter Satuan Bahari';
 const description =
   'Konversi mil laut, knot, fathom (depa), dan tekanan atmosfer. Termasuk skala Beaufort interaktif untuk kecepatan angin.';

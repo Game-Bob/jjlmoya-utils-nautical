@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
-const slug = 'sail-area-calculator-ru';
+const slug = 'kalkulator-ploshadi-parusnosti';
 const title = 'Калькулятор площади парусности и коэффициента SA/D';
 const description =
   'Рассчитайте общую площадь парусности и отношение площади парусов к водоизмещению (SA/D) вашей лодки. Морской анализ производительности на основе измерений I, J, P и E.';

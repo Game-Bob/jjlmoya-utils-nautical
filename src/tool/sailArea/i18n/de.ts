@@ -1,7 +1,7 @@
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
-const slug = 'segelflaechen-rechner-de';
+const slug = 'segelflaechen-rechner';
 const title = 'Segelflächen und SAD Verhältnis Rechner';
 const description =
   'Berechnen Sie die Gesamtsegelfläche und das Verhältnis von Segelfläche zu Verdrängung (SA/D) Ihres Bootes. Nautische Leistungsanalyse basierend auf I-, J-, P- und E-Maßen.';
