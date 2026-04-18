@@ -1,7 +1,4 @@
 import type { NauticalToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import SpeedConverterComponent from './component.astro';
-import SpeedConverterSEO from './seo.astro';
-import SpeedConverterBibliography from './bibliography.astro';
 
 export interface SpeedConverterUI {
   [key: string]: string;
@@ -48,11 +45,10 @@ export const speedConverter: NauticalToolEntry<SpeedConverterUI> = {
   },
 };
 
-export { SpeedConverterComponent, SpeedConverterSEO, SpeedConverterBibliography };
 
 export const SPEED_CONVERTER_TOOL: ToolDefinition = {
   entry: speedConverter,
-  Component: SpeedConverterComponent,
-  SEOComponent: SpeedConverterSEO,
-  BibliographyComponent: SpeedConverterBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,7 +1,4 @@
 import type { NauticalToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import UnderKeelComponent from './component.astro';
-import UnderKeelSEO from './seo.astro';
-import UnderKeelBibliography from './bibliography.astro';
 
 export interface UnderKeelUI {
   [key: string]: string;
@@ -51,11 +48,10 @@ export const underKeel: NauticalToolEntry<UnderKeelUI> = {
   },
 };
 
-export { UnderKeelComponent, UnderKeelSEO, UnderKeelBibliography };
 
 export const UNDER_KEEL_TOOL: ToolDefinition = {
   entry: underKeel,
-  Component: UnderKeelComponent,
-  SEOComponent: UnderKeelSEO,
-  BibliographyComponent: UnderKeelBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

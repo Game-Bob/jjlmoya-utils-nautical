@@ -1,7 +1,4 @@
 import type { NauticalToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import NauticalConverterComponent from './component.astro';
-import NauticalConverterSEO from './seo.astro';
-import NauticalConverterBibliography from './bibliography.astro';
 
 export interface NauticalConverterUI {
   [key: string]: string;
@@ -59,11 +56,10 @@ export const nauticalConverter: NauticalToolEntry<NauticalConverterUI> = {
   },
 };
 
-export { NauticalConverterComponent, NauticalConverterSEO, NauticalConverterBibliography };
 
 export const NAUTICAL_CONVERTER_TOOL: ToolDefinition = {
   entry: nauticalConverter,
-  Component: NauticalConverterComponent,
-  SEOComponent: NauticalConverterSEO,
-  BibliographyComponent: NauticalConverterBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

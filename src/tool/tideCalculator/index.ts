@@ -1,7 +1,4 @@
 import type { NauticalToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import TideCalculatorCalculator from './component.astro';
-import TideCalculatorSEO from './seo.astro';
-import TideCalculatorBibliography from './bibliography.astro';
 
 export interface TideCalculatorUI {
   [key: string]: string;
@@ -52,11 +49,10 @@ export const tideCalculator: NauticalToolEntry<TideCalculatorUI> = {
   },
 };
 
-export { TideCalculatorCalculator, TideCalculatorSEO, TideCalculatorBibliography };
 
 export const TIDE_CALCULATOR_TOOL: ToolDefinition = {
   entry: tideCalculator,
-  Component: TideCalculatorCalculator,
-  SEOComponent: TideCalculatorSEO,
-  BibliographyComponent: TideCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,7 +1,4 @@
 import type { NauticalToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import EnduranceComponent from './component.astro';
-import EnduranceSEO from './seo.astro';
-import EnduranceBibliography from './bibliography.astro';
 
 export interface EnduranceUI {
   [key: string]: string;
@@ -58,11 +55,10 @@ export const endurance: NauticalToolEntry<EnduranceUI> = {
   },
 };
 
-export { EnduranceComponent, EnduranceSEO, EnduranceBibliography };
 
 export const ENDURANCE_TOOL: ToolDefinition = {
   entry: endurance,
-  Component: EnduranceComponent,
-  SEOComponent: EnduranceSEO,
-  BibliographyComponent: EnduranceBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

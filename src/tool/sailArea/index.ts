@@ -1,7 +1,4 @@
 import type { NauticalToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import SailAreaComponent from './component.astro';
-import SailAreaSEO from './seo.astro';
-import SailAreaBibliography from './bibliography.astro';
 
 export interface SailAreaUI {
   [key: string]: string;
@@ -55,11 +52,10 @@ export const sailArea: NauticalToolEntry<SailAreaUI> = {
   },
 };
 
-export { SailAreaComponent, SailAreaSEO, SailAreaBibliography };
 
 export const SAIL_AREA_TOOL: ToolDefinition = {
   entry: sailArea,
-  Component: SailAreaComponent,
-  SEOComponent: SailAreaSEO,
-  BibliographyComponent: SailAreaBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };
