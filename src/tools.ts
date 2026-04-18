@@ -1,3 +1,4 @@
+export { ALL_ENTRIES } from './entries';
 import { TIDE_CALCULATOR_TOOL } from './tool/tideCalculator';
 import { UNDER_KEEL_TOOL } from './tool/underKeel';
 import { NAUTICAL_CONVERTER_TOOL } from './tool/nauticalConverter';
@@ -24,4 +25,3 @@ export {
   ENDURANCE_TOOL,
 };
 
-export const ALL_ENTRIES = ALL_TOOLS.map(t => t.entry);

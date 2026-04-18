@@ -1,19 +1,34 @@
-import type { NauticalCategoryEntry, CategoryLocaleContent } from '../types';
-import { tideCalculator } from '../tool/tideCalculator/entry';
-import { underKeel } from '../tool/underKeel/entry';
-import { nauticalConverter } from '../tool/nauticalConverter/entry';
-import { sailArea } from '../tool/sailArea/entry';
-import { speedConverter } from '../tool/speedConverter/entry';
-import { endurance } from '../tool/endurance/entry';
+import type { NauticalToolEntry, ToolLocaleContent } from '../../types';
 
-export type { CategoryLocaleContent };
+export interface SpeedConverterUI {
+  [key: string]: string;
+  knLabel: string;
+  kmhLabel: string;
+  msLabel: string;
+  mphLabel: string;
+  beaufortTitle: string;
+  forceLabel: string;
+  descriptionLabel: string;
+  knotsLabel: string;
+  effectLabel: string;
+  seaStateLabel: string;
+  windEffectLabel: string;
+  faqTitle: string;
+  bibliographyTitle: string;
+  beaufortDataJson: string;
+}
 
-export const nauticalCategory: NauticalCategoryEntry = {
-  icon: 'mdi:sail-boat',
-  tools: [tideCalculator, underKeel, nauticalConverter, sailArea, speedConverter, endurance],
+export type SpeedConverterLocaleContent = ToolLocaleContent<SpeedConverterUI>;
+
+export const speedConverter: NauticalToolEntry<SpeedConverterUI> = {
+  id: 'speed-converter',
+  icons: {
+    bg: 'mdi:speedometer',
+    fg: 'mdi:weather-windy',
+  },
   i18n: {
-    en: () => import('./i18n/en').then((m) => m.content),
     es: () => import('./i18n/es').then((m) => m.content),
+    en: () => import('./i18n/en').then((m) => m.content),
     fr: () => import('./i18n/fr').then((m) => m.content),
     de: () => import('./i18n/de').then((m) => m.content),
     id: () => import('./i18n/id').then((m) => m.content),
