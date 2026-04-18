@@ -1,3 +1,4 @@
+import { sailArea } from './entry';
 export * from './entry';
 export const SAIL_AREA_TOOL: ToolDefinition = {
   entry: sailArea,

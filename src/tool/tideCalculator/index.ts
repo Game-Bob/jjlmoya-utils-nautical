@@ -1,3 +1,4 @@
+import { tideCalculator } from './entry';
 export * from './entry';
 export const TIDE_CALCULATOR_TOOL: ToolDefinition = {
   entry: tideCalculator,
