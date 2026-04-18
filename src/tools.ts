@@ -23,3 +23,5 @@ export {
   SPEED_CONVERTER_TOOL,
   ENDURANCE_TOOL,
 };
+
+export const ALL_ENTRIES = ALL_TOOLS.map(t => t.entry);
