@@ -21,7 +21,7 @@
     gap: 2rem;
   }
 
-  :global(.theme-dark) .speed-converter {
+  .theme-dark .speed-converter {
     --n-bg: #0f172a;
     --n-bg-muted: #1e293b;
     --n-text: #f8fafc;

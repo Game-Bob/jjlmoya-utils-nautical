@@ -24,7 +24,7 @@
     margin: 0 auto;
   }
 
-  :global(.theme-dark) .under-keel-calculator {
+  .theme-dark .under-keel-calculator {
     --n-bg: #0f172a;
     --n-bg-muted: #1e293b;
     --n-text: #f8fafc;

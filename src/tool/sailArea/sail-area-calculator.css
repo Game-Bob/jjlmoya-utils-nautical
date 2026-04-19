@@ -23,7 +23,7 @@
     margin: 0 auto;
   }
 
-  :global(.theme-dark) .sail-area-calculator {
+  .theme-dark .sail-area-calculator {
     --n-bg: #0f172a;
     --n-bg-muted: #1e293b;
     --n-text: #f8fafc;
@@ -142,7 +142,7 @@
     line-height: 1;
   }
 
-  :global(.theme-dark) .sail-area-calculator .sad-value-large {
+  .theme-dark .sail-area-calculator .sad-value-large {
     color: var(--n-accent);
   }
 

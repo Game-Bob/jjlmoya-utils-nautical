@@ -20,7 +20,7 @@
     margin: 0 auto;
   }
 
-  :global(.theme-dark) .endurance-calculator {
+  .theme-dark .endurance-calculator {
     --n-bg: #0f172a;
     --n-bg-muted: #1e293b;
     --n-text: #f8fafc;

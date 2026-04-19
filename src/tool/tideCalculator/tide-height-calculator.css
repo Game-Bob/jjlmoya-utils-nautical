@@ -21,7 +21,7 @@
     margin: 0 auto;
   }
 
-  :global(.theme-dark) .tide-calculator {
+  .theme-dark .tide-calculator {
     --n-bg: #0f172a;
     --n-bg-muted: #1e293b;
     --n-text: #f8fafc;
@@ -78,7 +78,7 @@
     opacity: 0.9;
   }
 
-  :global(#invert-btn) {
+  #invert-btn {
     background: rgba(255, 255, 255, 0.1);
     border: none;
     color: var(--n-primary-on);
@@ -92,7 +92,7 @@
     transition: background 0.2s;
   }
 
-  :global(#invert-btn:hover) {
+  #invert-btn:hover {
     background: rgba(255, 255, 255, 0.2);
   }
 
@@ -197,7 +197,7 @@
     margin: 0.5rem 0;
   }
 
-  :global(#target-value) {
+  #target-value {
     font-size: 4rem;
     font-weight: 800;
     color: var(--n-accent);
