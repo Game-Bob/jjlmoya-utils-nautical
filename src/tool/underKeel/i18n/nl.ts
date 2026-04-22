@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
@@ -22,8 +23,7 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Vaarvenster vanaf:',
   statusUntilLabel: 'Vaarvenster tot:',
   bottomLabel: 'BODEM',
-  faqTitle: 'Veelgestelde Vragen',
-  bibliographyTitle: 'Bibliografie',
+  faqTitle: 'Veelgestelde Vragen': 'Bibliografie',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -69,17 +69,6 @@ const howTo: UnderKeelLocaleContent['howTo'] = [
   {
     name: 'Controleer uw vaarvenster',
     text: 'De tool toont het exacte tijdsinterval waarin u voldoende diepte hebt om veilig te navigeren.',
-  },
-];
-
-const bibliography: UnderKeelLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Recreational Boating',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Portos de Galicia - Tide Tables',
-    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
   },
 ];
 

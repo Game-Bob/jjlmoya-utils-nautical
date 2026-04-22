@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: NauticalConverterUI = {
   forceLabel: 'Siła',
   effectLabel: 'Efekt',
   copyLabel: 'Kopiuj wartość',
-  faqTitle: 'Często Zadawane Pytania',
-  bibliographyTitle: 'Bibliografia',
+  faqTitle: 'Często Zadawane Pytania': 'Bibliografia',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [
@@ -77,17 +77,6 @@ const howTo: NauticalConverterLocaleContent['howTo'] = [
   {
     name: 'Skopiuj wynik',
     text: 'Użyj przycisku kopiowania obok dowolnego pola, aby skopiować wartość do schowka.',
-  },
-];
-
-const bibliography: NauticalConverterLocaleContent['bibliography'] = [
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
-  },
-  {
-    name: 'NOAA - National Weather Service',
-    url: 'https://www.weather.gov/mfl/beaufort',
   },
 ];
 

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
@@ -22,8 +23,7 @@ const ui: UnderKeelUI = {
   statusFromLabel: '航行開始:',
   statusUntilLabel: '航行終了:',
   bottomLabel: '海底部',
-  faqTitle: 'よくある質問',
-  bibliographyTitle: '参考文献',
+  faqTitle: 'よくある質問': '参考文献',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -69,17 +69,6 @@ const howTo: UnderKeelLocaleContent['howTo'] = [
   {
     name: '航行可能時間を確認する',
     text: 'ツールは、安全に航行するために十分な水深が得られる正確な時間帯を表示します。',
-  },
-];
-
-const bibliography: UnderKeelLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Recreational Boating',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Portos de Galicia - Tide Tables',
-    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
   },
 ];
 

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
@@ -22,8 +23,7 @@ const ui: UnderKeelUI = {
   statusFromLabel: '通行开始时间：',
   statusUntilLabel: '通行结束时间：',
   bottomLabel: '海床',
-  faqTitle: '常见问题',
-  bibliographyTitle: '参考文献统计',
+  faqTitle: '常见问题': '参考文献统计',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -69,17 +69,6 @@ const howTo: UnderKeelLocaleContent['howTo'] = [
   {
     name: '检查您的通行窗口',
     text: '该工具将显示确切的时间间隔，在此期间您将有足够的深度进行安全导航。',
-  },
-];
-
-const bibliography: UnderKeelLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Recreational Boating',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Portos de Galicia - Tide Tables',
-    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
   },
 ];
 

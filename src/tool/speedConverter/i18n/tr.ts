@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
@@ -34,8 +35,7 @@ const ui: SpeedConverterUI = {
   effectLabel: 'Görsel Etki',
   seaStateLabel: 'Deniz Durumu',
   windEffectLabel: 'Karadaki Etki',
-  faqTitle: 'Sıkça Sorulan Sorular',
-  bibliographyTitle: 'Kaynakça',
+  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
   beaufortDataJson: JSON.stringify(beaufortData),
 };
 
@@ -74,17 +74,6 @@ const howTo: SpeedConverterLocaleContent['howTo'] = [
   {
     name: 'Sonuçları rotanızı planlamak için kullanın',
     text: 'Hız ve rüzgar bilgilerini birleştirerek koşulların tekneniz ve planladığınız seyir için uygun olup olmadığına karar verin.',
-  },
-];
-
-const bibliography: SpeedConverterLocaleContent['bibliography'] = [
-  {
-    name: 'Met Office - The Beaufort Scale',
-    url: 'https://www.metoffice.gov.uk/weather/guides/coast-and-sea/beaufort-scale',
-  },
-  {
-    name: 'IMO - International Maritime Organization',
-    url: 'https://www.imo.org/',
   },
 ];
 

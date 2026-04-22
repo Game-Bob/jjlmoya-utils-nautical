@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
@@ -29,8 +30,7 @@ const ui: EnduranceUI = {
   seaLight: 'Marejadilla (+15%)',
   seaModerate: 'Marejada (+30%)',
   seaStorm: 'Temporal (+60%)',
-  faqTitle: 'Preguntas Frecuentes',
-  bibliographyTitle: 'Referencias',
+  faqTitle: 'Preguntas Frecuentes': 'Referencias',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [
@@ -72,17 +72,6 @@ const howTo: EnduranceLocaleContent['howTo'] = [
   {
     name: 'Revisa la distancia segura y el calculo inverso',
     text: 'La herramienta te muestra cuantas millas puedes recorrer con seguridad y cuanto combustible necesitas para llegar a un destino concreto.',
-  },
-];
-
-const bibliography: EnduranceLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Nautica de Recreo',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Real Federacion Espanola de Vela - Seguridad en la Mar',
-    url: 'https://www.rfev.es/es/seguridad/',
   },
 ];
 

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
@@ -26,8 +27,7 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Tipe Performa',
   racerLabel: 'Kapal Balap (Racer)',
   exportPdfLabel: 'BUAT LAPORAN TEKNIS',
-  faqTitle: 'Pertanyaan yang Sering Diajukan',
-  bibliographyTitle: 'Bibliografi',
+  faqTitle: 'Pertanyaan yang Sering Diajukan': 'Bibliografi',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [
@@ -73,21 +73,6 @@ const howTo: SailAreaLocaleContent['howTo'] = [
   {
     name: 'Interpretasikan rasio SA/D',
     text: 'Rasio antara 16 dan 20 adalah kapal pesiar (cruiser) yang seimbang. Di atas 20, kapal akan sangat lincah dalam angin ringan tetapi menuntut keahlian lebih dalam kondisi angin kencang.',
-  },
-];
-
-const bibliography: SailAreaLocaleContent['bibliography'] = [
-  {
-    name: 'Society of Naval Architects and Marine Engineers - SNAME',
-    url: 'https://www.sname.org/',
-  },
-  {
-    name: 'ORC - Offshore Racing Congress',
-    url: 'https://orc.org/',
-  },
-  {
-    name: 'Elvstrom Sailmakers - Sail Manual',
-    url: 'https://www.elvstromsails.com/',
   },
 ];
 

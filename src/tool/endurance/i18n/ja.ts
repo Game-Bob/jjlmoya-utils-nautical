@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
@@ -29,8 +30,7 @@ const ui: EnduranceUI = {
   seaLight: '軽いうねり (+15%)',
   seaModerate: '中程度のうねり (+30%)',
   seaStorm: '荒天 (+60%)',
-  faqTitle: 'よくある質問',
-  bibliographyTitle: '参考文献',
+  faqTitle: 'よくある質問': '参考文献',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [
@@ -72,17 +72,6 @@ const howTo: EnduranceLocaleContent['howTo'] = [
   {
     name: '安全距離と逆算結果を確認する',
     text: '安全に走行できる海里数と、特定の目的地に到達するために必要な燃料量が表示されます。',
-  },
-];
-
-const bibliography: EnduranceLocaleContent['bibliography'] = [
-  {
-    name: 'UK Maritime and Coastguard Agency',
-    url: 'https://www.gov.uk/government/organisations/maritime-and-coastguard-agency',
-  },
-  {
-    name: 'RYA - Royal Yachting Association',
-    url: 'https://www.rya.org.uk/',
   },
 ];
 

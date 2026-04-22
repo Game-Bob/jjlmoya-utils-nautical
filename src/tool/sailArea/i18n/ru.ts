@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
@@ -26,8 +27,7 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Тип характеристик',
   racerLabel: 'Гоночный',
   exportPdfLabel: 'СФОРМИРОВАТЬ ТЕХНИЧЕСКИЙ ОТЧЕТ',
-  faqTitle: 'Часто задаваемые вопросы',
-  bibliographyTitle: 'Библиография',
+  faqTitle: 'Часто задаваемые вопросы': 'Библиография',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [
@@ -73,21 +73,6 @@ const howTo: SailAreaLocaleContent['howTo'] = [
   {
     name: 'Интерпретируйте коэффициент SA/D',
     text: 'Коэффициент от 16 до 20 соответствует сбалансированному круизеру. При значении выше 20 лодка будет очень резвой при слабом ветре, но требовательной в свежую погоду.',
-  },
-];
-
-const bibliography: SailAreaLocaleContent['bibliography'] = [
-  {
-    name: 'Society of Naval Architects and Marine Engineers - SNAME',
-    url: 'https://www.sname.org/',
-  },
-  {
-    name: 'ORC - Offshore Racing Congress',
-    url: 'https://orc.org/',
-  },
-  {
-    name: 'Elvstrom Sailmakers - Sail Manual',
-    url: 'https://www.elvstromsails.com/',
   },
 ];
 

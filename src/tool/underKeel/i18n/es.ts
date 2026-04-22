@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
@@ -22,8 +23,7 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Paso desde las:',
   statusUntilLabel: 'Paso hasta las:',
   bottomLabel: 'FONDO',
-  faqTitle: 'Preguntas Frecuentes',
-  bibliographyTitle: 'Referencias',
+  faqTitle: 'Preguntas Frecuentes': 'Referencias',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -69,17 +69,6 @@ const howTo: UnderKeelLocaleContent['howTo'] = [
   {
     name: 'Comprueba tu ventana de paso',
     text: 'La herramienta te indicara el intervalo de tiempo exacto durante el cual tendras profundidad suficiente para navegar con seguridad.',
-  },
-];
-
-const bibliography: UnderKeelLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Nautica de Recreo',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Portos de Galicia - Tablas de Mareas',
-    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
   },
 ];
 

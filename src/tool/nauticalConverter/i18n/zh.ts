@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: NauticalConverterUI = {
   forceLabel: '风力',
   effectLabel: '影响',
   copyLabel: '复制数值',
-  faqTitle: '常见问题',
-  bibliographyTitle: '参考文献',
+  faqTitle: '常见问题': '参考文献',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [
@@ -77,17 +77,6 @@ const howTo: NauticalConverterLocaleContent['howTo'] = [
   {
     name: '复制结果',
     text: '使用任何字段旁边的复制按钮将数值复制到剪贴板。',
-  },
-];
-
-const bibliography: NauticalConverterLocaleContent['bibliography'] = [
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
-  },
-  {
-    name: 'NOAA - National Weather Service',
-    url: 'https://www.weather.gov/mfl/beaufort',
   },
 ];
 

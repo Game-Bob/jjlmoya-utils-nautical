@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
@@ -23,8 +24,7 @@ const ui: TideCalculatorUI = {
   statusUpLabel: '밀물',
   statusDownLabel: '썰물',
   statusOutOfRange: '범위 초과',
-  faqTitle: '자주 묻는 질문',
-  bibliographyTitle: '참고 문헌',
+  faqTitle: '자주 묻는 질문': '참고 문헌',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [
@@ -76,17 +76,6 @@ const howTo: TideCalculatorLocaleContent['howTo'] = [
   {
     name: '12분의 1 표 분석',
     text: '시간대별 세부 내역을 검토하여 전체 기간 동안 수위가 어떻게 변하는지 이해합니다.',
-  },
-];
-
-const bibliography: TideCalculatorLocaleContent['bibliography'] = [
-  {
-    name: 'Puertos del Estado - Tide Prediction',
-    url: 'https://portus.puertos.es/#/',
-  },
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
   },
 ];
 

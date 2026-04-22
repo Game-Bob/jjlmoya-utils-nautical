@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
@@ -26,8 +27,7 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Tipo de Performance',
   racerLabel: 'Regata',
   exportPdfLabel: 'GERAR RELATÓRIO TÉCNICO',
-  faqTitle: 'Perguntas Frequentes',
-  bibliographyTitle: 'Bibliografia',
+  faqTitle: 'Perguntas Frequentes': 'Bibliografia',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [
@@ -73,21 +73,6 @@ const howTo: SailAreaLocaleContent['howTo'] = [
   {
     name: 'Interprete a relação SA/D',
     text: 'Uma relação entre 16 e 20 indica um cruzeiro equilibrado. Acima de 20 o barco será muito vivo com vento fraco, mas exigente em condições de vento fresco.',
-  },
-];
-
-const bibliography: SailAreaLocaleContent['bibliography'] = [
-  {
-    name: 'Society of Naval Architects and Marine Engineers - SNAME',
-    url: 'https://www.sname.org/',
-  },
-  {
-    name: 'ORC - Offshore Racing Congress',
-    url: 'https://orc.org/',
-  },
-  {
-    name: 'Elvstrom Sailmakers - Sail Manual',
-    url: 'https://www.elvstromsails.com/',
   },
 ];
 

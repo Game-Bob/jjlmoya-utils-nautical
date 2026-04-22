@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
@@ -22,8 +23,7 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Passage från:',
   statusUntilLabel: 'Passage till:',
   bottomLabel: 'BOTTEN',
-  faqTitle: 'Vanliga frågor',
-  bibliographyTitle: 'Bibliografi',
+  faqTitle: 'Vanliga frågor': 'Bibliografi',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -69,17 +69,6 @@ const howTo: UnderKeelLocaleContent['howTo'] = [
   {
     name: 'Kontrollera ditt passagefönster',
     text: 'Verktyget visar det exakta tidsintervallet under vilket du kommer att ha tillräckligt djup för att navigera säkert.',
-  },
-];
-
-const bibliography: UnderKeelLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Recreational Boating',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Portos de Galicia - Tide Tables',
-    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
   },
 ];
 

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
@@ -23,8 +24,7 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Прилив',
   statusDownLabel: 'Отлив',
   statusOutOfRange: 'Вне диапазона',
-  faqTitle: 'Часто задаваемые вопросы',
-  bibliographyTitle: 'Библиография',
+  faqTitle: 'Часто задаваемые вопросы': 'Библиография',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [
@@ -76,17 +76,6 @@ const howTo: TideCalculatorLocaleContent['howTo'] = [
   {
     name: 'Изучите таблицу двенадцатых',
     text: 'Просмотрите почасовое распределение, чтобы понять, как будет меняться уровень воды в течение всего периода.',
-  },
-];
-
-const bibliography: TideCalculatorLocaleContent['bibliography'] = [
-  {
-    name: 'Puertos del Estado - Tide Prediction',
-    url: 'https://portus.puertos.es/#/',
-  },
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
   },
 ];
 

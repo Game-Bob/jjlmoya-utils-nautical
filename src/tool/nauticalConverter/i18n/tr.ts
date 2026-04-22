@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { NauticalConverterUI, NauticalConverterLocaleContent } from '../index';
 
@@ -30,8 +31,7 @@ const ui: NauticalConverterUI = {
   forceLabel: 'Kuvvet',
   effectLabel: 'Etki',
   copyLabel: 'Değeri kopyala',
-  faqTitle: 'Sıkça Sorulan Sorular',
-  bibliographyTitle: 'Kaynakça',
+  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [
@@ -77,17 +77,6 @@ const howTo: NauticalConverterLocaleContent['howTo'] = [
   {
     name: 'Sonucu kopyalayın',
     text: 'Değeri panoya kopyalamak için herhangi bir alanın yanındaki kopyala düğmesini kullanın.',
-  },
-];
-
-const bibliography: NauticalConverterLocaleContent['bibliography'] = [
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
-  },
-  {
-    name: 'NOAA - National Weather Service',
-    url: 'https://www.weather.gov/mfl/beaufort',
   },
 ];
 

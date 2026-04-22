@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
@@ -26,8 +27,7 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Typ osiągów',
   racerLabel: 'Regatowy',
   exportPdfLabel: 'GENERUJ RAPORT TECHNICZNY',
-  faqTitle: 'Często Zadawane Pytania',
-  bibliographyTitle: 'Bibliografia',
+  faqTitle: 'Często Zadawane Pytania': 'Bibliografia',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [
@@ -73,21 +73,6 @@ const howTo: SailAreaLocaleContent['howTo'] = [
   {
     name: 'Zinterpretuj współczynnik SA/D',
     text: 'Współczynnik pomiędzy 16 a 20 to zrównoważony jacht turystyczny. Powyżej 20 jacht będzie bardzo szybki przy słabym wietrze, ale wymagający w trudniejszych warunkach.',
-  },
-];
-
-const bibliography: SailAreaLocaleContent['bibliography'] = [
-  {
-    name: 'Society of Naval Architects and Marine Engineers - SNAME',
-    url: 'https://www.sname.org/',
-  },
-  {
-    name: 'ORC - Offshore Racing Congress',
-    url: 'https://orc.org/',
-  },
-  {
-    name: 'Elvstrom Sailmakers - Sail Manual',
-    url: 'https://www.elvstromsails.com/',
   },
 ];
 

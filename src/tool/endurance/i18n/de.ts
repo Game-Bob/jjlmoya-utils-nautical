@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
@@ -29,8 +30,7 @@ const ui: EnduranceUI = {
   seaLight: 'Leichter Wellengang (+15%)',
   seaModerate: 'Mäßiger Wellengang (+30%)',
   seaStorm: 'Sturm (+60%)',
-  faqTitle: 'Häufig gestellte Fragen',
-  bibliographyTitle: 'Bibliografie',
+  faqTitle: 'Häufig gestellte Fragen': 'Bibliografie',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [
@@ -72,17 +72,6 @@ const howTo: EnduranceLocaleContent['howTo'] = [
   {
     name: 'Prüfen Sie die sichere Distanz und Rückwärtsrechnung',
     text: 'Das Tool zeigt an, wie viele Meilen Sie sicher zurücklegen können und wie viel Kraftstoff Sie benötigen, um ein bestimmtes Ziel zu erreichen.',
-  },
-];
-
-const bibliography: EnduranceLocaleContent['bibliography'] = [
-  {
-    name: 'UK Maritime and Coastguard Agency',
-    url: 'https://www.gov.uk/government/organisations/maritime-and-coastguard-agency',
-  },
-  {
-    name: 'RYA - Royal Yachting Association',
-    url: 'https://www.rya.org.uk/',
   },
 ];
 

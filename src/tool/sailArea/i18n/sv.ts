@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
@@ -26,8 +27,7 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Prestandatyp',
   racerLabel: 'Racer',
   exportPdfLabel: 'GENERERA TEKNISK RAPPORT',
-  faqTitle: 'Vanliga frågor',
-  bibliographyTitle: 'Bibliografi',
+  faqTitle: 'Vanliga frågor': 'Bibliografi',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [
@@ -73,21 +73,6 @@ const howTo: SailAreaLocaleContent['howTo'] = [
   {
     name: 'Tolka SA/D-förhållandet',
     text: 'Ett förhållande mellan 16 och 20 indikerar en balanserad cruiser. Över 20 blir båten mycket livlig i svag vind men krävande i friska förhållanden.',
-  },
-];
-
-const bibliography: SailAreaLocaleContent['bibliography'] = [
-  {
-    name: 'Society of Naval Architects and Marine Engineers - SNAME',
-    url: 'https://www.sname.org/',
-  },
-  {
-    name: 'ORC - Offshore Racing Congress',
-    url: 'https://orc.org/',
-  },
-  {
-    name: 'Elvstrom Sailmakers - Sail Manual',
-    url: 'https://www.elvstromsails.com/',
   },
 ];
 

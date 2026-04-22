@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
@@ -23,8 +24,7 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Crescente',
   statusDownLabel: 'Calante',
   statusOutOfRange: 'Fuori intervallo',
-  faqTitle: 'Domande Frequenti',
-  bibliographyTitle: 'Bibliografia',
+  faqTitle: 'Domande Frequenti': 'Bibliografia',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [
@@ -76,17 +76,6 @@ const howTo: TideCalculatorLocaleContent['howTo'] = [
   {
     name: 'Analizza la tabella dei dodicesimi',
     text: 'Controlla la ripartizione ora per ora per capire come fluttuerà il livello dell\'acqua durante l\'intero periodo.',
-  },
-];
-
-const bibliography: TideCalculatorLocaleContent['bibliography'] = [
-  {
-    name: 'Puertos del Estado - Tide Prediction',
-    url: 'https://portus.puertos.es/#/',
-  },
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
   },
 ];
 

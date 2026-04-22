@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
@@ -29,8 +30,7 @@ const ui: EnduranceUI = {
   seaLight: 'Light swell (+15%)',
   seaModerate: 'Moderate swell (+30%)',
   seaStorm: 'Storm (+60%)',
-  faqTitle: 'Frequently Asked Questions',
-  bibliographyTitle: 'Bibliography',
+  faqTitle: 'Frequently Asked Questions': 'Bibliography',
 };
 const faq: EnduranceLocaleContent['faq'] = [
   {
@@ -73,16 +73,6 @@ const howTo: EnduranceLocaleContent['howTo'] = [
   },
 ];
 
-const bibliography: EnduranceLocaleContent['bibliography'] = [
-  {
-    name: 'UK Maritime and Coastguard Agency',
-    url: 'https://www.gov.uk/government/organisations/maritime-and-coastguard-agency',
-  },
-  {
-    name: 'RYA - Royal Yachting Association',
-    url: 'https://www.rya.org.uk/',
-  },
-];
 const seo: EnduranceLocaleContent['seo'] = [
   {
     type: 'title',

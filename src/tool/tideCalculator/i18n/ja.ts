@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
@@ -23,8 +24,7 @@ const ui: TideCalculatorUI = {
   statusUpLabel: '上げ潮',
   statusDownLabel: '下げ潮',
   statusOutOfRange: '範囲外',
-  faqTitle: 'よくある質問',
-  bibliographyTitle: '参考文献',
+  faqTitle: 'よくある質問': '参考文献',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [
@@ -76,17 +76,6 @@ const howTo: TideCalculatorLocaleContent['howTo'] = [
   {
     name: '12分の1則の表を分析する',
     text: '1時間ごとの内訳を確認して、全期間を通じて潮位がどのように変動するかを理解します。',
-  },
-];
-
-const bibliography: TideCalculatorLocaleContent['bibliography'] = [
-  {
-    name: 'Puertos del Estado - Tide Prediction',
-    url: 'https://portus.puertos.es/#/',
-  },
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
   },
 ];
 

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
@@ -34,8 +35,7 @@ const ui: SpeedConverterUI = {
   effectLabel: 'Visuell effekt',
   seaStateLabel: 'Sjötillstånd',
   windEffectLabel: 'Effekt på land',
-  faqTitle: 'Vanliga frågor',
-  bibliographyTitle: 'Bibliografi',
+  faqTitle: 'Vanliga frågor': 'Bibliografi',
   beaufortDataJson: JSON.stringify(beaufortData),
 };
 
@@ -74,17 +74,6 @@ const howTo: SpeedConverterLocaleContent['howTo'] = [
   {
     name: 'Använd resultaten för att planera din navigering',
     text: 'Kombinera hastighets- och vindinformation för att avgöra om förhållandena är lämpliga för din typ av fartyg och planerad rutt.',
-  },
-];
-
-const bibliography: SpeedConverterLocaleContent['bibliography'] = [
-  {
-    name: 'Met Office - The Beaufort Scale',
-    url: 'https://www.metoffice.gov.uk/weather/guides/coast-and-sea/beaufort-scale',
-  },
-  {
-    name: 'IMO - International Maritime Organization',
-    url: 'https://www.imo.org/',
   },
 ];
 

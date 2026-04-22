@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
@@ -22,8 +23,7 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Travessia de:',
   statusUntilLabel: 'Travessia até:',
   bottomLabel: 'FUNDO',
-  faqTitle: 'Perguntas Frequentes',
-  bibliographyTitle: 'Bibliografia',
+  faqTitle: 'Perguntas Frequentes': 'Bibliografia',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -69,17 +69,6 @@ const howTo: UnderKeelLocaleContent['howTo'] = [
   {
     name: 'Verifique a sua janela de travessia',
     text: 'A ferramenta mostrará o intervalo de tempo exato em que terá profundidade suficiente para navegar com segurança.',
-  },
-];
-
-const bibliography: UnderKeelLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Recreational Boating',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Portos de Galicia - Tide Tables',
-    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
   },
 ];
 

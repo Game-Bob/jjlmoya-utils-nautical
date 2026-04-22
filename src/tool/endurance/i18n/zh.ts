@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
@@ -29,8 +30,7 @@ const ui: EnduranceUI = {
   seaLight: '轻微涌浪 (+15%)',
   seaModerate: '中等涌浪 (+30%)',
   seaStorm: '风暴 (+60%)',
-  faqTitle: '常见问题',
-  bibliographyTitle: '参考文献',
+  faqTitle: '常见问题': '参考文献',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [
@@ -72,17 +72,6 @@ const howTo: EnduranceLocaleContent['howTo'] = [
   {
     name: '查看安全距离和反向计算',
     text: '工具将显示您可以安全覆盖的里程数，以及到达特定目的地所需的燃料量。',
-  },
-];
-
-const bibliography: EnduranceLocaleContent['bibliography'] = [
-  {
-    name: 'UK Maritime and Coastguard Agency',
-    url: 'https://www.gov.uk/government/organisations/maritime-and-coastguard-agency',
-  },
-  {
-    name: 'RYA - Royal Yachting Association',
-    url: 'https://www.rya.org.uk/',
   },
 ];
 

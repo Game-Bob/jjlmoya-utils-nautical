@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
@@ -22,8 +23,7 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Durchfahrt ab:',
   statusUntilLabel: 'Durchfahrt bis:',
   bottomLabel: 'GRUND',
-  faqTitle: 'Häufig gestellte Fragen',
-  bibliographyTitle: 'Bibliografie',
+  faqTitle: 'Häufig gestellte Fragen': 'Bibliografie',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -69,17 +69,6 @@ const howTo: UnderKeelLocaleContent['howTo'] = [
   {
     name: 'Durchfahrtsfenster prüfen',
     text: 'Das Tool zeigt das genaue Zeitintervall an, in dem Sie über genügend Tiefe für eine sichere Navigation verfügen.',
-  },
-];
-
-const bibliography: UnderKeelLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Recreational Boating',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Portos de Galicia - Tide Tables',
-    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
   },
 ];
 

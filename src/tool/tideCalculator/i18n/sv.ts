@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
@@ -23,8 +24,7 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Stigande',
   statusDownLabel: 'Sjunkande',
   statusOutOfRange: 'Utanför intervallet',
-  faqTitle: 'Vanliga frågor',
-  bibliographyTitle: 'Bibliografi',
+  faqTitle: 'Vanliga frågor': 'Bibliografi',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [
@@ -76,17 +76,6 @@ const howTo: TideCalculatorLocaleContent['howTo'] = [
   {
     name: 'Analysera tolftedelstabellen',
     text: 'Granska uppdelningen timme för timme för att förstå hur vattennivån kommer att variera under hela perioden.',
-  },
-];
-
-const bibliography: TideCalculatorLocaleContent['bibliography'] = [
-  {
-    name: 'Puertos del Estado - Tide Prediction',
-    url: 'https://portus.puertos.es/#/',
-  },
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
   },
 ];
 

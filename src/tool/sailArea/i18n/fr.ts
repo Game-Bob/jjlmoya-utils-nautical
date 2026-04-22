@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
@@ -26,8 +27,7 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Performance',
   racerLabel: 'Course',
   exportPdfLabel: 'GENERER RAPPORT TECHNIQUE',
-  faqTitle: 'Questions Frequentes',
-  bibliographyTitle: 'Bibliographie',
+  faqTitle: 'Questions Frequentes': 'Bibliographie',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [
@@ -73,21 +73,6 @@ const howTo: SailAreaLocaleContent['howTo'] = [
   {
     name: 'Interpreter le ratio SA/D',
     text: 'Un ratio entre 16 et 20 est un croiseur equilibre. Au-dessus de 20, le bateau sera tres vif par petit temps mais exigeant avec du vent frais.',
-  },
-];
-
-const bibliography: SailAreaLocaleContent['bibliography'] = [
-  {
-    name: 'Societe des Architectes Navals - SNAME',
-    url: 'https://www.sname.org/',
-  },
-  {
-    name: 'ORC - Offshore Racing Congress',
-    url: 'https://orc.org/',
-  },
-  {
-    name: 'Elvstrom Sailmakers - Manuel de Voilerie',
-    url: 'https://www.elvstromsails.com/',
   },
 ];
 

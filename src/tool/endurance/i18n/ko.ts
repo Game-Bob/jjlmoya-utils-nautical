@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
@@ -29,8 +30,7 @@ const ui: EnduranceUI = {
   seaLight: '약한 물결 (+15%)',
   seaModerate: '보통 물결 (+30%)',
   seaStorm: '거친 풍랑 (+60%)',
-  faqTitle: '자주 묻는 질문',
-  bibliographyTitle: '참고 문헌',
+  faqTitle: '자주 묻는 질문': '참고 문헌',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [
@@ -72,17 +72,6 @@ const howTo: EnduranceLocaleContent['howTo'] = [
   {
     name: '안전 거리 및 역산 결과 확인',
     text: '안전하게 항해할 수 있는 해리 수와 특정 목적지에 도달하기 위해 필요한 연료량을 보여줍니다.',
-  },
-];
-
-const bibliography: EnduranceLocaleContent['bibliography'] = [
-  {
-    name: 'UK Maritime and Coastguard Agency',
-    url: 'https://www.gov.uk/government/organisations/maritime-and-coastguard-agency',
-  },
-  {
-    name: 'RYA - Royal Yachting Association',
-    url: 'https://www.rya.org.uk/',
   },
 ];
 

@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SailAreaUI, SailAreaLocaleContent } from '../index';
 
@@ -26,8 +27,7 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Performans Tipi',
   racerLabel: 'Yarış (Racer)',
   exportPdfLabel: 'TEKNİK RAPOR OLUŞTUR',
-  faqTitle: 'Sıkça Sorulan Sorular',
-  bibliographyTitle: 'Kaynakça',
+  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [
@@ -73,21 +73,6 @@ const howTo: SailAreaLocaleContent['howTo'] = [
   {
     name: 'SA/D oranını yorumlayın',
     text: '16 ile 20 arasındaki bir oran dengeli bir gezinti teknesidir (cruiser). 20\'nin üzerindeki oranlarda tekne hafif rüzgarda çok canlı olacaktır ancak sert koşullarda daha fazla deneyim gerektirir.',
-  },
-];
-
-const bibliography: SailAreaLocaleContent['bibliography'] = [
-  {
-    name: 'Society of Naval Architects and Marine Engineers - SNAME',
-    url: 'https://www.sname.org/',
-  },
-  {
-    name: 'ORC - Offshore Racing Congress',
-    url: 'https://orc.org/',
-  },
-  {
-    name: 'Elvstrom Sailmakers - Sail Manual',
-    url: 'https://www.elvstromsails.com/',
   },
 ];
 

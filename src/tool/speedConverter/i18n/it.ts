@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
@@ -34,8 +35,7 @@ const ui: SpeedConverterUI = {
   effectLabel: 'Effetto Visivo',
   seaStateLabel: 'Stato del Mare',
   windEffectLabel: 'Effetto a Terra',
-  faqTitle: 'Domande Frequenti',
-  bibliographyTitle: 'Bibliografia',
+  faqTitle: 'Domande Frequenti': 'Bibliografia',
   beaufortDataJson: JSON.stringify(beaufortData),
 };
 
@@ -74,17 +74,6 @@ const howTo: SpeedConverterLocaleContent['howTo'] = [
   {
     name: 'Usa i risultati per pianificare la navigazione',
     text: 'Combina le informazioni su velocità e vento per decidere se le condizioni sono appropriate per il tuo tipo di barca e per la rotta pianificata.',
-  },
-];
-
-const bibliography: SpeedConverterLocaleContent['bibliography'] = [
-  {
-    name: 'Met Office - The Beaufort Scale',
-    url: 'https://www.metoffice.gov.uk/weather/guides/coast-and-sea/beaufort-scale',
-  },
-  {
-    name: 'IMO - International Maritime Organization',
-    url: 'https://www.imo.org/',
   },
 ];
 

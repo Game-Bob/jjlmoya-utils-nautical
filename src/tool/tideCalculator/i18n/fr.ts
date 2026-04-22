@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
@@ -23,8 +24,7 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Montante',
   statusDownLabel: 'Descendante',
   statusOutOfRange: 'Hors plage',
-  faqTitle: 'Questions Frequentes',
-  bibliographyTitle: 'Bibliographie',
+  faqTitle: 'Questions Frequentes': 'Bibliographie',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [
@@ -76,17 +76,6 @@ const howTo: TideCalculatorLocaleContent['howTo'] = [
   {
     name: 'Analyser le tableau des douzaines',
     text: "Examinez la ventilation heure par heure pour comprendre comment le niveau de l'eau va fluctuer pendant toute la periode.",
-  },
-];
-
-const bibliography: TideCalculatorLocaleContent['bibliography'] = [
-  {
-    name: 'Puertos del Estado - Prediction des marees',
-    url: 'https://portus.puertos.es/#/',
-  },
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
   },
 ];
 

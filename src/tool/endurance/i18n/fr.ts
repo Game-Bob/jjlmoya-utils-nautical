@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
@@ -29,8 +30,7 @@ const ui: EnduranceUI = {
   seaLight: 'Petite houle (+15%)',
   seaModerate: 'Houle moderee (+30%)',
   seaStorm: 'Tempete (+60%)',
-  faqTitle: 'Questions Frequentes',
-  bibliographyTitle: 'References',
+  faqTitle: 'Questions Frequentes': 'References',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [
@@ -72,17 +72,6 @@ const howTo: EnduranceLocaleContent['howTo'] = [
   {
     name: 'Verifiez la distance securisee et le calcul inverse',
     text: "L'outil vous montre combien de miles vous pouvez parcourir en securite et combien de carburant vous avez besoin pour atteindre une destination precise.",
-  },
-];
-
-const bibliography: EnduranceLocaleContent['bibliography'] = [
-  {
-    name: 'Direction des Affaires Maritimes - Navigation de Plaisance',
-    url: 'https://www.mer.gouv.fr/les-marins/plaisanciers',
-  },
-  {
-    name: 'Federation Francaise de Voile - Securite',
-    url: 'https://www.ffvoile.fr/',
   },
 ];
 

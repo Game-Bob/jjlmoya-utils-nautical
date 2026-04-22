@@ -44,3 +44,5 @@ export const speedConverter: NauticalToolEntry<SpeedConverterUI> = {
     zh: () => import('./i18n/zh').then((m) => m.content),
   },
 };
+
+export { bibliography } from './bibliography';

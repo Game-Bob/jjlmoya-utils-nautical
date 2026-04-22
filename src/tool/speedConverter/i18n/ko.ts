@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { SpeedConverterUI, SpeedConverterLocaleContent } from '../index';
 
@@ -34,8 +35,7 @@ const ui: SpeedConverterUI = {
   effectLabel: '시각적 영향',
   seaStateLabel: '해상 상태',
   windEffectLabel: '육상 영향',
-  faqTitle: '자주 묻는 질문',
-  bibliographyTitle: '참고 문헌',
+  faqTitle: '자주 묻는 질문': '참고 문헌',
   beaufortDataJson: JSON.stringify(beaufortData),
 };
 
@@ -74,17 +74,6 @@ const howTo: SpeedConverterLocaleContent['howTo'] = [
   {
     name: '결과를 항해 계획에 활용',
     text: '속도와 바람 정보를 조합하여 현재 기상 조건이 본인의 배와 계획된 항로에 적합한지 판단하세요.',
-  },
-];
-
-const bibliography: SpeedConverterLocaleContent['bibliography'] = [
-  {
-    name: 'Met Office - The Beaufort Scale',
-    url: 'https://www.metoffice.gov.uk/weather/guides/coast-and-sea/beaufort-scale',
-  },
-  {
-    name: 'IMO - International Maritime Organization',
-    url: 'https://www.imo.org/',
   },
 ];
 

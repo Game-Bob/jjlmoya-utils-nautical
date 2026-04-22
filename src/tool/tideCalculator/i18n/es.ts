@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 
@@ -23,8 +24,7 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Subiendo',
   statusDownLabel: 'Bajando',
   statusOutOfRange: 'Fuera de rango',
-  faqTitle: 'Preguntas Frecuentes',
-  bibliographyTitle: 'Referencias Bibliograficas',
+  faqTitle: 'Preguntas Frecuentes': 'Referencias Bibliograficas',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [
@@ -76,17 +76,6 @@ const howTo: TideCalculatorLocaleContent['howTo'] = [
   {
     name: 'Analiza la tabla de dozavos',
     text: 'Revisa el desglose hora por hora para entender como fluctuara el nivel del agua durante todo el periodo.',
-  },
-];
-
-const bibliography: TideCalculatorLocaleContent['bibliography'] = [
-  {
-    name: 'Puertos del Estado - Prediccion de Mareas',
-    url: 'https://portus.puertos.es/#/',
-  },
-  {
-    name: 'Instituto Hidrografico de la Marina',
-    url: 'https://armada.defensa.gob.es/ihm/',
   },
 ];
 

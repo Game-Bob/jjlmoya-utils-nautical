@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { EnduranceUI, EnduranceLocaleContent } from '../index';
 
@@ -29,8 +30,7 @@ const ui: EnduranceUI = {
   seaLight: 'Lätt sjögång (+15 %)',
   seaModerate: 'Måttlig sjögång (+30 %)',
   seaStorm: 'Storm (+60 %)',
-  faqTitle: 'Vanliga Frågor',
-  bibliographyTitle: 'Bibliografi',
+  faqTitle: 'Vanliga Frågor': 'Bibliografi',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [
@@ -72,17 +72,6 @@ const howTo: EnduranceLocaleContent['howTo'] = [
   {
     name: 'Kontrollera den säkra distansen och den omvända beräkningen',
     text: 'Verktyget visar hur många sjömil du säkert kan täcka och hur mycket bränsle du behöver för att nå en specifik destination.',
-  },
-];
-
-const bibliography: EnduranceLocaleContent['bibliography'] = [
-  {
-    name: 'UK Maritime and Coastguard Agency',
-    url: 'https://www.gov.uk/government/organisations/maritime-and-coastguard-agency',
-  },
-  {
-    name: 'RYA - Royal Yachting Association',
-    url: 'https://www.rya.org.uk/',
   },
 ];
 

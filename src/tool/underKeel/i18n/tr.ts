@@ -1,3 +1,4 @@
+import { bibliography } from '../bibliography';
 import type { WithContext, FAQPage, HowTo, SoftwareApplication } from 'schema-dts';
 import type { UnderKeelUI, UnderKeelLocaleContent } from '../index';
 
@@ -22,8 +23,7 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Geçiş başlangıcı:',
   statusUntilLabel: 'Geçiş bitişi:',
   bottomLabel: 'DENİZ TABANI',
-  faqTitle: 'Sıkça Sorulan Sorular',
-  bibliographyTitle: 'Kaynakça',
+  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -69,17 +69,6 @@ const howTo: UnderKeelLocaleContent['howTo'] = [
   {
     name: 'Geçiş pencerenizi kontrol edin',
     text: 'Araç, emniyetle seyretmek için yeterli derinliğe sahip olacağınız tam zaman aralığını gösterecektir.',
-  },
-];
-
-const bibliography: UnderKeelLocaleContent['bibliography'] = [
-  {
-    name: 'Ministerio de Transportes - Recreational Boating',
-    url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',
-  },
-  {
-    name: 'Portos de Galicia - Tide Tables',
-    url: 'https://portosdegalicia.gal/es/taboa-de-mareas',
   },
 ];
 
