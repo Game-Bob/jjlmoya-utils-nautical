@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Прилив',
   statusDownLabel: 'Отлив',
   statusOutOfRange: 'Вне диапазона',
-  faqTitle: 'Часто задаваемые вопросы': 'Библиография',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: '通行开始时间：',
   statusUntilLabel: '通行结束时间：',
   bottomLabel: '海床',
-  faqTitle: '常见问题': '参考文献统计',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: '最大负载吃水：', definition: '船只最低点（龙骨）在满载时达到的深度。' },
       { term: '海图深度：', definition: '航海图上您想要穿过的点的数字。如果有下划线，则该点在海图基准面时会干出。' },

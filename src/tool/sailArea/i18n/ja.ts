@@ -27,7 +27,6 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'パフォーマンス型',
   racerLabel: 'レーサー',
   exportPdfLabel: 'テクニカルレポートを生成',
-  faqTitle: 'よくある質問': '参考文献',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [

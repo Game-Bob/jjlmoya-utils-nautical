@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Легкое волнение (+15%)',
   seaModerate: 'Умеренное волнение (+30%)',
   seaStorm: 'Шторм (+60%)',
-  faqTitle: 'Часто задаваемые вопросы': 'Библиография',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

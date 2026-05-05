@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Travessia de:',
   statusUntilLabel: 'Travessia até:',
   bottomLabel: 'FUNDO',
-  faqTitle: 'Perguntas Frequentes': 'Bibliografia',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: 'Calado máximo carregado', definition: 'A profundidade atingida pelo ponto mais baixo do barco (a quilha) em plena carga.' },
       { term: 'Profundidade da carta', definition: 'O número na carta náutica para o ponto que deseja cruzar. Se sublinhado, o ponto seca no Zero Hidrográfico.' },

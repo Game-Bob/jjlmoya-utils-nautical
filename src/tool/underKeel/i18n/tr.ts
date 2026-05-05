@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Geçiş başlangıcı:',
   statusUntilLabel: 'Geçiş bitişi:',
   bottomLabel: 'DENİZ TABANI',
-  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: 'Maksimum yüklü draft:', definition: 'Tam yüklü teknenin en alt noktasının (omurga) ulaştığı derinlik.' },
       { term: 'Harita derinliği:', definition: 'Harita üzerindeki derinlik rakamı. Altı çiziliyse Harita Düzleminde kurur.' },

@@ -35,7 +35,6 @@ const ui: SpeedConverterUI = {
   effectLabel: '시각적 영향',
   seaStateLabel: '해상 상태',
   windEffectLabel: '육상 영향',
-  faqTitle: '자주 묻는 질문': '참고 문헌',
   beaufortDataJson: JSON.stringify(beaufortData),
 };
 

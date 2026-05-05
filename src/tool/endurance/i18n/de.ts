@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Leichter Wellengang (+15%)',
   seaModerate: 'Mäßiger Wellengang (+30%)',
   seaStorm: 'Sturm (+60%)',
-  faqTitle: 'Häufig gestellte Fragen': 'Bibliografie',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

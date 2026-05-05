@@ -31,7 +31,6 @@ const ui: NauticalConverterUI = {
   forceLabel: 'Styrka',
   effectLabel: 'Effekt',
   copyLabel: 'Kopiera värde',
-  faqTitle: 'Vanliga Frågor': 'Bibliografi',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [

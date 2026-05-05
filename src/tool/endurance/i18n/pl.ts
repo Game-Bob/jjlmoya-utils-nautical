@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Lekka fala (+15%)',
   seaModerate: 'Umiarkowana fala (+30%)',
   seaStorm: 'Sztorm (+60%)',
-  faqTitle: 'Często Zadawane Pytania': 'Bibliografia',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

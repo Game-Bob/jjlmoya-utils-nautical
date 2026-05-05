@@ -27,7 +27,6 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Performans Tipi',
   racerLabel: 'Yarış (Racer)',
   exportPdfLabel: 'TEKNİK RAPOR OLUŞTUR',
-  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [

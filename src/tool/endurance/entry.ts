@@ -24,8 +24,6 @@ export interface EnduranceUI {
   seaLight: string;
   seaModerate: string;
   seaStorm: string;
-  faqTitle: string;
-  bibliographyTitle: string;
 }
 
 export type EnduranceLocaleContent = ToolLocaleContent<EnduranceUI>;

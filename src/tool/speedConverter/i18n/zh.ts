@@ -35,7 +35,6 @@ const ui: SpeedConverterUI = {
   effectLabel: '视觉影响',
   seaStateLabel: '海况',
   windEffectLabel: '陆地影响',
-  faqTitle: '常见问题': '参考文献统计',
   beaufortDataJson: JSON.stringify(beaufortData),
 };
 

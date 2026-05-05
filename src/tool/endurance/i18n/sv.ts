@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Lätt sjögång (+15 %)',
   seaModerate: 'Måttlig sjögång (+30 %)',
   seaStorm: 'Storm (+60 %)',
-  faqTitle: 'Vanliga Frågor': 'Bibliografi',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

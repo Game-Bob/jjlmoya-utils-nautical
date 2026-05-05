@@ -25,8 +25,6 @@ export interface NauticalConverterUI {
   forceLabel: string;
   effectLabel: string;
   copyLabel: string;
-  faqTitle: string;
-  bibliographyTitle: string;
 }
 
 export type NauticalConverterLocaleContent = ToolLocaleContent<NauticalConverterUI>;

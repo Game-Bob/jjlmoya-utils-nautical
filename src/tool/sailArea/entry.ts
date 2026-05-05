@@ -21,8 +21,6 @@ export interface SailAreaUI {
   performanceTypeLabel: string;
   racerLabel: string;
   exportPdfLabel: string;
-  faqTitle: string;
-  bibliographyTitle: string;
 }
 
 export type SailAreaLocaleContent = ToolLocaleContent<SailAreaUI>;

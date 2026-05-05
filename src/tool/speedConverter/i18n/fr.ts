@@ -35,7 +35,6 @@ const ui: SpeedConverterUI = {
   effectLabel: 'Effet Visuel',
   seaStateLabel: 'Etat de la Mer',
   windEffectLabel: 'Effet sur Terre',
-  faqTitle: 'Questions Frequentes': 'Bibliographie',
   beaufortDataJson: JSON.stringify(beaufortData),
 };
 

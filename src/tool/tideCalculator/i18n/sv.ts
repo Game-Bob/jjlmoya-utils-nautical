@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Stigande',
   statusDownLabel: 'Sjunkande',
   statusOutOfRange: 'Utanför intervallet',
-  faqTitle: 'Vanliga frågor': 'Bibliografi',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

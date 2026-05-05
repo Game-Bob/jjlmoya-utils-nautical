@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Transito dalle:',
   statusUntilLabel: 'Transito fino alle:',
   bottomLabel: 'FONDALE',
-  faqTitle: 'Domande Frequenti': 'Bibliografia',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: 'Pescaggio massimo a carico', definition: 'La profondità raggiunta dal punto più basso della barca (la chiglia) a pieno carico.' },
       { term: 'Profondità della carta', definition: 'Il numero sulla carta nautica per il punto che desideri attraversare.' },

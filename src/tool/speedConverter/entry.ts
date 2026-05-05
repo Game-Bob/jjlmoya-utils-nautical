@@ -13,8 +13,6 @@ export interface SpeedConverterUI {
   effectLabel: string;
   seaStateLabel: string;
   windEffectLabel: string;
-  faqTitle: string;
-  bibliographyTitle: string;
   beaufortDataJson: string;
 }
 

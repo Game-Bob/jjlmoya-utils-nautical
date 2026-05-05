@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Lichte deining (+15%)',
   seaModerate: 'Matige deining (+30%)',
   seaStorm: 'Storm (+60%)',
-  faqTitle: 'Veelgestelde Vragen': 'Bibliografie',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

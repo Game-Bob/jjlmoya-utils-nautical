@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: '밀물',
   statusDownLabel: '썰물',
   statusOutOfRange: '범위 초과',
-  faqTitle: '자주 묻는 질문': '참고 문헌',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

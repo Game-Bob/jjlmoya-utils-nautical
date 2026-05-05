@@ -17,8 +17,6 @@ export interface UnderKeelUI {
   statusFromLabel: string;
   statusUntilLabel: string;
   bottomLabel: string;
-  faqTitle: string;
-  bibliographyTitle: string;
 }
 
 export type UnderKeelLocaleContent = ToolLocaleContent<UnderKeelUI>;

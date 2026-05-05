@@ -18,8 +18,6 @@ export interface TideCalculatorUI {
   statusUpLabel: string;
   statusDownLabel: string;
   statusOutOfRange: string;
-  faqTitle: string;
-  bibliographyTitle: string;
 }
 
 export type TideCalculatorLocaleContent = ToolLocaleContent<TideCalculatorUI>;

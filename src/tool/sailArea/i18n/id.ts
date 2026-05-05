@@ -27,7 +27,6 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Tipe Performa',
   racerLabel: 'Kapal Balap (Racer)',
   exportPdfLabel: 'BUAT LAPORAN TEKNIS',
-  faqTitle: 'Pertanyaan yang Sering Diajukan': 'Bibliografi',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [

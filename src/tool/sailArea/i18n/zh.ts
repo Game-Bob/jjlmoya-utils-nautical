@@ -27,7 +27,6 @@ const ui: SailAreaUI = {
   performanceTypeLabel: '性能类型',
   racerLabel: '竞赛型',
   exportPdfLabel: '生成技术报告',
-  faqTitle: '常见问题': '参考文献统计',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [

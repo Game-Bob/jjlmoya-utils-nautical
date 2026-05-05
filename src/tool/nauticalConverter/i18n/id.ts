@@ -31,7 +31,6 @@ const ui: NauticalConverterUI = {
   forceLabel: 'Kekuatan',
   effectLabel: 'Efek',
   copyLabel: 'Salin nilai',
-  faqTitle: 'Pertanyaan yang Sering Diajukan': 'Bibliografi',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [

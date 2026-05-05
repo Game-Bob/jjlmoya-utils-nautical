@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Alun Ringan (+15%)',
   seaModerate: 'Alun Sedang (+30%)',
   seaStorm: 'Badai (+60%)',
-  faqTitle: 'Pertanyaan yang Sering Diajukan': 'Bibliografi',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

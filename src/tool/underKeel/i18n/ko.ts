@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: '통과 시작:',
   statusUntilLabel: '통과 종료:',
   bottomLabel: '바닥면',
-  faqTitle: '자주 묻는 질문': '참고 문헌',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: '최대 적재 흘수', definition: '만재 상태에서 선박의 최하단(용골)이 잠기는 깊이.' },
       { term: '해도 수심', definition: '해당 지점의 해도상 수치. 밑줄이 그어져 있다면 기본 수준면에서 노출되는 지점입니다.' },

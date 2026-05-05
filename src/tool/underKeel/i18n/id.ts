@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Lintasan dari:',
   statusUntilLabel: 'Lintasan hingga:',
   bottomLabel: 'DASAR LAUT',
-  faqTitle: 'Pertanyaan yang Sering Diajukan': 'Bibliografi',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -101,7 +100,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     html: 'Untuk menggunakan kalkulator ruang bebas di bawah lunas secara profesional, Anda perlu mengetahui dua detail teknis tentang kapal Anda dan satu keputusan pribadi:',
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: 'Draf beban maksimum', definition: 'Kedalaman yang dicapai oleh titik terendah kapal (lunas) saat terisi penuh.' },
       { term: 'Sounding peta', definition: 'Angka pada peta navigasi untuk titik yang ingin Anda lintasi. Jika digarisbawahi, titik tersebut mengering pada Chart Datum.' },

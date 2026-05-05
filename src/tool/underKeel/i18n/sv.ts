@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Passage från:',
   statusUntilLabel: 'Passage till:',
   bottomLabel: 'BOTTEN',
-  faqTitle: 'Vanliga frågor': 'Bibliografi',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: 'Maximalt lastat djupgående', definition: 'Det djup som nås av båtens lägsta punkt (kölen) vid full last.' },
       { term: 'Sjökortsdjup', definition: 'Siffran i sjökortet för den punkt du vill korsa. Om understruken är punkten torr vid sjökortsplan.' },

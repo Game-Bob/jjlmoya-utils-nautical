@@ -31,7 +31,6 @@ const ui: NauticalConverterUI = {
   forceLabel: 'Stärke',
   effectLabel: 'Auswirkung',
   copyLabel: 'Wert kopieren',
-  faqTitle: 'Häufig gestellte Fragen': 'Bibliografie',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [

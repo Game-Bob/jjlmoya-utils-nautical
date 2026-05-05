@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: '航行開始:',
   statusUntilLabel: '航行終了:',
   bottomLabel: '海底部',
-  faqTitle: 'よくある質問': '参考文献',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: '最大積載喫水', definition: '満載状態で船の最低部（キール）が達する深さ。' },
       { term: '海図水深', definition: '通過したい地点の海図上の数字。下線付きの場合、基本水準面では干出します。' },

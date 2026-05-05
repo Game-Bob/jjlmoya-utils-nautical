@@ -31,7 +31,6 @@ const ui: NauticalConverterUI = {
   forceLabel: '風力',
   effectLabel: '影響',
   copyLabel: '値をコピー',
-  faqTitle: 'よくある質問': '参考文献',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [

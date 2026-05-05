@@ -11,4 +11,4 @@ const { locale = 'es' } = Astro.props;
 const content = await nauticalConverter.i18n[locale]?.();
 ---
 
-{content && <SharedBibliography links={content.bibliography} title={content.ui.bibliographyTitle} />}
+{content && <SharedBibliography links={content.bibliography}  />}

@@ -31,7 +31,6 @@ const ui: NauticalConverterUI = {
   forceLabel: '풍력',
   effectLabel: '영향',
   copyLabel: '값 복사',
-  faqTitle: '자주 묻는 질문': '참고 문헌',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [

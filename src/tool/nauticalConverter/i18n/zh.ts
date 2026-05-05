@@ -31,7 +31,6 @@ const ui: NauticalConverterUI = {
   forceLabel: '风力',
   effectLabel: '影响',
   copyLabel: '复制数值',
-  faqTitle: '常见问题': '参考文献',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [

@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Passage a partir de :',
   statusUntilLabel: "Passage jusqu'a :",
   bottomLabel: 'FOND',
-  faqTitle: 'Questions Frequentes': 'Bibliographie',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [

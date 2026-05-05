@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: '上げ潮',
   statusDownLabel: '下げ潮',
   statusOutOfRange: '範囲外',
-  faqTitle: 'よくある質問': '参考文献',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

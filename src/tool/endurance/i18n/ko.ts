@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: '약한 물결 (+15%)',
   seaModerate: '보통 물결 (+30%)',
   seaStorm: '거친 풍랑 (+60%)',
-  faqTitle: '자주 묻는 질문': '참고 문헌',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

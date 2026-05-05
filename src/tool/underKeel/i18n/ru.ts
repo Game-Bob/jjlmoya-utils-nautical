@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Проход возможен с:',
   statusUntilLabel: 'Проход возможен до:',
   bottomLabel: 'ДНО',
-  faqTitle: 'Часто задаваемые вопросы': 'Библиография',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: 'Максимальная осадка в грузу', definition: 'Глубина, которой достигает самая нижняя точка судна (киль) при полной загрузке.' },
       { term: 'Глубина по карте', definition: 'Число на карте для точки, в которой вы хотите пройти.' },

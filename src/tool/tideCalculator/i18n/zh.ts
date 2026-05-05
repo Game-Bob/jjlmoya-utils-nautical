@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: '上涨',
   statusDownLabel: '下降',
   statusOutOfRange: '超出范围',
-  faqTitle: '常见问题': '参考文献统计',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

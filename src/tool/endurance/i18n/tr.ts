@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Hafif Çalkantılı (+%15)',
   seaModerate: 'Orta Çalkantılı (+%30)',
   seaStorm: 'Fırtınalı (+%60)',
-  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

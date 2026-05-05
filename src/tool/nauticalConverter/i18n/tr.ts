@@ -31,7 +31,6 @@ const ui: NauticalConverterUI = {
   forceLabel: 'Kuvvet',
   effectLabel: 'Etki',
   copyLabel: 'Değeri kopyala',
-  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
 };
 
 const faq: NauticalConverterLocaleContent['faq'] = [

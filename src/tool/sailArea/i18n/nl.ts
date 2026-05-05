@@ -27,7 +27,6 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Prestatie Type',
   racerLabel: 'Racer',
   exportPdfLabel: 'GENEREER TECHNISCH RAPPORT',
-  faqTitle: 'Veelgestelde Vragen': 'Bibliografie',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [

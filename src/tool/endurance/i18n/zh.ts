@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: '轻微涌浪 (+15%)',
   seaModerate: '中等涌浪 (+30%)',
   seaStorm: '风暴 (+60%)',
-  faqTitle: '常见问题': '参考文献',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

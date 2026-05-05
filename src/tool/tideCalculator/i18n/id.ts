@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Naik',
   statusDownLabel: 'Turun',
   statusOutOfRange: 'Di luar jangkauan',
-  faqTitle: 'Pertanyaan yang Sering Diajukan': 'Bibliografi',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

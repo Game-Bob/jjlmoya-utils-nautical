@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Light swell (+15%)',
   seaModerate: 'Moderate swell (+30%)',
   seaStorm: 'Storm (+60%)',
-  faqTitle: 'Frequently Asked Questions': 'Bibliography',
 };
 const faq: EnduranceLocaleContent['faq'] = [
   {

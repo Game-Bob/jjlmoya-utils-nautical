@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Subiendo',
   statusDownLabel: 'Bajando',
   statusOutOfRange: 'Fuera de rango',
-  faqTitle: 'Preguntas Frecuentes': 'Referencias Bibliograficas',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

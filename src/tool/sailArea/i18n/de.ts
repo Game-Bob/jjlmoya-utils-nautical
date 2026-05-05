@@ -27,7 +27,6 @@ const ui: SailAreaUI = {
   performanceTypeLabel: 'Leistungstyp',
   racerLabel: 'Regattayacht',
   exportPdfLabel: 'TECHNISCHEN BERICHT ERSTELLEN',
-  faqTitle: 'Häufig gestellte Fragen': 'Bibliografie',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [

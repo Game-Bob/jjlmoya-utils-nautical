@@ -30,7 +30,6 @@ const ui: EnduranceUI = {
   seaLight: 'Petite houle (+15%)',
   seaModerate: 'Houle moderee (+30%)',
   seaStorm: 'Tempete (+60%)',
-  faqTitle: 'Questions Frequentes': 'References',
 };
 
 const faq: EnduranceLocaleContent['faq'] = [

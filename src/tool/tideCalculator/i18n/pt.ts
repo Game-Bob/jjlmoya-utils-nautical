@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'A encher',
   statusDownLabel: 'A vazar',
   statusOutOfRange: 'Fora do intervalo',
-  faqTitle: 'Perguntas Frequentes': 'Bibliografia',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

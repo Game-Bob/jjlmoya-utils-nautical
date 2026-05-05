@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Przejście od:',
   statusUntilLabel: 'Przejście do:',
   bottomLabel: 'DNO',
-  faqTitle: 'Często zadawane pytania': 'Bibliografia',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: 'Maksymalne zanurzenie pod ładunkiem', definition: 'Głębokość osiągana przez najniższy punkt łodzi (stępkę) przy pełnym obciążeniu.' },
       { term: 'Głębokość z mapy', definition: 'Liczba na mapie morskiej dla punktu, który chcesz pokonać. Jeśli podkreślona, punkt osycha przy Zero Mapy.' },

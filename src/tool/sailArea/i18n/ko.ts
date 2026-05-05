@@ -27,7 +27,6 @@ const ui: SailAreaUI = {
   performanceTypeLabel: '성능 유형',
   racerLabel: '레이서',
   exportPdfLabel: '기술 보고서 생성',
-  faqTitle: '자주 묻는 질문': '참고 문헌',
 };
 
 const faq: SailAreaLocaleContent['faq'] = [

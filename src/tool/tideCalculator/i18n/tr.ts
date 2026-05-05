@@ -24,7 +24,6 @@ const ui: TideCalculatorUI = {
   statusUpLabel: 'Yükseliyor',
   statusDownLabel: 'Alçalıyor',
   statusOutOfRange: 'Aralık dışı',
-  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
 };
 
 const faq: TideCalculatorLocaleContent['faq'] = [

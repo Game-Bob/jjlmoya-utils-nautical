@@ -1,6 +1,6 @@
 import type { BibliographyEntry } from '../../types';
 
-export const bibliography: BibliographyEntry[] = ['bibliography'] = [
+export const bibliography: BibliographyEntry[] = [
   {
     name: 'Ministerio de Transportes - Recreational Boating',
     url: 'https://www.mitma.gob.es/marina-mercante/nautica-de-recreo/',

@@ -35,7 +35,6 @@ const ui: SpeedConverterUI = {
   effectLabel: 'Görsel Etki',
   seaStateLabel: 'Deniz Durumu',
   windEffectLabel: 'Karadaki Etki',
-  faqTitle: 'Sıkça Sorulan Sorular': 'Kaynakça',
   beaufortDataJson: JSON.stringify(beaufortData),
 };
 

@@ -23,7 +23,6 @@ const ui: UnderKeelUI = {
   statusFromLabel: 'Vaarvenster vanaf:',
   statusUntilLabel: 'Vaarvenster tot:',
   bottomLabel: 'BODEM',
-  faqTitle: 'Veelgestelde Vragen': 'Bibliografie',
 };
 
 const faq: UnderKeelLocaleContent['faq'] = [
@@ -97,7 +96,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     level: 3,
   },
   {
-    type: 'list',
+    type: 'glossary',
     items: [
       { term: 'Maximale beladen diepgang', definition: 'De diepte die het laagste punt van de boot (de kiel) bereikt bij volledige belading.' },
       { term: 'Kaartdiepte', definition: 'Het getal op de zeekaart voor het punt dat u wilt oversteken.' },
