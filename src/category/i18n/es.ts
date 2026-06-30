@@ -1,23 +1,23 @@
 import type { CategoryLocaleContent } from '../index';
 
 const slug = 'vela-y-nautica';
-const title = 'Vela y Nautica';
+const title = 'Vela y Náutica';
 const description =
-  'Herramientas de calculo nautico para navegantes: mareas, autonomia, superficie velica, conversores de unidades y velocidad. Ideales para el estudio del PER y Patron de Yate.';
+  'Herramientas de cálculo náutico para navegantes: mareas, autonomía, superficie vélica, conversores de unidades y velocidad. Ideales para el estudio del PER y Patrón de Yate.';
 
 const seo: CategoryLocaleContent['seo'] = [
   {
     type: 'title',
-    text: '¿Por que usar herramientas digitales en navegacion y vela?',
+    text: '¿Por qué usar herramientas digitales en navegación y vela?',
     level: 2,
   },
   {
     type: 'paragraph',
-    html: 'La navegacion moderna ha experimentado una transformacion radical con la llegada de las herramientas digitales. Ya sea que te encuentres en una pequeña embarcacion de recreo o al mando de un velero de crucero, la capacidad de procesar datos de posicion, viento y corriente de forma instantanea no es solo una cuestion de comodidad, sino un pilar fundamental de la seguridad en el mar.',
+    html: 'La navegación moderna ha experimentado una transformación radical con la llegada de las herramientas digitales. Ya sea que te encuentres en una pequeña embarcación de recreo o al mando de un velero de crucero, la capacidad de procesar datos de posición, viento y corriente de forma instantánea no es solo una cuestión de comodidad, sino un pilar fundamental de la seguridad en el mar.',
   },
   {
     type: 'paragraph',
-    html: 'Historicamente, el marino dependia exclusivamente del sextante, el cronometro de marina y las tablas de reduccion para determinar su posicion en el vasto oceano. Hoy, aunque el romanticismo del sextante persiste, la realidad operativa exige una velocidad de respuesta que solo las herramientas de calculo digital pueden proporcionar.',
+    html: 'Históricamente, el marino dependía exclusivamente del sextante, el cronómetro de marina y las tablas de reducción para determinar su posición en el vasto océano. Hoy, aunque el romanticismo del sextante persiste, la realidad operativa exige una velocidad de respuesta que solo las herramientas de cálculo digital pueden proporcionar.',
   },
   {
     type: 'title',
@@ -26,48 +26,48 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'title',
-    text: 'Geolocalización y Cartografia Digital de Alta Precision',
+    text: 'Geolocalización y Cartografía Digital de Alta Precisión',
     level: 3,
   },
   {
     type: 'paragraph',
-    html: 'La cartografia digital ha democratizado la navegacion, permitiendo que incluso barcos pequeños tengan acceso a informacion que antes estaba limitada a buques comerciales de gran calado. Un patron responsable utiliza las herramientas digitales para validar su juicio, no para sustituirlo.',
+    html: 'La cartografía digital ha democratizado la navegación, permitiendo que incluso barcos pequeños tengan acceso a información que antes estaba limitada a buques comerciales de gran calado. Un patrón responsable utiliza las herramientas digitales para validar su juicio, no para sustituirlo.',
   },
   {
     type: 'list',
     items: [
-      'Precision en la entrada de datos: Errores tipograficos minimos pueden alejarte kilometros de tu destino.',
-      'Compatibilidad entre dispositivos: Permite sincronizar la planificacion en tablet con los sistemas del puente de mando.',
+      'Precisión en la entrada de datos: Errores tipográficos mínimos pueden alejarte kilómetros de tu destino.',
+      'Compatibilidad entre dispositivos: Permite sincronizar la planificación en tablet con los sistemas del puente de mando.',
       'Respaldo ante fallos de hardware: Las apps web ligeras son un seguro si el plotter de abordo falla.',
-      'Planificacion de travesias (Passage Planning): Las calculadorasnáuticas permiten estimar consumos y distancias con precision matematica.',
+      'Planificación de travesías (Passage Planning): Las calculadoras náuticas permiten estimar consumos y distancias con precisión matemática.',
     ],
   },
   {
     type: 'title',
-    text: 'Meteorologia Marina y Optimizacion de la Ruta',
+    text: 'Meteorología Marina y Optimización de la Ruta',
     level: 3,
   },
   {
     type: 'paragraph',
-    html: 'El viento y el estado del mar son los verdaderos soberanos de la navegacion a vela. La interpretacion correcta de las escalas de viento (como la escala Beaufort) y su conversion a unidades practicas como nudos es el dia a dia de cualquier navegante.',
+    html: 'El viento y el estado del mar son los verdaderos soberanos de la navegación a vela. La interpretación correcta de las escalas de viento (como la escala Beaufort) y su conversión a unidades prácticas como nudos es el día a día de cualquier navegante.',
   },
   {
     type: 'tip',
     title: 'La importancia de la redundancia y el Plan B',
-    html: 'Nunca confies toda tu navegacion a un solo sistema electronico. Mantén siempre una copia de seguridad de tus coordenadas criticas en papel. Las herramientas web son excelentes para la planificacion previa, pero el buen marinero siempre tiene un plan de emergencia.',
+    html: 'Nunca confíes toda tu navegación a un solo sistema electrónico. Mantén siempre una copia de seguridad de tus coordenadas críticas en papel. Las herramientas web son excelentes para la planificación previa, pero el buen marinero siempre tiene un plan de emergencia.',
   },
   {
     type: 'title',
-    text: 'Formacion Nautica y el uso de Calculadoras',
+    text: 'Formación Náutica y el uso de Calculadoras',
     level: 2,
   },
   {
     type: 'paragraph',
-    html: 'Incluso en los examenes oficiales para obtener los titulos nauticos (como el PER en España), el uso de calculos sobre la carta sigue siendo obligatorio. Las herramientas digitales sirven como el compañero de estudio perfecto, permitiendo a los aspirantes verificar sus ejercicios de estima, calculos de marea o correcciones de aguja magnetica.',
+    html: 'Incluso en los exámenes oficiales para obtener los títulos náuticos (como el PER en España), el uso de cálculos sobre la carta sigue siendo obligatorio. Las herramientas digitales sirven como el compañero de estudio perfecto, permitiendo a los aspirantes verificar sus ejercicios de estima, cálculos de marea o correcciones de aguja magnética.',
   },
   {
     type: 'paragraph',
-    html: 'Nuestra coleccion de utilidades busca ser ese puente entre la rigurosidad academica de las cartas de papel y la inmediatez de la navegacion moderna. Queremos que cada patron, aficionado o profesional, encuentre aqui el dato rapido y preciso que necesita antes de soltar amarras.',
+    html: 'Nuestra colección de utilidades busca ser ese puente entre la rigurosidad académica de las cartas de papel y la inmediatez de la navegación moderna. Queremos que cada patrón, aficionado o profesional, encuentre aquí el dato rápido y preciso que necesita antes de soltar amarras.',
   },
 ];
 

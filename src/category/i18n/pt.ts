@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'A navegação moderna passou por uma transformação radical com o advento das ferramentas digitais. Quer você esteja em uma pequena embarcação de recreio ou ao leme de um iate de cruzeiro, a capacidade de processar dados de posição, vento e corrente instantaneamente não é apenas uma questão de conveniência — é um pilar fundamental de segurança no mar.',
+    html: 'A navegação moderna passou por uma transformação radical com o advento das ferramentas digitais. Quer você esteja em uma pequena embarcação de recreio ou ao leme de um iate de cruzeiro, a capacidade de processar dados de posição, vento e corrente instantaneamente não é apenas uma questão de conveniência - é um pilar fundamental de segurança no mar.',
   },
   {
     type: 'paragraph',

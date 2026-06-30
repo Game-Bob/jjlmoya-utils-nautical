@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'La navigazione moderna ha subito una trasformazione radicale con l\'avvento degli strumenti digitali. Che si trovi su una piccola imbarcazione da diporto o al timone di uno yacht da crociera, la capacità di elaborare istantaneamente dati di posizione, vento e corrente non è solo una questione di comodità — è un pilastro fondamentale della sicurezza in mare.',
+    html: 'La navigazione moderna ha subito una trasformazione radicale con l\'avvento degli strumenti digitali. Che si trovi su una piccola imbarcazione da diporto o al timone di uno yacht da crociera, la capacità di elaborare istantaneamente dati di posizione, vento e corrente non è solo una questione di comodità - è un pilastro fondamentale della sicurezza in mare.',
   },
   {
     type: 'paragraph',

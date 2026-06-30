@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Moderne navigatie heeft een radicale transformatie ondergaan met de komst van digitale tools. Of u nu op een kleine recreatievaarder bent of aan het roer van een cruisingjacht staat, de mogelijkheid om positie-, wind- en stroomgegevens direct te verwerken is niet alleen een kwestie van gemak — het is een fundamentele pijler van veiligheid op zee.',
+    html: 'Moderne navigatie heeft een radicale transformatie ondergaan met de komst van digitale tools. Of u nu op een kleine recreatievaarder bent of aan het roer van een cruisingjacht staat, de mogelijkheid om positie-, wind- en stroomgegevens direct te verwerken is niet alleen een kwestie van gemak - het is een fundamentele pijler van veiligheid op zee.',
   },
   {
     type: 'paragraph',

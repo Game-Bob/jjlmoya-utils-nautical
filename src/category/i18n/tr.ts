@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Modern navigasyon, dijital araçların ortaya çıkmasıyla köklü bir dönüşüm geçirdi. İster küçük bir eğlence teknesinde olun, ister bir kruvaziyer yatın dümenini tutun, konum, rüzgar ve akıntı verilerini anında işleme kabiliyeti yalnızca bir kolaylık meselesi değil — denizde güvenliğin temel bir direğidir.',
+    html: 'Modern navigasyon, dijital araçların ortaya çıkmasıyla köklü bir dönüşüm geçirdi. İster küçük bir eğlence teknesinde olun, ister bir kruvaziyer yatın dümenini tutun, konum, rüzgar ve akıntı verilerini anında işleme kabiliyeti yalnızca bir kolaylık meselesi değil - denizde güvenliğin temel bir direğidir.',
   },
   {
     type: 'paragraph',

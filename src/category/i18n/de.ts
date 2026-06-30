@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Die moderne Navigation hat mit dem Aufkommen digitaler Werkzeuge eine radikale Transformation erfahren. Ob auf einem kleinen Freizeitboot oder am Steuer einer Kreuzyacht – die Fähigkeit, Positions-, Wind- und Strömungsdaten sofort zu verarbeiten, ist nicht nur eine Frage des Komforts, sondern ein grundlegendes Sicherheitsprinzip auf See.',
+    html: 'Die moderne Navigation hat mit dem Aufkommen digitaler Werkzeuge eine radikale Transformation erfahren. Ob auf einem kleinen Freizeitboot oder am Steuer einer Kreuzyacht - die Fähigkeit, Positions-, Wind- und Strömungsdaten sofort zu verarbeiten, ist nicht nur eine Frage des Komforts, sondern ein grundlegendes Sicherheitsprinzip auf See.',
   },
   {
     type: 'paragraph',

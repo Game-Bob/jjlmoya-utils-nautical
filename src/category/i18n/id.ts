@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Navigasi modern telah mengalami transformasi radikal dengan hadirnya alat digital. Baik Anda berada di kapal rekreasi kecil maupun di kemudi kapal pesiar, kemampuan untuk memproses data posisi, angin, dan arus secara instan bukan hanya soal kenyamanan — ini adalah pilar keselamatan fundamental di laut.',
+    html: 'Navigasi modern telah mengalami transformasi radikal dengan hadirnya alat digital. Baik Anda berada di kapal rekreasi kecil maupun di kemudi kapal pesiar, kemampuan untuk memproses data posisi, angin, dan arus secara instan bukan hanya soal kenyamanan - ini adalah pilar keselamatan fundamental di laut.',
   },
   {
     type: 'paragraph',

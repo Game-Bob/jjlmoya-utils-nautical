@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Nowoczesna nawigacja przeszła radykalną transformację wraz z pojawieniem się cyfrowych narzędzi. Czy jesteś na małej łodzi rekreacyjnej, czy przy sterze jachtu rejsowego, zdolność do natychmiastowego przetwarzania danych pozycji, wiatru i prądu to nie tylko kwestia wygody — jest to fundamentalny filar bezpieczeństwa na morzu.',
+    html: 'Nowoczesna nawigacja przeszła radykalną transformację wraz z pojawieniem się cyfrowych narzędzi. Czy jesteś na małej łodzi rekreacyjnej, czy przy sterze jachtu rejsowego, zdolność do natychmiastowego przetwarzania danych pozycji, wiatru i prądu to nie tylko kwestia wygody - jest to fundamentalny filar bezpieczeństwa na morzu.',
   },
   {
     type: 'paragraph',

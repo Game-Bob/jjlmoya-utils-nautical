@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Modern navigation has undergone a radical transformation with the advent of digital tools. Whether you are on a small recreational craft or at the helm of a cruising yacht, the ability to process position, wind and current data instantly is not just a matter of convenience — it is a fundamental pillar of safety at sea.',
+    html: 'Modern navigation has undergone a radical transformation with the advent of digital tools. Whether you are on a small recreational craft or at the helm of a cruising yacht, the ability to process position, wind and current data instantly is not just a matter of convenience - it is a fundamental pillar of safety at sea.',
   },
   {
     type: 'paragraph',

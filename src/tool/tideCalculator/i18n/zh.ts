@@ -5,7 +5,7 @@ import type { TideCalculatorUI, TideCalculatorLocaleContent } from '../index';
 const slug = 'tide-height-calculator';
 const title = '潮汐高度计算器';
 const description =
-  '使用航海“十二分之一法则”估算潮汐周期中任意点的水深。是海岸规划和航海执照学习的理想工具。';
+  '使用航海"十二分之一法则"估算潮汐周期中任意点的水深。是海岸规划和航海执照学习的理想工具。';
 
 const ui: TideCalculatorUI = {
   parametersLabel: '参数',

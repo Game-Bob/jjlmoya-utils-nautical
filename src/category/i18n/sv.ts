@@ -13,7 +13,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Modern navigering har genomgått en radikal omvandling med introduktionen av digitala verktyg. Oavsett om du är ombord på en liten fritidsbåt eller vid rodret på en kryssningsjakt, är förmågan att omedelbart bearbeta positions-, vind- och strömdata inte bara en bekvämlighet — det är en grundläggande säkerhetspelare till sjöss.',
+    html: 'Modern navigering har genomgått en radikal omvandling med introduktionen av digitala verktyg. Oavsett om du är ombord på en liten fritidsbåt eller vid rodret på en kryssningsjakt, är förmågan att omedelbart bearbeta positions-, vind- och strömdata inte bara en bekvämlighet - det är en grundläggande säkerhetspelare till sjöss.',
   },
   {
     type: 'paragraph',

@@ -52,7 +52,7 @@ const faq: NauticalConverterLocaleContent['faq'] = [
   },
   {
     question: 'Jaka jednostka ciśnienia jest używana w meteorologii morskiej?',
-    answer: 'Meteorologia morska posługuje się głównie milibarem (mbar) lub jego odpowiednikiem – hektopaskalem (hPa). Normalne ciśnienie atmosferyczne na poziomie morza wynosi 1013,25 mbar.',
+    answer: 'Meteorologia morska posługuje się głównie milibarem (mbar) lub jego odpowiednikiem - hektopaskalem (hPa). Normalne ciśnienie atmosferyczne na poziomie morza wynosi 1013,25 mbar.',
   },
   {
     question: 'Ile stóp ma sążeń?',
@@ -87,7 +87,7 @@ const seo: NauticalConverterLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Żegluga po morzu wymaga własnego języka – systemu miar doskonalonego przez stulecia morskich eksploracji. Jednostki morskie nie są historycznym dziwactwem, lecz matematycznie spójnymi narzędziami dostosowanymi do geometrii Ziemi i praktycznych potrzeb nawigatora.',
+    html: 'Żegluga po morzu wymaga własnego języka - systemu miar doskonalonego przez stulecia morskich eksploracji. Jednostki morskie nie są historycznym dziwactwem, lecz matematycznie spójnymi narzędziami dostosowanymi do geometrii Ziemi i praktycznych potrzeb nawigatora.',
   },
   {
     type: 'paragraph',
@@ -130,7 +130,7 @@ const seo: NauticalConverterLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'W świecie morskim głębokość nie jest tylko statystyką – to różnica między bezpiecznym kotwicowiskiem a wejściem na dno. Historycznie, <strong>sążeń</strong> (1,8288 metra lub dokładnie 6 stóp) był dominującą jednostką miary głębokości w świecie anglojęzycznym.',
+    html: 'W świecie morskim głębokość nie jest tylko statystyką - to różnica między bezpiecznym kotwicowiskiem a wejściem na dno. Historycznie, <strong>sążeń</strong> (1,8288 metra lub dokładnie 6 stóp) był dominującą jednostką miary głębokości w świecie anglojęzycznym.',
   },
   {
     type: 'paragraph',
