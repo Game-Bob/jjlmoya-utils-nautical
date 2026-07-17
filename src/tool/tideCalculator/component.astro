@@ -20,29 +20,29 @@ const { ui } = Astro.props;
 
             <div class="tc-input-set">
                 <div class="tc-input-block">
-                    <label>{ui.highTideLabel}</label>
+                    <label for="high-tide-time">{ui.highTideLabel}</label>
                     <div class="row">
                         <input type="time" id="high-tide-time" value="12:00" />
                         <div class="tc-unit-input">
-                            <input type="number" id="high-tide-height" value="3.5" step="0.1" />
+                            <input type="number" id="high-tide-height" value="3.5" step="0.1" aria-label="High tide height" />
                             <span>m</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="tc-input-block">
-                    <label>{ui.lowTideLabel}</label>
+                    <label for="low-tide-time">{ui.lowTideLabel}</label>
                     <div class="row">
                         <input type="time" id="low-tide-time" value="06:00" />
                         <div class="tc-unit-input">
-                            <input type="number" id="low-tide-height" value="0.5" step="0.1" />
+                            <input type="number" id="low-tide-height" value="0.5" step="0.1" aria-label="Low tide height" />
                             <span>m</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="tc-input-block tc-featured">
-                    <label>{ui.targetTimeLabel}</label>
+                    <label for="target-time">{ui.targetTimeLabel}</label>
                     <input type="time" id="target-time" value="09:00" class="large-time" />
                 </div>
             </div>

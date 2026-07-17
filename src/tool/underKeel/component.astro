@@ -17,7 +17,7 @@ const { ui } = Astro.props;
 
       <div class="ukc-input-set">
         <div class="ukc-input-block">
-          <label>{ui.boatDraftLabel}</label>
+          <label for="boat-draft">{ui.boatDraftLabel}</label>
           <div class="ukc-unit-input">
             <input type="number" id="boat-draft" value="2.0" step="0.1" />
             <span>m</span>
@@ -25,7 +25,7 @@ const { ui } = Astro.props;
         </div>
 
         <div class="ukc-input-block">
-          <label>{ui.chartDepthLabel}</label>
+          <label for="chart-depth">{ui.chartDepthLabel}</label>
           <div class="ukc-unit-input">
             <input type="number" id="chart-depth" value="1.5" step="0.1" />
             <span>m</span>
@@ -33,7 +33,7 @@ const { ui } = Astro.props;
         </div>
 
         <div class="ukc-input-block">
-          <label>{ui.safetyMarginLabel}</label>
+          <label for="safety-margin">{ui.safetyMarginLabel}</label>
           <div class="ukc-unit-input">
             <input type="number" id="safety-margin" value="0.5" step="0.1" />
             <span>m</span>
@@ -43,18 +43,18 @@ const { ui } = Astro.props;
         <div class="ukc-hr-divider"></div>
 
         <div class="ukc-input-block">
-          <label>{ui.highTideLabel}</label>
+          <label for="high-tide-time">{ui.highTideLabel}</label>
           <div class="ukc-row">
             <input type="time" id="high-tide-time" value="12:00" />
-            <input type="number" id="high-tide-height" value="3.5" step="0.1" class="ukc-mini-num" />
+            <input type="number" id="high-tide-height" value="3.5" step="0.1" class="ukc-mini-num" aria-label="High tide height" />
           </div>
         </div>
 
         <div class="ukc-input-block">
-          <label>{ui.lowTideLabel}</label>
+          <label for="low-tide-time">{ui.lowTideLabel}</label>
           <div class="ukc-row">
             <input type="time" id="low-tide-time" value="06:00" />
-            <input type="number" id="low-tide-height" value="0.5" step="0.1" class="ukc-mini-num" />
+            <input type="number" id="low-tide-height" value="0.5" step="0.1" class="ukc-mini-num" aria-label="Low tide height" />
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ const { ui } = Astro.props;
             <div class="sa-input-with-unit">
               <input type="number" id="displacement" class="sa-elegant-input" placeholder="8500" />
               <div class="sa-unit-tag">
-                <select id="disp-unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+                <select id="disp-unit" aria-label="Displacement unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="kg">KG</option>
                   <option value="lbs">LBS</option>
                 </select>
@@ -50,11 +50,11 @@ const { ui } = Astro.props;
         <h3>{ui.rigGeometryLabel}</h3>
         <div class="sa-compact-grid">
           <div class="sa-input-row">
-            <label>P (m)</label>
+            <label for="val-p">P (m)</label>
             <div class="sa-input-with-unit">
               <input type="number" id="val-p" class="sa-elegant-input" placeholder="12.5" />
               <div class="sa-unit-tag">
-                <select class="sa-len-unit" data-for="val-p" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+                <select class="sa-len-unit" data-for="val-p" aria-label="P length unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
@@ -62,11 +62,11 @@ const { ui } = Astro.props;
             </div>
           </div>
           <div class="sa-input-row">
-            <label>E (m)</label>
+            <label for="val-e">E (m)</label>
             <div class="sa-input-with-unit">
               <input type="number" id="val-e" class="sa-elegant-input" placeholder="4.2" />
               <div class="sa-unit-tag">
-                <select class="sa-len-unit" data-for="val-e" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+                <select class="sa-len-unit" data-for="val-e" aria-label="E length unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
@@ -74,11 +74,11 @@ const { ui } = Astro.props;
             </div>
           </div>
           <div class="sa-input-row">
-            <label>I (m)</label>
+            <label for="val-i">I (m)</label>
             <div class="sa-input-with-unit">
               <input type="number" id="val-i" class="sa-elegant-input" placeholder="14.0" />
               <div class="sa-unit-tag">
-                <select class="sa-len-unit" data-for="val-i" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+                <select class="sa-len-unit" data-for="val-i" aria-label="I length unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
@@ -86,11 +86,11 @@ const { ui } = Astro.props;
             </div>
           </div>
           <div class="sa-input-row">
-            <label>J (m)</label>
+            <label for="val-j">J (m)</label>
             <div class="sa-input-with-unit">
               <input type="number" id="val-j" class="sa-elegant-input" placeholder="4.5" />
               <div class="sa-unit-tag">
-                <select class="sa-len-unit" data-for="val-j" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+                <select class="sa-len-unit" data-for="val-j" aria-label="J length unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
@@ -101,11 +101,11 @@ const { ui } = Astro.props;
 
         <div id="mizzen-row" style="display: none; margin-top: 1.5rem;" class="sa-compact-grid">
           <div class="sa-input-row">
-            <label>Py (m)</label>
+            <label for="val-py">Py (m)</label>
             <div class="sa-input-with-unit">
               <input type="number" id="val-py" class="sa-elegant-input" placeholder="8.5" />
               <div class="sa-unit-tag">
-                <select class="sa-len-unit" data-for="val-py" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+                <select class="sa-len-unit" data-for="val-py" aria-label="Py length unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>
@@ -113,11 +113,11 @@ const { ui } = Astro.props;
             </div>
           </div>
           <div class="sa-input-row">
-            <label>Ey (m)</label>
+            <label for="val-ey">Ey (m)</label>
             <div class="sa-input-with-unit">
               <input type="number" id="val-ey" class="sa-elegant-input" placeholder="3.0" />
               <div class="sa-unit-tag">
-                <select class="sa-len-unit" data-for="val-ey" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
+                <select class="sa-len-unit" data-for="val-ey" aria-label="Ey length unit" style="background:transparent; border:none; appearance:none; font-weight:900; cursor:pointer;">
                   <option value="m">M</option>
                   <option value="ft">FT</option>
                 </select>

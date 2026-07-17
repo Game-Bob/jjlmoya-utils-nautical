@@ -12,10 +12,10 @@ const { ui } = Astro.props;
   <div class="ec-main-container">
     <aside class="ec-sidebar-inputs">
       <div class="ec-compact-group">
-        <label>{ui.tankCapacityLabel}</label>
+        <span class="ec-group-label">{ui.tankCapacityLabel}</span>
         <div class="ec-dual-row">
           <div>
-            <span class="ec-sub-label">{ui.mainTankLabel}</span>
+            <label for="tank1" class="ec-sub-label">{ui.mainTankLabel}</label>
             <div class="ec-field-wrapper">
               <span class="ec-field-icon icon-fuel"></span>
               <input type="number" id="tank1" class="ec-compact-input" value="200" min="0" step="10" />
@@ -23,7 +23,7 @@ const { ui } = Astro.props;
             </div>
           </div>
           <div>
-            <span class="ec-sub-label">{ui.auxTankLabel}</span>
+            <label for="tank2" class="ec-sub-label">{ui.auxTankLabel}</label>
             <div class="ec-field-wrapper">
               <span class="ec-field-icon icon-fuel"></span>
               <input type="number" id="tank2" class="ec-compact-input" value="0" min="0" step="10" />
@@ -34,7 +34,7 @@ const { ui } = Astro.props;
       </div>
 
       <div class="ec-compact-group">
-        <label>{ui.currentFuelLabel}</label>
+        <label for="f-current">{ui.currentFuelLabel}</label>
         <div class="ec-field-wrapper">
           <span class="ec-field-icon icon-bucket"></span>
           <input type="number" id="f-current" class="ec-compact-input" value="150" min="0" step="5" />
@@ -43,7 +43,7 @@ const { ui } = Astro.props;
       </div>
 
       <div class="ec-compact-group">
-        <label>{ui.seaConditionsLabel}</label>
+        <label for="sea-s">{ui.seaConditionsLabel}</label>
         <div class="ec-field-wrapper">
           <span class="ec-field-icon icon-wave"></span>
           <select id="sea-s" class="ec-compact-select">
@@ -56,7 +56,7 @@ const { ui } = Astro.props;
       </div>
 
       <div class="ec-compact-group">
-        <label>{ui.consumptionLabel}</label>
+        <label for="f-cons">{ui.consumptionLabel}</label>
         <div class="ec-field-wrapper">
           <span class="ec-field-icon icon-fire"></span>
           <input type="number" id="f-cons" class="ec-compact-input" value="25" min="0.1" step="1" />
@@ -65,7 +65,7 @@ const { ui } = Astro.props;
       </div>
 
       <div class="ec-compact-group">
-        <label>{ui.cruiseSpeedLabel}</label>
+        <label for="v-cruiser">{ui.cruiseSpeedLabel}</label>
         <div class="ec-field-wrapper">
           <span class="ec-field-icon icon-wind"></span>
           <input type="number" id="v-cruiser" class="ec-compact-input" value="8" min="0.1" step="0.5" />
@@ -74,7 +74,7 @@ const { ui } = Astro.props;
       </div>
 
       <div class="ec-compact-group">
-        <label>{ui.reserveLabel}</label>
+        <label for="f-res">{ui.reserveLabel}</label>
         <div class="ec-field-wrapper">
           <span class="ec-field-icon icon-shield"></span>
           <input type="number" id="f-res" class="ec-compact-input" value="20" min="0" max="50" step="5" />
@@ -83,7 +83,7 @@ const { ui } = Astro.props;
       </div>
 
       <div class="ec-compact-group">
-        <label>{ui.fuelPriceLabel}</label>
+        <label for="f-price">{ui.fuelPriceLabel}</label>
         <div class="ec-field-wrapper">
           <span class="ec-field-icon">€</span>
           <input type="number" id="f-price" class="ec-compact-input" value="1.8" min="0" step="0.05" />
@@ -137,7 +137,7 @@ const { ui } = Astro.props;
         <div class="ec-inverter-header">{ui.inverseCalcLabel}</div>
         <div class="ec-inverter-row">
           <div>
-            <div class="ec-inverter-label">{ui.desiredDistLabel}</div>
+            <label for="inv-dist" class="ec-inverter-label">{ui.desiredDistLabel}</label>
             <div class="ec-field-wrapper">
               <input type="number" id="inv-dist" class="ec-compact-input" value="50" min="0" step="5" />
               <span class="ec-unit-tag">MN</span>
