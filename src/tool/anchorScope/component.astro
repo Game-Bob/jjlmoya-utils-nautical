@@ -1,0 +1,219 @@
+---
+import type { AnchorScopeUI } from './ui';
+import './anchorScope.css';
+
+interface Props {
+  ui: AnchorScopeUI;
+}
+
+const { ui } = Astro.props;
+---
+
+<section id="anchor-scope-calculator" class="asc-calculator" data-i18n={JSON.stringify(ui)}>
+  <div class="asc-main-card">
+    <div class="asc-sidebar">
+      <div class="asc-sidebar-top">
+        <span class="asc-sidebar-title">{ui.parametersTitle}</span>
+        <div class="asc-unit-toggle">
+          <button type="button" class="asc-unit-btn asc-unit-active" data-unit="metric">{ui.unitM}</button>
+          <button type="button" class="asc-unit-btn" data-unit="imperial">{ui.unitFt}</button>
+        </div>
+      </div>
+
+      <div class="asc-presets-bar">
+        <button type="button" class="asc-preset-chip" data-preset="calm">{ui.presetProtected}</button>
+        <button type="button" class="asc-preset-chip asc-preset-active" data-preset="moderate">{ui.presetOpen}</button>
+        <button type="button" class="asc-preset-chip" data-preset="storm">{ui.presetStorm}</button>
+      </div>
+
+      <div class="asc-inputs-group">
+        <div class="asc-input-row">
+          <div class="asc-input-block">
+            <label for="sc-depth">{ui.waterDepthLabel}</label>
+            <div class="asc-unit-field">
+              <input type="number" id="sc-depth" class="sc-num-input" min="0.5" step="0.5" />
+              <span class="asc-field-unit">{ui.unitM}</span>
+            </div>
+          </div>
+          <div class="asc-input-block">
+            <label for="sc-bow">{ui.bowHeightLabel}</label>
+            <div class="asc-unit-field">
+              <input type="number" id="sc-bow" class="sc-num-input" min="0" step="0.1" />
+              <span class="asc-field-unit">{ui.unitM}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="asc-input-row">
+          <div class="asc-input-block">
+            <label for="sc-tide">{ui.tideRangeLabel}</label>
+            <div class="asc-unit-field">
+              <input type="number" id="sc-tide" class="sc-num-input" min="0" step="0.1" />
+              <span class="asc-field-unit">{ui.unitM}</span>
+            </div>
+          </div>
+          <div class="asc-input-block">
+            <label for="sc-boat-length">{ui.boatLengthLabel}</label>
+            <div class="asc-unit-field">
+              <input type="number" id="sc-boat-length" class="sc-num-input" min="1" step="0.5" />
+              <span class="asc-field-unit">{ui.unitM}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="asc-input-block">
+          <label>{ui.rodeTypeLabel}</label>
+          <div class="asc-custom-select" id="sc-rode-type-select" data-id="sc-rode-type" data-value="all-chain">
+            <button type="button" class="asc-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+              <span class="asc-select-label">{ui.allChainOption}</span>
+              <svg class="asc-select-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div class="asc-select-dropdown" role="listbox">
+              <div class="asc-option asc-option-active" data-val="all-chain" role="option">{ui.allChainOption}</div>
+              <div class="asc-option" data-val="rope-chain" role="option">{ui.ropeChainOption}</div>
+              <div class="asc-option" data-val="all-rope" role="option">{ui.allRopeOption}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="asc-input-block">
+          <label>{ui.windConditionLabel}</label>
+          <div class="asc-custom-select" id="sc-wind-select" data-id="sc-wind" data-value="moderate">
+            <button type="button" class="asc-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+              <span class="asc-select-label">{ui.moderateWindOption}</span>
+              <svg class="asc-select-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div class="asc-select-dropdown" role="listbox">
+              <div class="asc-option" data-val="calm" role="option">{ui.calmWindOption}</div>
+              <div class="asc-option asc-option-active" data-val="moderate" role="option">{ui.moderateWindOption}</div>
+              <div class="asc-option" data-val="strong" role="option">{ui.strongWindOption}</div>
+              <div class="asc-option" data-val="storm" role="option">{ui.stormWindOption}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="asc-input-block">
+          <label>{ui.seabedTypeLabel}</label>
+          <div class="asc-custom-select" id="sc-seabed-select" data-id="sc-seabed" data-value="sand">
+            <button type="button" class="asc-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+              <span class="asc-select-label">{ui.sandOption}</span>
+              <svg class="asc-select-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div class="asc-select-dropdown" role="listbox">
+              <div class="asc-option asc-option-active" data-val="sand" role="option">{ui.sandOption}</div>
+              <div class="asc-option" data-val="mud" role="option">{ui.mudOption}</div>
+              <div class="asc-option" data-val="clay" role="option">{ui.clayOption}</div>
+              <div class="asc-option" data-val="gravel" role="option">{ui.gravelOption}</div>
+              <div class="asc-option" data-val="rock" role="option">{ui.rockOption}</div>
+              <div class="asc-option" data-val="weed" role="option">{ui.weedOption}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" id="sc-reset-btn" class="asc-reset-btn">{ui.resetButton}</button>
+    </div>
+
+    <div class="asc-content">
+      <div class="asc-metrics-grid">
+        <div class="asc-metric-card asc-metric-highlight">
+          <span class="asc-metric-lbl">{ui.recommendedRodeLabel}</span>
+          <span class="asc-metric-val" id="sc-rode-length-val">-</span>
+        </div>
+        <div class="asc-metric-card">
+          <span class="asc-metric-lbl">{ui.scopeRatioLabel}</span>
+          <span class="asc-metric-val" id="sc-scope-val">-</span>
+        </div>
+        <div class="asc-metric-card">
+          <span class="asc-metric-lbl">{ui.swingRadiusLabel}</span>
+          <span class="asc-metric-val" id="sc-swing-radius-val">-</span>
+        </div>
+        <div class="asc-metric-card">
+          <span class="asc-metric-lbl">{ui.totalDepthLabel}</span>
+          <span class="asc-metric-val" id="sc-total-depth-val">-</span>
+        </div>
+        <div class="asc-metric-card">
+          <span class="asc-metric-lbl">{ui.minSafeRodeLabel}</span>
+          <span class="asc-metric-val" id="sc-min-rode-val">-</span>
+        </div>
+        <div class="asc-metric-card">
+          <span class="asc-metric-lbl">{ui.heavyWeatherRodeLabel}</span>
+          <span class="asc-metric-val" id="sc-storm-rode-val">-</span>
+        </div>
+      </div>
+
+      <div class="asc-status-banner">
+        <div class="asc-status-tag" id="sc-status-badge">OPTIMAL</div>
+        <div class="asc-status-info">
+          <span class="asc-status-headline" id="sc-status-title"></span>
+          <span class="asc-status-subline" id="sc-status-desc"></span>
+        </div>
+      </div>
+
+      <div class="asc-visual-stage">
+        <svg id="sc-anchor-svg" class="asc-diagram-svg" viewBox="0 0 600 240">
+          <defs>
+            <linearGradient id="asc-water-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0284c7" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#0c4a6e" stop-opacity="0.95" />
+            </linearGradient>
+            <linearGradient id="asc-seabed-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#475569" />
+              <stop offset="100%" stop-color="#1e293b" />
+            </linearGradient>
+          </defs>
+
+          <rect id="sc-tide-water" x="0" y="55" width="600" height="25" fill="#38bdf8" fill-opacity="0.25" />
+          <line x1="0" y1="80" x2="600" y2="80" stroke="#38bdf8" stroke-dasharray="6,4" stroke-width="1.5" />
+          <rect x="0" y="80" width="600" height="135" fill="url(#asc-water-grad)" />
+
+          <path d="M 0 215 Q 200 210 400 218 T 600 215 L 600 240 L 0 240 Z" fill="url(#asc-seabed-grad)" />
+
+          <line x1="550" y1="55" x2="550" y2="215" stroke="#94a3b8" stroke-dasharray="3,3" stroke-width="1.2" />
+          <text x="540" y="140" fill="#94a3b8" font-size="11" font-weight="700" text-anchor="end" id="sc-svg-depth-text">9.0m</text>
+
+          <path id="sc-catenary-line" d="M 485 75 Q 300 200 120 215 L 75 215" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+
+          <g id="sc-anchor-group" transform="translate(60, 202)">
+            <circle cx="15" cy="8" r="4" fill="#f8fafc" />
+            <path d="M 15 8 L 15 24 M 5 18 Q 15 30 25 18" fill="none" stroke="#f8fafc" stroke-width="3" stroke-linecap="round" />
+            <path d="M 0 24 Q 15 18 30 24" fill="none" stroke="#64748b" stroke-width="2" />
+          </g>
+
+          <g id="sc-boat-group" transform="translate(425, 48)">
+            <path d="M 15 32 L 75 32 L 88 18 L 0 18 Z" fill="#f8fafc" />
+            <rect x="25" y="8" width="28" height="11" rx="2" fill="#0284c7" />
+            <line x1="45" y1="8" x2="45" y2="0" stroke="#f8fafc" stroke-width="2" />
+            <circle cx="85" cy="20" r="3.5" fill="#f59e0b" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="asc-advice-row">
+        <div class="asc-advice-card">
+          <span class="asc-advice-tag">{ui.seabedTag}</span>
+          <p class="asc-advice-text" id="sc-seabed-advice"></p>
+        </div>
+        <div class="asc-advice-card">
+          <span class="asc-advice-tag">{ui.catenaryTag}</span>
+          <p class="asc-advice-text" id="sc-catenary-advice"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { AnchorScopeController } from './controller';
+
+  const root = document.getElementById('anchor-scope-calculator');
+  if (root) {
+    new AnchorScopeController(root);
+  }
+</script>

@@ -1,22 +1,19 @@
-import type { NauticalCategoryEntry, CategoryLocaleContent } from '../types';
-import { tideCalculator } from '../tool/tideCalculator/entry';
-import { underKeel } from '../tool/underKeel/entry';
-import { nauticalConverter } from '../tool/nauticalConverter/entry';
-import { sailArea } from '../tool/sailArea/entry';
-import { speedConverter } from '../tool/speedConverter/entry';
-import { endurance } from '../tool/endurance/entry';
-import { anchorScope } from '../tool/anchorScope/entry';
+import type { NauticalToolEntry, ToolLocaleContent } from '../../types';
+import type { AnchorScopeUI } from './ui';
 
-export type { CategoryLocaleContent };
+export type AnchorScopeLocaleContent = ToolLocaleContent<AnchorScopeUI>;
 
-export const nauticalCategory: NauticalCategoryEntry = {
-  icon: 'mdi:sail-boat',
-  tools: [tideCalculator, underKeel, nauticalConverter, sailArea, speedConverter, endurance, anchorScope],
+export const anchorScope: NauticalToolEntry<AnchorScopeUI> = {
+  id: 'anchor-scope',
+  icons: {
+    bg: 'mdi:compass-outline',
+    fg: 'mdi:anchor',
+  },
   i18n: {
+    de: () => import('./i18n/de').then((m) => m.content),
     en: () => import('./i18n/en').then((m) => m.content),
     es: () => import('./i18n/es').then((m) => m.content),
     fr: () => import('./i18n/fr').then((m) => m.content),
-    de: () => import('./i18n/de').then((m) => m.content),
     id: () => import('./i18n/id').then((m) => m.content),
     it: () => import('./i18n/it').then((m) => m.content),
     ja: () => import('./i18n/ja').then((m) => m.content),
@@ -30,3 +27,5 @@ export const nauticalCategory: NauticalCategoryEntry = {
     zh: () => import('./i18n/zh').then((m) => m.content),
   },
 };
+
+export { bibliography } from './bibliography';

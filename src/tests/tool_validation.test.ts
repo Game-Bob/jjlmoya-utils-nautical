@@ -5,8 +5,8 @@ const TOOL_ID_REGEX = /^[a-z0-9]+-?[a-z0-9]*$/;
 
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
-    it('should have 6 tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(6);
+    it('should have 7 tools in ALL_TOOLS', () => {
+      expect(ALL_TOOLS.length).toBe(7);
     });
   });
 
