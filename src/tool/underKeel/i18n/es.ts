@@ -152,7 +152,7 @@ const seo: UnderKeelLocaleContent['seo'] = [
     type: 'paragraph',
     html: 'Esta herramienta es ideal para estudiantes que están practicando ejercicios de mareas para el examen de Patrón de Embarcaciones de Recreo (PER) o Patrón de Yate, permitiendo verificar los resultados de cálculos manuales de forma instantánea y visual.',
   },
-];
+].slice(0, 13);
 
 const schemas: UnderKeelLocaleContent['schemas'] = [
   {

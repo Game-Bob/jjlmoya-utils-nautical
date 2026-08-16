@@ -122,6 +122,22 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: 'Navigatietip',
     html: 'Als uw vaarvenster erg nauw is of het weer verslechtert, is het meestal de verstandigste beslissing om buitengaats in diep water te wachten tot het getij tot de vereiste hoogte is gestegen.',
   },
+  {
+    type: 'paragraph',
+    html: 'Controleer de verwachting en de werkelijke zee voordat je vertrekt.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Controleer de dieptemarge en houd een veilige reserve aan.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Noteer de invoer zodat je de berekening later kunt herhalen.',
+  },
+  {
+    type: 'paragraph',
+    html: "Vergelijk meerdere scenario's wanneer wind of stroom verandert.",
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

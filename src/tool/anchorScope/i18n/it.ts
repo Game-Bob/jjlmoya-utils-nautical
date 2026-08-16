@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Salvaguardia del Verricello',
     html: 'Non lasciare mai la catena in tiro sul barbotin del verricello. Usare sempre una bozza ammortizzante fissata alla bitta d ormeggio di prua.',
   },
+  {
+    type: 'paragraph',
+    html: 'Controlla le previsioni e lo stato reale del mare prima della partenza.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Verifica il margine di profondità e lascia una riserva di sicurezza.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Annota i valori usati per poter ripetere il calcolo in seguito.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Confronta più scenari quando cambiano vento o corrente.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Il calcolo aiuta a preparare la rotta, ma non sostituisce la vigilanza a bordo.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

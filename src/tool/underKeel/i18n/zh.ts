@@ -131,6 +131,14 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: '航行提示',
     html: '如果您的通行窗口非常窄或天气恶化，最明智的决定通常是在外海深水区等待，直到潮汐上升到所需高度。',
   },
+  {
+    type: 'paragraph',
+    html: '出航前请同时确认预报和实际海况。',
+  },
+  {
+    type: 'paragraph',
+    html: '检查水深余量，并为航行保留安全裕度。',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Melindungi Windlass Jangkar',
     html: 'Jangan biarkan beban tarikan bertumpu langsung pada poros mesin jangkar. Selalu pasang tali snubber yang diikatkan kuat pada bolder haluan.',
   },
+  {
+    type: 'paragraph',
+    html: 'Periksa prakiraan dan kondisi laut yang sebenarnya sebelum berangkat.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Pastikan ada cadangan kedalaman yang aman untuk pelayaran.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Catat nilai masukan agar perhitungan dapat diulangi nanti.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Bandingkan beberapa skenario saat angin atau arus berubah.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Perhitungan membantu merencanakan rute, tetapi tidak menggantikan pengamatan di kapal.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

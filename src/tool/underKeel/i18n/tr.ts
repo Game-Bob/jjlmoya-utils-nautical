@@ -131,6 +131,14 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: 'Navigasyon İpucu',
     html: 'Geçiş pencereniz çok darsa veya hava kötüleşiyorsa, en bilgece karar genellikle gelgit gereken yüksekliğe çıkana kadar açıkta, derin suda beklemektir.',
   },
+  {
+    type: 'paragraph',
+    html: 'Seferden önce tahmin ile gerçek deniz durumunu birlikte değerlendirin.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Derinlik payını kontrol edin ve güvenli bir rezerv bırakın.',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Skydda Ankarpelet',
     html: 'Lat aldrig ankardraget belasta ankarpelets kabbelaris direkt. Anvand alltid en avlastande snubberlina fast i en knap.',
   },
+  {
+    type: 'paragraph',
+    html: 'Kontrollera prognosen och det verkliga sjöläget före avfärd.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Kontrollera djupmarginalen och lämna en säkerhetsreserv.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Skriv ner värdena så att beräkningen kan upprepas senare.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Jämför flera scenarier när vind eller ström förändras.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Beräkningen hjälper planeringen men ersätter inte uppsikt ombord.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

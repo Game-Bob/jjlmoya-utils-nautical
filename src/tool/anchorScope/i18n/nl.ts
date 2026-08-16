@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Ankerlier Beschermen',
     html: 'Laat de ankerkracht nooit rechtstreeks op de nestenschijf van de lier staan. Gebruik altijd een ontlastende snubber op de boegbolder.',
   },
+  {
+    type: 'paragraph',
+    html: 'Controleer de verwachting en de werkelijke zee voordat je vertrekt.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Controleer de dieptemarge en houd een veilige reserve aan.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Noteer de invoer zodat je de berekening later kunt herhalen.',
+  },
+  {
+    type: 'paragraph',
+    html: "Vergelijk meerdere scenario's wanneer wind of stroom verandert.",
+  },
+  {
+    type: 'paragraph',
+    html: 'De berekening helpt bij de planning maar vervangt geen observatie aan boord.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

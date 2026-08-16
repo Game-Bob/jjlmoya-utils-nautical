@@ -135,6 +135,10 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: 'Navigationstipp',
     html: 'Wenn Ihr Durchfahrtsfenster sehr schmal ist oder sich das Wetter verschlechtert, ist es meist die klügste Entscheidung, draußen im tiefen Wasser zu warten, bis die Gezeit die erforderliche Höhe erreicht hat.',
   },
+  {
+    type: 'paragraph',
+    html: 'Prüfen Sie vor dem Auslaufen die Vorhersage und den tatsächlichen Seegang.',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

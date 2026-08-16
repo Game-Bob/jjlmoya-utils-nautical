@@ -122,6 +122,22 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: 'Navigationstips',
     html: 'Om ditt passagefönster är mycket smalt eller vädret försämras, är det klokaste beslutet vanligtvis att vänta ute på djupt vatten tills tidvattnet stigit till den nödvändiga höjden.',
   },
+  {
+    type: 'paragraph',
+    html: 'Kontrollera prognosen och det verkliga sjöläget före avfärd.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Kontrollera djupmarginalen och lämna en säkerhetsreserv.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Skriv ner värdena så att beräkningen kan upprepas senare.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Jämför flera scenarier när vind eller ström förändras.',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

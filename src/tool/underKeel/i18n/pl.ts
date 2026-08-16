@@ -122,6 +122,22 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: 'Wskazówka nawigacyjna',
     html: 'Jeśli okno przejścia jest bardzo wąskie lub pogoda się pogarsza, najrozsądniejszą decyzją jest poczekanie, aż pływ wzrośnie.',
   },
+  {
+    type: 'paragraph',
+    html: 'Przed wypłynięciem sprawdź prognozę oraz rzeczywisty stan morza.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Skontroluj zapas głębokości i pozostaw bezpieczną rezerwę.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Zapisz dane wejściowe, aby później powtórzyć obliczenia.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Porównaj kilka scenariuszy, gdy zmienia się wiatr lub prąd.',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

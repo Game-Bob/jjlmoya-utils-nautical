@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'ウインドラスの保護対策',
     html: 'アンカーの荷重をウインドラスのジプシーに直接掛けたまま放置しないでください。必ずクリートに係止したスナバーロープを使用してください。',
   },
+  {
+    type: 'paragraph',
+    html: '出航前に予報と実際の海況を確認してください。',
+  },
+  {
+    type: 'paragraph',
+    html: '必要な水深に安全な余裕を残して計画します。',
+  },
+  {
+    type: 'paragraph',
+    html: '入力値を記録すると、後で同じ計算を再現できます。',
+  },
+  {
+    type: 'paragraph',
+    html: '風や潮流が変わる場合は複数の条件を比較します。',
+  },
+  {
+    type: 'paragraph',
+    html: 'この計算は計画を助けますが、船上での見張りに代わるものではありません。',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

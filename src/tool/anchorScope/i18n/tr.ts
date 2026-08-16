@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Demir Irgatının Korunması',
     html: 'Yükünü hiçbir zaman doğrudan ırgatın kavaletası üzerine bırakmayın. Daima koçboynuzuna bağlı esnek bir snubber halatı kullanın.',
   },
+  {
+    type: 'paragraph',
+    html: 'Seferden önce tahmin ile gerçek deniz durumunu birlikte değerlendirin.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Derinlik payını kontrol edin ve güvenli bir rezerv bırakın.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Sonuçları daha sonra karşılaştırmak için giriş değerlerini kaydedin.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Rüzgar veya akıntı değiştiğinde birkaç senaryoyu karşılaştırın.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Bu hesap planlamaya yardımcı olur, ancak teknedeki gözlemin yerini tutmaz.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

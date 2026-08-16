@@ -122,6 +122,22 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: 'Dica de Navegação',
     html: 'Se a sua janela de travessia for muito estreita ou o tempo piorar, a decisão mais sensata é esperar até que a maré suba.',
   },
+  {
+    type: 'paragraph',
+    html: 'Confira a previsão e o estado real do mar antes de sair.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Verifique a margem de profundidade e mantenha uma reserva de segurança.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Registe os valores para poder repetir o cálculo mais tarde.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Compare vários cenários quando o vento ou a corrente mudarem.',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

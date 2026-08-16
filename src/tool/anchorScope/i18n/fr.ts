@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Proteger votre guindeau',
     html: 'Ne laissez jamais travailler la chaine en direct sur le barbotin. Utilisez toujours une main de fer textile frappee sur un taquet avant.',
   },
+  {
+    type: 'paragraph',
+    html: "Vérifiez la météo et l'état réel de la mer avant le départ.",
+  },
+  {
+    type: 'paragraph',
+    html: 'Contrôlez la marge de profondeur et gardez une réserve de sécurité.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Notez les valeurs utilisées pour pouvoir refaire le calcul plus tard.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Comparez plusieurs scénarios lorsque le vent ou le courant change.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Le calcul aide à préparer la route, mais ne remplace pas la veille à bord.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

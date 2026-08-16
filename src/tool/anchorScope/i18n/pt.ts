@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Protecao do Guincho Eletrico',
     html: 'Nunca deixe o esforco da ancoragem apoiar diretamente no guincho de proa. Utilize sempre um cabo snubber na cunho de amaracao.',
   },
+  {
+    type: 'paragraph',
+    html: 'Confira a previsão e o estado real do mar antes de sair.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Verifique a margem de profundidade e mantenha uma reserva de segurança.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Registe os valores para poder repetir o cálculo mais tarde.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Compare vários cenários quando o vento ou a corrente mudarem.',
+  },
+  {
+    type: 'paragraph',
+    html: 'O cálculo ajuda a planear a rota, mas não substitui a observação a bordo.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

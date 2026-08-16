@@ -159,6 +159,33 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Ankerwinde entlasten',
     html: 'Legen Sie die Last niemals dauerhaft auf die Kettennuss der Winde. Verwenden Sie stets eine elastische Hahnepot oder Kettengabel auf der Bugklampe.',
   },
+  {
+    type: 'title',
+    text: 'Kettenlänge nach Wassertiefe und Wind',
+    level: 3,
+  },
+  {
+    type: 'paragraph',
+    html: 'Berechnen Sie die Kettenlänge immer für den höchsten erwarteten Wasserstand. So bleibt der Ankergrund auch bei steigendem Wasser und wechselndem Wind zuverlässig berücksichtigt.',
+  },
+  {
+    type: 'table',
+    headers: ['Bedingung', 'Empfehlung', 'Hinweis'],
+    rows: [
+      ['Ruhige Bucht', 'Mindestens 4:1', 'Kettenzug flach halten'],
+      ['Frische Brise', 'Etwa 5:1', 'Schwoikreis freihalten'],
+      ['Starker Wind', 'Bis 7:1', 'Ankergrund und Reserve prüfen'],
+    ],
+  },
+  {
+    type: 'title',
+    text: 'Sicherheitsreserve beim Ankern',
+    level: 3,
+  },
+  {
+    type: 'paragraph',
+    html: 'Rechnen Sie eine Reserve für Tiefenfehler, Wellen und Bewegung des Schiffs ein. Prüfen Sie anschließend, ob der berechnete Schwoikreis frei von flachen Stellen und anderen Booten ist.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

@@ -135,6 +135,10 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: 'Tips Navigasi',
     html: 'Jika jendela lintasan Anda sangat sempit atau cuaca memburuk, keputusan paling bijaksana biasanya adalah menunggu di perairan dalam sampai pasang naik ke ketinggian yang dibutuhkan.',
   },
+  {
+    type: 'paragraph',
+    html: 'Periksa prakiraan dan kondisi laut yang sebenarnya sebelum berangkat.',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

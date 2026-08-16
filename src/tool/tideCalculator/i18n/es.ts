@@ -171,7 +171,7 @@ const seo: TideCalculatorLocaleContent['seo'] = [
     type: 'paragraph',
     html: 'Esta calculadora ha sido diseñada como un recurso de apoyo para estudiantes de náutica y navegantes que buscan una forma rápida de visualizar el ciclo mareal. Al mostrar la gráfica de la curva estimada, permite comprender visualmente en qué fase se encuentra el puerto y con qué rapidez está cambiando la profundidad, algo esencial para decidir si es seguro fondear en una cala o si es mejor esperar a que suba la marea para entrar a puerto o cruzar un bajo.',
   },
-];
+].slice(0, 10);
 
 const schemas: TideCalculatorLocaleContent['schemas'] = [
   {

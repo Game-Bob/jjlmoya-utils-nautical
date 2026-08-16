@@ -122,6 +122,22 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: 'Consiglio di Navigazione',
     html: 'Se la tua finestra di transito è molto stretta o il tempo peggiora, la decisione più saggia è aspettare finché la marea non sale.',
   },
+  {
+    type: 'paragraph',
+    html: 'Controlla le previsioni e lo stato reale del mare prima della partenza.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Verifica il margine di profondità e lascia una riserva di sicurezza.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Annota i valori usati per poter ripetere il calcolo in seguito.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Confronta più scenari quando cambiano vento o corrente.',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

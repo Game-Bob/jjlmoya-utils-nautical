@@ -131,6 +131,14 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: '항해 팁',
     html: '항해 가능 시간이 매우 짧거나 기상이 악화되는 경우, 조석이 필요한 높이까지 차오를 때까지 수심이 깊은 먼 바다에서 대기하는 것이 가장 현명한 결정입니다.',
   },
+  {
+    type: 'paragraph',
+    html: '출항 전에 예보와 실제 해상 상태를 함께 확인하세요.',
+  },
+  {
+    type: 'paragraph',
+    html: '필요 수심에 안전 여유를 두고 항로를 계획하세요.',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

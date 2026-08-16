@@ -171,6 +171,26 @@ const seo: SpeedConverterLocaleContent['seo'] = [
     title: 'Güvenlik ve Meteoroloji',
     html: 'Denize açılmadan önce mutlaka deniz meteoroloji raporlarını inceleyin. Beaufort 4-5 çoğu tekne için yönetilebilirdir; Kuvvet 6 ve üzerinde, yeterli deneyiminiz yoksa seyri ertelemeyi ciddi şekilde düşünün.',
   },
+  {
+    type: 'paragraph',
+    html: 'Seferden önce tahmin ile gerçek deniz durumunu birlikte değerlendirin.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Derinlik payını kontrol edin ve güvenli bir rezerv bırakın.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Sonuçları daha sonra karşılaştırmak için giriş değerlerini kaydedin.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Rüzgar veya akıntı değiştiğinde birkaç senaryoyu karşılaştırın.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Bu hesap planlamaya yardımcı olur, ancak teknedeki gözlemin yerini tutmaz.',
+  },
 ];
 
 const schemas: SpeedConverterLocaleContent['schemas'] = [

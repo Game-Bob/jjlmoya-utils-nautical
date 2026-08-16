@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: '保护电动起锚机',
     html: '严禁将锚链拉力直接承受在起锚机的链轮上。请务必使用系于船首系缆桩的弹性减震绳。',
   },
+  {
+    type: 'paragraph',
+    html: '出航前请同时确认预报和实际海况。',
+  },
+  {
+    type: 'paragraph',
+    html: '检查水深余量，并为航行保留安全裕度。',
+  },
+  {
+    type: 'paragraph',
+    html: '记录输入数据，之后可以重复同一计算。',
+  },
+  {
+    type: 'paragraph',
+    html: '风力或水流变化时，请比较多个条件。',
+  },
+  {
+    type: 'paragraph',
+    html: '计算可以帮助规划航线，但不能代替船上的观察。',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

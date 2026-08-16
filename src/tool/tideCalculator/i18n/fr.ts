@@ -136,6 +136,14 @@ const seo: TideCalculatorLocaleContent['seo'] = [
       },
     ],
   },
+  {
+    type: 'paragraph',
+    html: "Vérifiez la météo et l'état réel de la mer avant le départ.",
+  },
+  {
+    type: 'paragraph',
+    html: 'Contrôlez la marge de profondeur et gardez une réserve de sécurité.',
+  },
 ];
 
 const schemas: TideCalculatorLocaleContent['schemas'] = [

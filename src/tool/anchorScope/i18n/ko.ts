@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: '양묘기 보호 수칙',
     html: '닻줄의 하중을 양묘기 지프시에 직접 걸어두지 마십시오. 항상 볼라드에 고정된 스너버 로프를 체결하십시오.',
   },
+  {
+    type: 'paragraph',
+    html: '출항 전에 예보와 실제 해상 상태를 함께 확인하세요.',
+  },
+  {
+    type: 'paragraph',
+    html: '필요 수심에 안전 여유를 두고 항로를 계획하세요.',
+  },
+  {
+    type: 'paragraph',
+    html: '입력값을 기록하면 다음에도 같은 계산을 재현할 수 있습니다.',
+  },
+  {
+    type: 'paragraph',
+    html: '바람이나 조류가 바뀌면 여러 조건을 비교하세요.',
+  },
+  {
+    type: 'paragraph',
+    html: '계산은 계획을 돕지만 선상 관찰을 대신하지 않습니다.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [

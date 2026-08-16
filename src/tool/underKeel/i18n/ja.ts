@@ -131,6 +131,14 @@ const seo: UnderKeelLocaleContent['seo'] = [
     title: '航海のヒント',
     html: '航行可能時間が非常に短い場合や天候が悪化した場合は、潮が必要な高さまで上がるまで、沖合の深い場所で待機するのが最も賢明な判断です。',
   },
+  {
+    type: 'paragraph',
+    html: '出航前に予報と実際の海況を確認してください。',
+  },
+  {
+    type: 'paragraph',
+    html: '必要な水深に安全な余裕を残して計画します。',
+  },
 ];
 
 const schemas: UnderKeelLocaleContent['schemas'] = [

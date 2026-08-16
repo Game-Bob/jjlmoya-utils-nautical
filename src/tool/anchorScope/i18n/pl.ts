@@ -159,6 +159,26 @@ const seo: AnchorScopeLocaleContent['seo'] = [
     title: 'Ochrona Windy Kotwicznej',
     html: 'Nigdy nie zostawiaj pracującego łańcucha bezpośrednio na bębnie windy. Zawsze stosuj elastyczny szpon kotwiczny zamocowany do polera dziobowego.',
   },
+  {
+    type: 'paragraph',
+    html: 'Przed wypłynięciem sprawdź prognozę oraz rzeczywisty stan morza.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Skontroluj zapas głębokości i pozostaw bezpieczną rezerwę.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Zapisz dane wejściowe, aby później powtórzyć obliczenia.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Porównaj kilka scenariuszy, gdy zmienia się wiatr lub prąd.',
+  },
+  {
+    type: 'paragraph',
+    html: 'Obliczenie pomaga planować trasę, ale nie zastępuje obserwacji na pokładzie.',
+  },
 ];
 
 const schemas: AnchorScopeLocaleContent['schemas'] = [
