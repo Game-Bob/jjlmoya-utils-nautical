@@ -23,3 +23,4 @@ export { sailArea, SAIL_AREA_TOOL } from './tool/sailArea';
 export { speedConverter, SPEED_CONVERTER_TOOL } from './tool/speedConverter';
 export { endurance, ENDURANCE_TOOL } from './tool/endurance';
 export { anchorScope, ANCHOR_SCOPE_TOOL } from './tool/anchorScope';
+export { hullSpeed, HULL_SPEED_TOOL } from './tool/hullSpeed';

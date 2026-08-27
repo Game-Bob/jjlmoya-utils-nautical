@@ -8,6 +8,7 @@ export type { NauticalConverterUI, NauticalConverterLocaleContent } from './tool
 export type { SailAreaUI, SailAreaLocaleContent } from './tool/sailArea';
 export type { SpeedConverterUI, SpeedConverterLocaleContent } from './tool/speedConverter';
 export type { EnduranceUI, EnduranceLocaleContent } from './tool/endurance';
+export type { HullSpeedUI, HullSpeedLocaleContent } from './tool/hullSpeed';
 
 export type {
   KnownLocale,

@@ -13,6 +13,8 @@ export type { UnderKeelUI, UnderKeelLocaleContent } from './tool/underKeel/entry
 export { anchorScope } from './tool/anchorScope/entry';
 export type { AnchorScopeLocaleContent } from './tool/anchorScope/entry';
 export type { AnchorScopeUI } from './tool/anchorScope/ui';
+export { hullSpeed } from './tool/hullSpeed/entry';
+export type { HullSpeedUI, HullSpeedLocaleContent } from './tool/hullSpeed/entry';
 export { nauticalCategory } from './category';
 import { endurance } from './tool/endurance/entry';
 import { nauticalConverter } from './tool/nauticalConverter/entry';
@@ -21,4 +23,5 @@ import { speedConverter } from './tool/speedConverter/entry';
 import { tideCalculator } from './tool/tideCalculator/entry';
 import { underKeel } from './tool/underKeel/entry';
 import { anchorScope } from './tool/anchorScope/entry';
-export const ALL_ENTRIES = [endurance, nauticalConverter, sailArea, speedConverter, tideCalculator, underKeel, anchorScope];
+import { hullSpeed } from './tool/hullSpeed/entry';
+export const ALL_ENTRIES = [endurance, nauticalConverter, sailArea, speedConverter, tideCalculator, underKeel, anchorScope, hullSpeed];

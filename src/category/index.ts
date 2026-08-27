@@ -6,12 +6,13 @@ import { sailArea } from '../tool/sailArea/entry';
 import { speedConverter } from '../tool/speedConverter/entry';
 import { endurance } from '../tool/endurance/entry';
 import { anchorScope } from '../tool/anchorScope/entry';
+import { hullSpeed } from '../tool/hullSpeed/entry';
 
 export type { CategoryLocaleContent };
 
 export const nauticalCategory: NauticalCategoryEntry = {
   icon: 'mdi:sail-boat',
-  tools: [tideCalculator, underKeel, nauticalConverter, sailArea, speedConverter, endurance, anchorScope],
+  tools: [tideCalculator, underKeel, nauticalConverter, sailArea, speedConverter, endurance, anchorScope, hullSpeed],
   i18n: {
     en: () => import('./i18n/en').then((m) => m.content),
     es: () => import('./i18n/es').then((m) => m.content),

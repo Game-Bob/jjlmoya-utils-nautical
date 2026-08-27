@@ -6,6 +6,7 @@ import { SAIL_AREA_TOOL } from './tool/sailArea';
 import { SPEED_CONVERTER_TOOL } from './tool/speedConverter';
 import { ENDURANCE_TOOL } from './tool/endurance';
 import { ANCHOR_SCOPE_TOOL } from './tool/anchorScope';
+import { HULL_SPEED_TOOL } from './tool/hullSpeed';
 import type { ToolDefinition } from './types';
 
 export const ALL_TOOLS: ToolDefinition[] = [
@@ -16,6 +17,7 @@ export const ALL_TOOLS: ToolDefinition[] = [
   SPEED_CONVERTER_TOOL,
   ENDURANCE_TOOL,
   ANCHOR_SCOPE_TOOL,
+  HULL_SPEED_TOOL,
 ];
 
 export {
@@ -26,5 +28,6 @@ export {
   SPEED_CONVERTER_TOOL,
   ENDURANCE_TOOL,
   ANCHOR_SCOPE_TOOL,
+  HULL_SPEED_TOOL,
 };
 

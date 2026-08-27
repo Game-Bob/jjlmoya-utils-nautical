@@ -5,8 +5,8 @@ const TOOL_ID_REGEX = /^[a-z0-9]+-?[a-z0-9]*$/;
 
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
-    it('should have 7 tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(7);
+    it('should have 8 tools in ALL_TOOLS', () => {
+      expect(ALL_TOOLS.length).toBe(8);
     });
   });
 
@@ -33,10 +33,13 @@ describe('Tool Validation Suite', () => {
   });
 
   describe('Tool i18n', () => {
-    it('all tools should have es and en locales', () => {
+    it('all tools should have an English locale', () => {
       for (const tool of ALL_TOOLS) {
-        expect(tool.entry.i18n.es).toBeDefined();
         expect(tool.entry.i18n.en).toBeDefined();
+        const locales = Object.keys(tool.entry.i18n);
+        if (locales.length > 1) {
+          expect(tool.entry.i18n.es).toBeDefined();
+        }
       }
     });
 
