@@ -63,7 +63,7 @@ const seo: CategoryLocaleContent['seo'] = [
   },
   {
     type: 'paragraph',
-    html: 'Even in official examinations for nautical qualifications (such as the RYA Dayskipper or Yachtmaster), chart calculations remain mandatory. Digital tools serve as the perfect study companion, allowing candidates to verify their dead reckoning exercises, tidal calculations and compass corrections.',
+    html: 'Even in certification exams for nautical qualifications (such as the RYA Dayskipper or Yachtmaster), chart calculations remain mandatory. Digital tools serve as a study companion, allowing candidates to check their dead reckoning exercises, tidal calculations and compass corrections.',
   },
   {
     type: 'paragraph',
