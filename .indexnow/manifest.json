@@ -1,545 +1,545 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-04T11:12:23.948Z",
+  "generatedAt": "2026-09-04T19:21:36.408Z",
   "pages": {
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/anker-kettenlaenge-rechner/": {
-      "hash": "8b02de93c8f30d856e15d24eb8fd3ae77533aafe5c146a726f1f20a1eb3ce799",
+      "hash": "534071df58434e1930ffc9a3f952ca5d84a1498281f64a922ae4ebf2444eec28",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/anker-kettenlaenge-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/geschwindigkeits-umrechner/": {
-      "hash": "95223f4ccb5ba22c425a7e5d7e98360143276f0aa5514bc6eb237dd1fd277aac",
+      "hash": "3d442706d577a849d57ea0c84c358a218629384fefb874833caceb470be66a5d",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/geschwindigkeits-umrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/gezeiten-rechner/": {
-      "hash": "0b66d905b338f60510224c394b27855d4cec17e302bf0dc235cf309875358b90",
+      "hash": "591f1f6713b55127a51a3aa16c71adccdcc8730291fc04e49ad26b22fcac50a4",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/gezeiten-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/": {
-      "hash": "22f41bb4cac0a2d8bc49fc99455c3ce14c0dfc5d2aaf3b40c2741b9aad2f9ae2",
+      "hash": "33af57096b75b4b988d6643a8a458ea9703524fb65e2bb6f6c602f4c276f3b7b",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/nautische-einheiten-umrechner/": {
-      "hash": "3fc30eb452c92bd7d7a44c914f7263f148a047bcce8757d9028d557ce83f0858",
+      "hash": "a1e888a7b83074f1eccd3ff96d999feabccce2811dcdf1c0f3a2b2b9e25ec92e",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/nautische-einheiten-umrechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/reichweiten-rechner/": {
-      "hash": "a44a8d029059ec674f991003be5eb470f80e1d88f397ba6a0f2ecc37211fe1ce",
+      "hash": "4a753140f1e302169746e947e71368bfe4c382a3344908606783e9362ec46bdd",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/reichweiten-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/rumpfgeschwindigkeit-rechner/": {
-      "hash": "7183a6e69598bf4bd60a2accb895d1302b11f971995006542d3bf1d1dc6fb7bf",
+      "hash": "21322a0cc0b2666b8738f5f474edc58a0dab0e77b86c35b28bd2457a13d9f2d7",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/rumpfgeschwindigkeit-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/segelflaechen-rechner/": {
-      "hash": "1aa368e67e6c8577280d50cd125bd860f8728316ce7ab788eb07fbf2d22b33b8",
+      "hash": "88aa982dba74501d226e32b7ccb5a293eba1470c83a4b81fea7261319b9ec9ce",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/segelflaechen-rechner/"
     },
     "https://www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik/ukc-rechner/": {
-      "hash": "d5b26375f287c89e4458a3a4131af14e7d32526762a8f9ee15dad79306b8e79b",
+      "hash": "cc0f8d061b85e9e1537776e097cf10fda2a646b42ce3b3ac28682985b2844d7b",
       "route": "/de/werkzeuge/kategorien/segeln-und-nautik/ukc-rechner/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/anchor-scope-calculator/": {
-      "hash": "70b52a5969cbeba709fcd6de9d61909a14bb158897a456fe08156d108ea8ab24",
+      "hash": "6cc94f8ca23aee077077686505f72b57e9ec73363369c944e4cc535ccf517bb3",
       "route": "/en/utilities/categories/sailing-and-nautical/anchor-scope-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/": {
-      "hash": "79e6b631daf7c40a008a6dbde249888f199be652b7c36c067c07e622e820ba10",
+      "hash": "ace26b093dab626bb5678ac90afcbcbc9b2a829135326ab3b0bbe659707a1b8a",
       "route": "/en/utilities/categories/sailing-and-nautical/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/nautical-endurance-calculator/": {
-      "hash": "d14b5d090752c51f5e268c24cdf98ff0ecaff7efdc28a765e281857657a64b04",
+      "hash": "5624c21626127953298200ab4211da6d97053f4d1e5e75af4bb434429c3f5884",
       "route": "/en/utilities/categories/sailing-and-nautical/nautical-endurance-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/nautical-speed-converter/": {
-      "hash": "ab494806b08b76239b59bca2222cfa3e6b1000c34f3c6e5ae87e73da2ba67ea8",
+      "hash": "3b8a76364f13f843a2772c214ac95183175d52a654157eb4473829ddf367be62",
       "route": "/en/utilities/categories/sailing-and-nautical/nautical-speed-converter/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/nautical-units-converter/": {
-      "hash": "ccc41de79ff0b056bae875933d316254f076b82c5471ffc16a62ac2035025e55",
+      "hash": "da34f858ef335e278670e241c1a16cd63895047770da89025470d1c6018d2f50",
       "route": "/en/utilities/categories/sailing-and-nautical/nautical-units-converter/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/sail-area-calculator/": {
-      "hash": "6c7b89913b708898574cdf7f0289e6bdbd74730356d1a0dc6f11d0d52bf79fbd",
+      "hash": "ec729c1f8e885c9fc2421bd36cf812b895ed60f4ef8e40f90206f3f2c630c7ca",
       "route": "/en/utilities/categories/sailing-and-nautical/sail-area-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/sailboat-hull-speed-calculator/": {
-      "hash": "5a10abdc62268cfaade55b76b5892416d4b40571b729246cb97b3f2e7ed07e34",
+      "hash": "7872e12e8591547d77ca5ec75b8667ecab7cfef2405b58c78e4f0a485396e856",
       "route": "/en/utilities/categories/sailing-and-nautical/sailboat-hull-speed-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/tide-height-calculator/": {
-      "hash": "7b789ae45b9c6280e70a1d844ba426f2bea38bbb49ef63798f8366d47feeb856",
+      "hash": "075aac1565da9ddd118f8a5a870ecae196c155a9a19a48ab9cad05ce8401cb3a",
       "route": "/en/utilities/categories/sailing-and-nautical/tide-height-calculator/"
     },
     "https://www.gamebob.dev/en/utilities/categories/sailing-and-nautical/under-keel-clearance-calculator/": {
-      "hash": "4a32b43427fa0c198987ed14c1f8d94ec850ade97e7a59100f1b3d602238552d",
+      "hash": "11b4ac5011d7b8bff214c39d16ef247f91809583fb8add511b038022e9d0de56",
       "route": "/en/utilities/categories/sailing-and-nautical/under-keel-clearance-calculator/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/calculateur-autonomie-nautique/": {
-      "hash": "0f5bcb5aa3cd7378fbec349ab44a721b051a8d4cee58ece6b6e69bda26ac61de",
+      "hash": "211637868d2c0f2a8a5404d0702a0b9abda7048969ccdb5fdf5610f1a587b0ad",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/calculateur-autonomie-nautique/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/calculateur-hauteur-maree/": {
-      "hash": "b4976167e6ac1e25cbe9df88d931adf971e992cb137e49a5b70aa8b4e2dcfa54",
+      "hash": "5cbb3612a9797669e2332e3b41d7d5722a608941541c31245a0e6247618c08e6",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/calculateur-hauteur-maree/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/calculateur-longueur-chaine-mouillage/": {
-      "hash": "7389beef5fb5c6d0fabf57c7dbd2a5c1900f0e8571d894598e8e02722fd546aa",
+      "hash": "2cfbd6cd9de6f0abe86fb9380d3b8c6785ebdd6fbce8c2e51e3719bc70995fe3",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/calculateur-longueur-chaine-mouillage/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/calculateur-passage-haut-fond/": {
-      "hash": "09ae39558a6b2af0638120fd31a34c2734e28f08ad8ab0dc989ca61de841c0dd",
+      "hash": "5cb3c80497fb19d39ff24850ab3e87fe542483c1c9a80e4bc74dd20c58479213",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/calculateur-passage-haut-fond/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/calculateur-surface-velique/": {
-      "hash": "8d25432ca29c77a66c15a68a4f6ba86bb763d0c1022839a40b923b60c766590f",
+      "hash": "5cfb82d02c133970f35736a253dabbe228ead4fdd840424301d114a30e3e3a01",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/calculateur-surface-velique/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/calculateur-vitesse-de-coque/": {
-      "hash": "cfc4b0c64fa7fe751074a0a479775d8002355ba30974f5e0c690a4c6caec6b1d",
+      "hash": "a82c58330c7ea592c217e94fc4c880e2ecaa7d1a472d5cc17ce21b70733255df",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/calculateur-vitesse-de-coque/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/convertisseur-unites-nautiques/": {
-      "hash": "6dced809a16f1c9a4990c9c2f0cd50f3e0a0b08e30346fab541eebdd46dec1be",
+      "hash": "825667a7407043516b0d741f735785b23c07877c4fc1194ec770684ac3e21a05",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/convertisseur-unites-nautiques/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/convertisseur-vitesse-nautique/": {
-      "hash": "cfe887dd6f9829cd3bc29b2cced71885ed0137934724d70002938b0cfa8279a2",
+      "hash": "6af20ba4883c820de7f453a38ccd28ea4809fc9ee379c87c2a4e80c627829e8c",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/convertisseur-vitesse-nautique/"
     },
     "https://www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme/": {
-      "hash": "6fe41de537351dabcba79d47faa1795d167a7aa9820881b289bed48420e35bf3",
+      "hash": "c171e4a84c685c8b217dae25546497e1d0562b644995750c849acff719302f9e",
       "route": "/fr/utilitaires/categories/voile-et-nautisme/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/": {
-      "hash": "3d562485af58136f02e567844850a927dae8adc32b36dfd0bca3bae6ded1c749",
+      "hash": "ad61307f0fd2873789b60954fb3e334b4eddc0bf032ce69a8af40802312c8b40",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-daya-jelajah-kapal/": {
-      "hash": "95a3b4cb17547a364db5ef6f0fe05d3611e58a0a331522df995f11ff6773099b",
+      "hash": "08e1db4aab787b01a769ad80888f4b1caf848dd55681869764df112d46d644fb",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-daya-jelajah-kapal/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-kecepatan-lambung-kapal/": {
-      "hash": "e12003c023c5485c92584b55559482083dd164927d9f8efc90771231d5e14579",
+      "hash": "48695a6dda96d5f97abd9797c8b5a801753e0e3b504717bb10d225b18e5ad678",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-kecepatan-lambung-kapal/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-luas-layar/": {
-      "hash": "5467ccccd901507548d90f10025a214249711eaf68076168bf357ce905c73c43",
+      "hash": "e285f58add44a39f8accbf7fed43d6bb68f5cec5c0b35144176661631557caf9",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-luas-layar/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-panjang-rantai-jangkar/": {
-      "hash": "e9c6e49eb59f6daac9b8c6adc321e9dc1a19246bee7af51bc6a90f2227b578cc",
+      "hash": "64e18bce90b0c7c3f5c7b67ac8f4284910510eafaef700eca1339be9ce62994d",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-panjang-rantai-jangkar/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-pasang-surut/": {
-      "hash": "07433c51b9bf5edcd63e46f4dfc978d3f4df8b24e89bb002389dbf42924b6471",
+      "hash": "8af48adbe3f2f46022b96406766d48c8a7c7d6009951f39af3dffaa9bacd8fe9",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-pasang-surut/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-ruang-bebas-kapal/": {
-      "hash": "d378c9c53347839de4cc4d7ecc47d75d1b6548fd99f0c061fdaff163cffbf44f",
+      "hash": "cbe4eafb83dbfacfce3936ef0784e9bd31ab616b04694649fab52c6dfd6e6028",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/kalkulator-ruang-bebas-kapal/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/konverter-satuan-nautika/": {
-      "hash": "f1fedaa31fd0a586eaf1082d93da9c9d33e981e6a232157bf05f411c1e6c551b",
+      "hash": "6539964aeefbcd7336a06ed3d51a4222788350846e23c26d5683f24428b7ec11",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/konverter-satuan-nautika/"
     },
     "https://www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika/pengonversi-kecepatan/": {
-      "hash": "c44d48353fd185aed48a0e1be1dda4ce41f15fc4633191f2f48bcda2b2340784",
+      "hash": "e12b7625ae699c7569bf6b975513835dd0525eb5542c904ae36092e62b37d94c",
       "route": "/id/utilitas/kategori/pelayaran-dan-nautika/pengonversi-kecepatan/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/calcolatore-autonomia/": {
-      "hash": "e4c0c5397e4a2377e5682dbe83e2055fcfca1304cbffdba4e5002127f94d0ba9",
+      "hash": "4a8731319d9b7ac554e7292cf6e43395a76aa889a860645ef605a94914d2e075",
       "route": "/it/utilita/categorie/vela-e-nautica/calcolatore-autonomia/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/calcolatore-lunghezza-catena-ancoraggio/": {
-      "hash": "f18c293e096320e0aa0181166e332488d828d0fa805a5cf37cdc0e7a98fe3f9f",
+      "hash": "fb2d9e30e3f4b7e529456665291fba69c47a38162a570d8713d632b369f0503a",
       "route": "/it/utilita/categorie/vela-e-nautica/calcolatore-lunghezza-catena-ancoraggio/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/calcolatore-marea/": {
-      "hash": "b9ec2eaeccffd41a3587d54be5ff5e0fd319cdc325f05549b93236880c23a8f5",
+      "hash": "4716d41949db8d70524d616a4a587ee0c19c75ef8e508d6c7943406d18fa615c",
       "route": "/it/utilita/categorie/vela-e-nautica/calcolatore-marea/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/calcolatore-superficie-velica/": {
-      "hash": "0bfb8cf81ee8bf58b6017f96e8e982dbf35101d35ec41a11d7250a2d76791048",
+      "hash": "d03c62ecc2ab61f860dd2d241c5e53ebbc662b3ee99cac3d2a07a21d8ff707b5",
       "route": "/it/utilita/categorie/vela-e-nautica/calcolatore-superficie-velica/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/calcolatore-velocita-scafo/": {
-      "hash": "af8df82a706df89e7aa620840664250ce57a2e857a244c707c75e2972d81daa4",
+      "hash": "d0adb403df1472c4afc2558dd46c1ce4bd0eb4455d2ddd1f1789584272a541af",
       "route": "/it/utilita/categorie/vela-e-nautica/calcolatore-velocita-scafo/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/conversore-velocita/": {
-      "hash": "dd769bcc09938e28f60a8a98003626481405ace95869e0862d86fbb190965bc6",
+      "hash": "f33aa31e9a284c2784aa369a4c69c4b84b58ff8cd458e9b5e140e86737d2b454",
       "route": "/it/utilita/categorie/vela-e-nautica/conversore-velocita/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/convertitore-unita/": {
-      "hash": "15a604108ce747cbc19aa97e2a99ceba341276d2b486196d7377e44b95365f9f",
+      "hash": "436cc421a8436c1865c7aa771e59531d7f090f7de871668091577a561dcbe911",
       "route": "/it/utilita/categorie/vela-e-nautica/convertitore-unita/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/": {
-      "hash": "056fc069df91366eb2e33ee81baa0e333f0846f789b01b63b763002076ed3f69",
+      "hash": "4771744bf206a0e6e9fe31324b8592bbd151eb123f6cd5b715018e7e3f3c8331",
       "route": "/it/utilita/categorie/vela-e-nautica/"
     },
     "https://www.gamebob.dev/it/utilita/categorie/vela-e-nautica/ukc-calcolatore/": {
-      "hash": "9d2d98d7d1794ea155ac56b02f8e031915ca57f0dae11957bd1a153730162f06",
+      "hash": "f8518cb1534d2a9a618209141594767b50762ea9afc10cb6b4b457b79479854d",
       "route": "/it/utilita/categorie/vela-e-nautica/ukc-calcolatore/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/anchor-scope-calculator/": {
-      "hash": "863fcc58756d44529379ba5342a307c24c842157c8b6ccd31f4e10ce3a8e91a7",
+      "hash": "c91ced5def4bc02429ccf9b72b7af47b6ca5f26641475d2b552e3211cdb21302",
       "route": "/ja/utilities/categories/sailing-and-nautical/anchor-scope-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/": {
-      "hash": "dd47d12268bc24c435acafa7cbdf6797a16facfd780df14f8b9296ff6e41e0d4",
+      "hash": "7dc8b62dbe8f86f281cdebcd2d3d29acdb99e2afdab61086a018f6eb504b6b8a",
       "route": "/ja/utilities/categories/sailing-and-nautical/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/nautical-endurance-calculator/": {
-      "hash": "b43e0253d79a6c137947e31e8579833ecb5989ef8f621796599b69af1c9f44c8",
+      "hash": "3035d059808fbf8c28d19d889bba8e1bf0fd3fa7490ed3e10b67029f78842bc6",
       "route": "/ja/utilities/categories/sailing-and-nautical/nautical-endurance-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/nautical-speed-converter/": {
-      "hash": "6f0e1aecf09ac21a696bc8789b3315396b8fd30eeb3c70fc4ef23db59b5fbea5",
+      "hash": "b3f53c9f308be9cf306d75d3829fb5bfa224b41004393be596f7b11aca15f3cc",
       "route": "/ja/utilities/categories/sailing-and-nautical/nautical-speed-converter/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/nautical-units-converter/": {
-      "hash": "aa82e81a8fd9d467a8ac141903410854e5cdfc3402c46e3fc857b09b70f75ac7",
+      "hash": "0b97c8012f3e1febdc7933270e4a490a07f047ff06a8a6e417230f6f36cadd05",
       "route": "/ja/utilities/categories/sailing-and-nautical/nautical-units-converter/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/sail-area-calculator/": {
-      "hash": "04822e9d3d60b416d3cf569e2a617b571dce29a723e8aeb63a69b4890c55a8a5",
+      "hash": "b9c266cd56b36936c17e90ffdeaa337c8e83b7a66936dff340ce2ee2fe34946a",
       "route": "/ja/utilities/categories/sailing-and-nautical/sail-area-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/sailboat-hull-speed-calculator/": {
-      "hash": "a190075a4033294e81aa5e93b9ee544f3326ed1c4db4cf549580aee353249c5d",
+      "hash": "d7c0b1cc27c7e2dcb7baf71f073d27687883319d81456c417a4d21dd5f01e8d4",
       "route": "/ja/utilities/categories/sailing-and-nautical/sailboat-hull-speed-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/tide-height-calculator/": {
-      "hash": "1db62b509f5913f88edbd4117e3c3f32570c4b621b4482b26d4dd6e15402aa6b",
+      "hash": "7db414b1ffb60e0e32479b7cfac567dfce1155dac6afde39fcb70afd8fc09ce2",
       "route": "/ja/utilities/categories/sailing-and-nautical/tide-height-calculator/"
     },
     "https://www.gamebob.dev/ja/utilities/categories/sailing-and-nautical/under-keel-clearance-calculator/": {
-      "hash": "aef39d1238d9b2bb3cd93adfd5c8c2f7692438a9c934a242cdcb2f5493ca879d",
+      "hash": "6081c3d49ee7027542d6e67930cc5087655e20280b5e4212458b4464ea6e6953",
       "route": "/ja/utilities/categories/sailing-and-nautical/under-keel-clearance-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/anchor-scope-calculator/": {
-      "hash": "5cbe189d80b0fa8577d8fa24a24341730529fe129e96627cfd67a533fef849d1",
+      "hash": "3e504a7974dd5d7425011ab7cea70d62d79c63523bc610adff59f6b23f379fcd",
       "route": "/ko/utilities/categories/sailing-and-nautical/anchor-scope-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/": {
-      "hash": "ff95002e4c05c44d31e8e17ee7736ac8118ace704838c577bc00057e500d214a",
+      "hash": "2fe57a96e984150da1e8f126c3e555ffab28b2101887eb1656ffb078bd736f2e",
       "route": "/ko/utilities/categories/sailing-and-nautical/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/nautical-endurance-calculator/": {
-      "hash": "09bf7a844c23bfae6c1306fc9a24352b6e57123d1c40b881a829d4ab77b2bae1",
+      "hash": "7934157e1e441fb24a7e1b1a3727d8d27597b6f4e3e0cf2b8b05d8d2fcb26e48",
       "route": "/ko/utilities/categories/sailing-and-nautical/nautical-endurance-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/nautical-speed-converter/": {
-      "hash": "73ad5342f520743fb3654fd3222fcc8ff60c07c75012a2c581f760fb6785ec7f",
+      "hash": "a8dda62e938f00f39bbff9d4fd09918073eb4b043771df631ced4757e9e61cba",
       "route": "/ko/utilities/categories/sailing-and-nautical/nautical-speed-converter/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/nautical-units-converter/": {
-      "hash": "c8809748a7e9c6c88a9421ed5dc5e1309e04febe335b02ae717ce67ebdbbf88c",
+      "hash": "ca8c79a68be57a09ca7fb41fb56dca54aaf45bdb234809e946a6fef5df779f63",
       "route": "/ko/utilities/categories/sailing-and-nautical/nautical-units-converter/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/sail-area-calculator/": {
-      "hash": "7ef684d679f49a7a2892cb2a394ae740444414e8258f9f30f298ab17f60b459f",
+      "hash": "20e543e013c4a5fb001ae4f9a4baf3084b16d984097cadbf6589133cd1acf083",
       "route": "/ko/utilities/categories/sailing-and-nautical/sail-area-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/sailboat-hull-speed-calculator/": {
-      "hash": "6b95bc190260dea85e77c0d61ac7d20c14e7aa64b6deb8eda550dcb30ebbbdb4",
+      "hash": "57042b0eabe8391d0a720e4430271c4cdf76efdcf6957987819bd51f9b56f4d3",
       "route": "/ko/utilities/categories/sailing-and-nautical/sailboat-hull-speed-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/tide-height-calculator/": {
-      "hash": "d014d0a194ef37fe7f76d926fd8cdf5c8d03bd127da70359acaa01778a8bcebc",
+      "hash": "9d86c7d442f2a74000a9059106a5a6b98ba8973e7ba803948bcd697cdaff963f",
       "route": "/ko/utilities/categories/sailing-and-nautical/tide-height-calculator/"
     },
     "https://www.gamebob.dev/ko/utilities/categories/sailing-and-nautical/under-keel-clearance-calculator/": {
-      "hash": "ee72690b6f827e921de2268c58e4d4856684ae4093a152fc8aa9e0457dc7131c",
+      "hash": "b9b60c175f12a0dbe3547b89c5281f4b578ffc86cdc020d42c04b4b69b8665a8",
       "route": "/ko/utilities/categories/sailing-and-nautical/under-keel-clearance-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/anker-kettinglengte-calculator/": {
-      "hash": "a750c01d6ac5ca415d889662fdcc0b67c3812af1e4453c635e320c42ee0e94a6",
+      "hash": "c3ee70532b0ea0dd975b2dcc37a5b7fb52f48a986ab65d4f33eaa98ee8c19632",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/anker-kettinglengte-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/calcolatore-autonomia-motore/": {
-      "hash": "1f7255c5952f7a5b3816b2270b0e2db40eceb00490cc40dca5031807d9422751",
+      "hash": "ee4bc4433132df3fa7ddee89cf7bbb3518e98fa9aa2bc0979483210e00a89915",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/calcolatore-autonomia-motore/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/getijde-calculator/": {
-      "hash": "ec72d2ff41fb93e5dbe7b470a368957786f2708026e0ffd044310566f3ea6f06",
+      "hash": "9be1c941664d61c8f154f60162712493069b4bdc2f2370b4b1f9a85cff0e8dcc",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/getijde-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/": {
-      "hash": "79d26fc6e8826daf10db6c8929c50e5bde1f15d0f5a1a4f58b643e616a501705",
+      "hash": "724a4a8755aecfb1c69c9d3845567c7b6307272194930590acf98fa0e20d217e",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/nautische-eenheden-omzetter/": {
-      "hash": "19456fd348a0c28b1dde221029c71f07847c51a789a021c4a486fadd7968f12c",
+      "hash": "5119c98eee669d9b135d2d0846594723f6b9a79f655828894a2ab8fcf24663fb",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/nautische-eenheden-omzetter/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/rompsnelheid-calculator/": {
-      "hash": "814ed155a72813dadcafe0d194502f1ed158f257c87a727f73d82dfdc570ba38",
+      "hash": "d0357bb790bb2a5a5e4c03898b5ebe12537deb3afb284dd95c1df5796a53d48a",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/rompsnelheid-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/snelheidsomzetter/": {
-      "hash": "5170196b9edb336c4240e2cf7395ab9ae45c150e5695683ef79f1b8f14808de2",
+      "hash": "887c30cdf67358317ad6406e51834bea0467909f2a5c07e2127803ce54cb4297",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/snelheidsomzetter/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/ukc-calculator/": {
-      "hash": "b1192b5b6c576d0f6e1d2fef2ec1e841cd425d13bbea8a28de1e1b4d2f03b3d0",
+      "hash": "59cbbd9cc47b3172b983fe115150b058f70b9d6888475b6b3794f6e24b9bbaec",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/ukc-calculator/"
     },
     "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/zeiloppervlak-calculator/": {
-      "hash": "7f71c05b767c63be61adf15de9aac863ff8d08ef20f118133ee2802e770cbaf5",
+      "hash": "d7bbb2703c6c990ae73a145591fa4e9abd9fbd85b67c1a76607b682fd0957dc6",
       "route": "/nl/hulpmiddelen/categorieen/zeilen-en-nautiek/zeiloppervlak-calculator/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/calcolatore-autonomia-polacco/": {
-      "hash": "526cdc636eb31f5087eac3b7c76e4b8b74d686778942b2be329d71fd5656e1f5",
+      "hash": "014dfa2c3d9c2c946b18b166d69240fd357f39cf1c79ea587c95a1e9f0fc5f8c",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/calcolatore-autonomia-polacco/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/": {
-      "hash": "a552da67fe92fef28ee2427ba96582511326e41ffe18acfb8e7c0f89d6d510b2",
+      "hash": "2a7f15692c2e16abc4117c86a6b46f900b1f5595d92cd54700f1676155f55cda",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-dlugosci-lancucha-kotwicznego/": {
-      "hash": "28f1ef13ca973325c827664ae17a19b57a1f2943d3befe4d5fc838a1b67a2865",
+      "hash": "d3e1c2f2f11439f02fb58b8b7da7458e4f8e26099866358c2ea0e3853aee2fef",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-dlugosci-lancucha-kotwicznego/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-plywow/": {
-      "hash": "f01db87996b6c009ceda48ed7c0ea4c38f6715ef419e9e67c98a0d4b5a3e4561",
+      "hash": "35a404b9225ec227da9a48241f6747895187a732662f4897e01e074789603f35",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-plywow/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-powierzchni-zagli/": {
-      "hash": "d27d3fd0952ca6aaa75b12029a3da822a0ba54621437b8f0093e31ee2c905880",
+      "hash": "3c424e8ecfb591336bbb35f4973fbb429aec48cd8a9e841b5bdbc64053302faa",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-powierzchni-zagli/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-predkosci/": {
-      "hash": "2b8df685880a95804650d5d2102387cf5ccb3a54cb1c3bdfc573655cee645808",
+      "hash": "f75718830bc186938918f86d8b34fd4817e8fe8c83cd653e605cc3637bd35a8a",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-predkosci/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-predkosci-kadluba/": {
-      "hash": "5fca5f6da596a156d8da6bdd30e1cd31e3771158c0d249eda92e13337dba5709",
+      "hash": "8eeaca26613e713b853e6700997420742c13a9824a7aa4a3b1a351dbe20f5537",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-predkosci-kadluba/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-rezerwy-pod-stepka/": {
-      "hash": "3749239c919424b145f3e2fb065bf6d66c9799dc5753bb137c196d64caec0b40",
+      "hash": "5fd0d00c6d996be5d2bed9c1169b24488297ab44497b43e3e12a66f60800d87b",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/kalkulator-rezerwy-pod-stepka/"
     },
     "https://www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/konwerter-jednostek/": {
-      "hash": "899d53dce316ff4fed873fe99fd6e395be2ae003f6244a4430bcb95f0d250de5",
+      "hash": "e25306055a9c734016095bf73e2f9ce337e597eed9c116c1a70cff8289a4dca9",
       "route": "/pl/narzedzia/kategorie/zeglowanie-i-nawigacja/konwerter-jednostek/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/calculadora-alcance-motor/": {
-      "hash": "cfc3adbbb6bed405ec55f46408382e1254995cfe58b12b426b662177104a97c0",
+      "hash": "3cda49855fbc06a48c9b6a8aa4d85399b009c7fccb6027e41fb8dfe2fd4532c3",
       "route": "/pt/utilidades/categorias/vela-e-nautica/calculadora-alcance-motor/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/calculadora-area-velica/": {
-      "hash": "ab34034be01b061a5622809054196b51d5308db6c7665d3d4fd439039379d05d",
+      "hash": "ddfeadc3c955fdc877e8b6430304b8b1d2af90bebd1296b2b85475c72e992150",
       "route": "/pt/utilidades/categorias/vela-e-nautica/calculadora-area-velica/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/calculadora-comprimento-corrente-ancoragem/": {
-      "hash": "54d65e6f109d2ac80e74b0cdb09c39a0740eedc25de6b61909444b9430d144e3",
+      "hash": "54280152d10ea795ae19a894f75d57b0b371f92887f3b3d0da1f73a1b108f185",
       "route": "/pt/utilidades/categorias/vela-e-nautica/calculadora-comprimento-corrente-ancoragem/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/calculadora-mare/": {
-      "hash": "90f48898a82b9c09e610dd62beea598fd637c13051120379017723d2e19d89c8",
+      "hash": "ce568211668ab2571bcda87d10287c3a1ff52b4930088f65caed303099ecf2bd",
       "route": "/pt/utilidades/categorias/vela-e-nautica/calculadora-mare/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/calculadora-velocidade-do-casco/": {
-      "hash": "4d01be35939def5c8a79422682a5d29dd279c16a0650e1a9548b19fb2cdd8438",
+      "hash": "4bc62a0ac7de693055953ea1705c01764ab1852da450e74a79b99372925e7f2e",
       "route": "/pt/utilidades/categorias/vela-e-nautica/calculadora-velocidade-do-casco/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/conversor-unidades/": {
-      "hash": "73366e36c24a92d5c36e8371eccd6de5bf46d508fab60c0ea100abfbed0be234",
+      "hash": "4046eeb417415ef92ff81b6e1a00219264c91cdec64a15bcb37eaed28c7b6e4a",
       "route": "/pt/utilidades/categorias/vela-e-nautica/conversor-unidades/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/conversor-velocidade/": {
-      "hash": "ecfde8a3243247d3bac4496ba25cd35ce4652e65177241e78b3b284f2fb29c99",
+      "hash": "7e32472f7bf7c644e1a79971bc51ec5a1efa4a92ba2701f98663c7ca75c1493c",
       "route": "/pt/utilidades/categorias/vela-e-nautica/conversor-velocidade/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/": {
-      "hash": "a30ab5affb361630be1dc734612f549ceb17fb0ccd9dfd894087cf87a388cfb2",
+      "hash": "bdcd6f6664664365f2350fa6b375b64a5476ec332abe642f60e33dad335b1a4b",
       "route": "/pt/utilidades/categorias/vela-e-nautica/"
     },
     "https://www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica/ukc-calculadora/": {
-      "hash": "e96bbe45c01bb1a75670e14ec8aa21f4416b5c99737da3743fa2dc3b70097f36",
+      "hash": "6e2a6ae6ad8acd1cd53c3e0bdca7c64966ac160469a8f0f42fe3181886c7982b",
       "route": "/pt/utilidades/categorias/vela-e-nautica/ukc-calculadora/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/": {
-      "hash": "7415e13aa3af5a6e980574cffa50be8876644b4d8822cc8069f71ef64073d07b",
+      "hash": "b3943067468743899b084e26063f5f844b84a309e7c858d4509300f44f2073b1",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/kalkulator-morskoi-avtonomnosti/": {
-      "hash": "9f2f6709d767c70761a2d684834f0af0e5b28a98b4cfeb13475ac685455f70a3",
+      "hash": "40ff1043e5395a1e9117f637f40a74c5761d48791d30f9184a26a8bb8e741bba",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/kalkulator-morskoi-avtonomnosti/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/kalkulator-ploshadi-parusnosti/": {
-      "hash": "c45d4a6281288fba8b46d50b669bba8cffd396fbb0223709e130edca0751c7d3",
+      "hash": "c37e9e80ab66240caab86bb45ad49d905316de354f287fb68d3d8db56cfdd699",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/kalkulator-ploshadi-parusnosti/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/kalkulator-vysoty-priliva/": {
-      "hash": "8129a71bb44d3f7ab02bbb61db9cc4b13f936af6c021db5de195a0c38637f607",
+      "hash": "d8c3d2465b35acedd52700446ffb2cb67f27251f2f7e62faf673d2daa6a3b2c8",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/kalkulator-vysoty-priliva/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/kalkulyator-dliny-yakornoy-cepi/": {
-      "hash": "c97784c3eb8fa2467cc564db7afb1bc121ce1607b5d72e20d10656ed7f98a77b",
+      "hash": "7cfefa99d8e828a1661ba95bf4ea86c27b1118264118819e9dd327d2d570cf77",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/kalkulyator-dliny-yakornoy-cepi/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/kalkulyator-skorosti-korpusa/": {
-      "hash": "a3f70ebe1f217deef0a8e182a769a5c98e3d977ca8cc3bb6739262b9524cfe9b",
+      "hash": "190025449a44c593fe783f86c758ab9972a2d63bde4d167d70cd38c6645ffa96",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/kalkulyator-skorosti-korpusa/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/kalkulyator-zapasa-glubiny/": {
-      "hash": "bc24dd72b3af6bbd52874ecf857d143a049a07bbeee1ce6e38ac41d0926b8554",
+      "hash": "04f03b21cad34b246005ea81d5657ee79de9c844f49ef9e474aaf09b9ab38c0b",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/kalkulyator-zapasa-glubiny/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/konverter-morskikh-edinits/": {
-      "hash": "d04e004b106ea1e0343f3933aad50f12fcf89be2acc36b709c06af7fe6aed8c1",
+      "hash": "b598e1ad4666ff4068f8dfc77b0f6f24abb77cea96cbc827c8ff7118ca8f8f15",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/konverter-morskikh-edinits/"
     },
     "https://www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika/morskoi-konverter-skorosti/": {
-      "hash": "7454f39a16ebec1947240a93e18738b9334305f40b288e27227b147a9d2208f0",
+      "hash": "2881765f2fb0d725a52a5bfef17679883cfdd71f6527d26067f3c1c8ff1577d1",
       "route": "/ru/instrumenty/kategorii/parusing-i-nautika/morskoi-konverter-skorosti/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/hastighets-omvandlare/": {
-      "hash": "27a0075cc4ed4ef2eb6faec40303d59a32e9f5b55c3840e96f2d2b9c4ac881c9",
+      "hash": "c792368a624c980fc62fbad89b4e2f9d7e911fbf96a02f6809b50f5e7f59823f",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/hastighets-omvandlare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/": {
-      "hash": "7c4840dc3a394709578466e9928a8e641c324b8273a746d91df33b48f390ead5",
+      "hash": "e7591c618242bb725fff0c89bf6a935a7167e84b8f333822d247d833b6b1d859",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/kalkylator-ankarlangd-kattingskalkulator/": {
-      "hash": "55ec32822e3f3517136e66d27f01d4d597789b6bc0d6344f2c87caf70d7a50af",
+      "hash": "9efa75c25543779854388083d8a946640323dea125bc1f48db1803795bcdf990",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/kalkylator-ankarlangd-kattingskalkulator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/nautiska-enheter-omvandlare/": {
-      "hash": "f5bc73f9c0bc6e95f1bfe3d42a45c08ff472cea3e17740ec78ea18ed1058fb2a",
+      "hash": "5fc408d40529ed213c8993f638ef1dbc9ff7e1be72c3d2d98cf0d19e80218bd8",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/nautiska-enheter-omvandlare/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/rackvidds-kalkylator/": {
-      "hash": "481ff3280042500ea95968266203c22a351aa9179b37c0ef1ced024339b7ac73",
+      "hash": "3a28624f997f8a1c9be480c749397210441a9990bb54c5aa0865b359fa7005f1",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/rackvidds-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/segelyte-kalkylator/": {
-      "hash": "3ead3dca75a70bf6525e5be05ba87e68eda4bb6f693132e3a315f320b871b006",
+      "hash": "a38f9d7cff7d9fbff03d60ba76e779d8a7cd805a3a9d20dd7a3182202e2bf692",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/segelyte-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/skrovhastighet-kalkylator/": {
-      "hash": "4aa4de256405097ad21f093d1dacc1d8259c7af90a74881ff19a6704111afe79",
+      "hash": "04b9eb5275d211688b8fe6f369c4ba156f3149691b356c61abab838f6c42f818",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/skrovhastighet-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/tidvattens-kalkylator/": {
-      "hash": "a608bceb177ef9dbd867b9e5c2c3cc551e58f1c32b2b49187d40e6486334e848",
+      "hash": "1c6057baef7b243145bb68f9c654eb375103d4b8753ff0a4fd31b4b741a1d1a8",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/tidvattens-kalkylator/"
     },
     "https://www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik/ukc-kalkylator/": {
-      "hash": "ae8170803021d456e290d9b22d75442f7345732a3038dabad295b1c1d326fae9",
+      "hash": "6500d6a1a7c818905739d4c755c4d1223e66cc3c990c2f3f84ed4c08b31c3c8d",
       "route": "/sv/verktyg/kategorier/segling-och-nautik/ukc-kalkylator/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/birim-donusturucu/": {
-      "hash": "f41f8c0e5d4293830e0a4e8dd1423de60d00d49f0d30e189ac2098854faa9802",
+      "hash": "8076da5aaaaae519ec98b26192c93ba2a3731e49d1467e7f62f35da0787469e7",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/birim-donusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/demir-zincir-uzunlugu-hesaplayici/": {
-      "hash": "9f3f226820368228da9e5edc46e3ca44a5e655c1d87fbe84718e41ffcd187086",
+      "hash": "04a782850660c5bfbe20c96d989b8a0a304c986a3f0fe041c4a0c55102758759",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/demir-zincir-uzunlugu-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/gelgit-hesaplayici/": {
-      "hash": "c6eb03d44bfca2aa1efeb6aedb4b038bb8a3221b33401986077ee8174a8854a8",
+      "hash": "26b221ce096056aad1944664c705189577e8ba31a09a83e0e03b3a698fc812b3",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/gelgit-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/hiz-donusturucu/": {
-      "hash": "e24dc16d6e5703d4215baf8a4ced2d27647a94b6de6ef746ba7a60ecc9d3035c",
+      "hash": "332d78be2ea687f92e302473c70bbe5548299f5da6c841d1a482a975c1cb501b",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/hiz-donusturucu/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/": {
-      "hash": "9f580bccb2d59a9502b5775f42a603414f8e94a68d24a93e9825c9460b733756",
+      "hash": "67b70d7e2f80fd89917e7bad0075a5fd95becf204b3d9422f5107ae294a6ba5d",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/menzil-hesaplayici/": {
-      "hash": "8ebd4f7cf1014da6dea4f8a4dddc276285debc2089dd1382627f5175d96743b7",
+      "hash": "60bb1c97a6632372ec5ee2f8b6751be3c488e537812bffcddbcfb237dad820a7",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/menzil-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/tekne-govde-hizi-hesaplayici/": {
-      "hash": "c0d4514c4eaba5da1375fa9aa6ae37402aabe402414a94881863660c2077c924",
+      "hash": "162532aaca8017d3eaf83d76e72f1558f19c715495e15b9a4845ab73029f144d",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/tekne-govde-hizi-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/ukc-hesaplayici/": {
-      "hash": "37e0ce39e60c41eeb39e74af3e5c277d0d8d8c1c04f4aab451fc0c29746bc765",
+      "hash": "d27f3da82d836f1dd6600e50a904b2a316c90ba7aa97be8584911980e57fb41f",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/ukc-hesaplayici/"
     },
     "https://www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik/yelken-alani-hesaplayici/": {
-      "hash": "7f8df2b4f1773df3e7395bbd362a4836d6c3ddbfda0e53380a07e0521938ce4d",
+      "hash": "c12df07b798b619b7aa39e936f4851890060282a7633d47282c450ef5bba7247",
       "route": "/tr/araclar/kategoriler/yelken-ve-denizcilik/yelken-alani-hesaplayici/"
     },
     "https://www.jjlmoya.es/utilidades/calculador-paso-de-bajo/": {
-      "hash": "f6ceae52d35ac7d303e3834a76e3a74108180d363afac42b54a41ce9a7f25064",
+      "hash": "1a2eae565e7d31149a6774a3322be45ad3b55875305cf4c9fa12969b83b7eb44",
       "route": "/utilidades/calculador-paso-de-bajo/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-altura-marea/": {
-      "hash": "5b03b002f9f16b3002d06309ce1045f4eb1a3625fa3e88fc606e3c0231c26f93",
+      "hash": "1d12b9f17e0a8b2d3f981fe8d630ba8f9e72dc47f08cef88226d97707d61b7da",
       "route": "/utilidades/calculadora-altura-marea/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-autonomia-nautica/": {
-      "hash": "5148799978f3aafc230f52adb2917676affcd06555bb6629b1385082e563029a",
+      "hash": "47ca0087642d97d8bb26134e8882ba9c29d8d5cf3289b21c263acf951867d615",
       "route": "/utilidades/calculadora-autonomia-nautica/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-longitud-cadena-fondeo/": {
-      "hash": "f965d340e57157414db8b4fd69ca7efa3635b8fda7a19b212f8f2a233c6787ca",
+      "hash": "09ec6cff2cafc8c673ac8519062147d03dedc7a53f458d5d95efc1fc3a0c24ca",
       "route": "/utilidades/calculadora-longitud-cadena-fondeo/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-superficie-velica/": {
-      "hash": "55a05439f6dd26b7711cfadc17be3719fd5e0068d6384692dcaa2b3bdd5f4353",
+      "hash": "e84dd5d9c5e992a9e3d384ddadfce418f99cc66d108f4c6a745e53830b1959ee",
       "route": "/utilidades/calculadora-superficie-velica/"
     },
     "https://www.jjlmoya.es/utilidades/calculadora-velocidad-casco-velero/": {
-      "hash": "5877540c6112685f83e5ac3e625af3205d30548ad2748a537ca5c0a086e64cd0",
+      "hash": "8c76849d81f2724769046b5a717677e3f584dcba39dd405639d66568824bdffc",
       "route": "/utilidades/calculadora-velocidad-casco-velero/"
     },
     "https://www.jjlmoya.es/utilidades/categorias/vela-y-nautica/": {
-      "hash": "787d8b767ee89831420a63dd9d12eb17285151ece11d0fb993d04b3d464b62bc",
+      "hash": "03617d807e51ef0e1e5e2be769003453dd97a4b5de9856f081ecf80e91a032ae",
       "route": "/utilidades/categorias/vela-y-nautica/"
     },
     "https://www.jjlmoya.es/utilidades/conversor-unidades-nauticas/": {
-      "hash": "1aafb4b1cdb098fc0018a3daf65fc536f65ecefafad6c720fa3592d11bac971b",
+      "hash": "53bf2aea5b7ee116ee5e79e6a389dd5cfa6a4fe1a3412f1a51e6ebcd81ef6351",
       "route": "/utilidades/conversor-unidades-nauticas/"
     },
     "https://www.jjlmoya.es/utilidades/conversor-velocidad-nautica/": {
-      "hash": "a18d6d49c8aeaa5656503e4411725b1ab05580d5942fd53dee8d1a4726cbe928",
+      "hash": "a6730f3a9c9f673bfc23d5471f19c41af76d59924a473de2d8f6a1aec1a274b8",
       "route": "/utilidades/conversor-velocidad-nautica/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/anchor-scope-calculator/": {
-      "hash": "db92e5ce622ca815fc216c1240d903dfaa6c582f616513fbe7e2feaf59329389",
+      "hash": "d8d98c334a6497db1dc75486f000eccc544268dd39806b653d1665ba9578c61f",
       "route": "/zh/utilities/categories/sailing-and-nautical/anchor-scope-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/": {
-      "hash": "7a6c8a720e3000c330999a93d5cf0ae620b1ed4c52ea138549437e45aa6e4ea5",
+      "hash": "0bbf1e8b99f8d6683c6c46d79eb32ab96d58c267fcb9bac0febe4566e6a41e10",
       "route": "/zh/utilities/categories/sailing-and-nautical/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/nautical-endurance-calculator/": {
-      "hash": "b4e21d37526da30beadab7d18ef725783a496b65a7b056c66ed8479157ff90b4",
+      "hash": "3fdce2b174d4171e93f2bcb24a108c621261268b0507eb12dee1172e63095e27",
       "route": "/zh/utilities/categories/sailing-and-nautical/nautical-endurance-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/nautical-speed-converter/": {
-      "hash": "80806c51ccebc114eebe499ecabcfa773b9898c4866c99a78d9915274a48e3d7",
+      "hash": "338401b9b77e5e35b3044f208e9186d4251b4f92fb909303ff002b0a0003525f",
       "route": "/zh/utilities/categories/sailing-and-nautical/nautical-speed-converter/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/nautical-units-converter/": {
-      "hash": "3ed7651fdbd261bf10688fb5f326fd89a643ecfb2b3f50d60c22eeb403348a15",
+      "hash": "f963d5b33bcd6d02ccb53069c76c0f036d301751b57212040638272ed4260c0e",
       "route": "/zh/utilities/categories/sailing-and-nautical/nautical-units-converter/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/sail-area-calculator/": {
-      "hash": "eede763f53026d7f5e07123e9261a1aae0d9825f9f1aab23740d7a8120925045",
+      "hash": "d12049ae84946561cbfa5810af154d888a27907f44e9a0187e135cdc9a1f35af",
       "route": "/zh/utilities/categories/sailing-and-nautical/sail-area-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/sailboat-hull-speed-calculator/": {
-      "hash": "0cbcadec08375f9d74cae5ef8a576589b1c8b1f53617ff9c3bb3adacd1cacbe4",
+      "hash": "4a6bed2dc29f14c853188d438b4717746f284be67259f09aa5d239d860576055",
       "route": "/zh/utilities/categories/sailing-and-nautical/sailboat-hull-speed-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/tide-height-calculator/": {
-      "hash": "42fa70d084444f66792555b0e91be373ada34c3c99a18b09da47a5a430728ae9",
+      "hash": "db05e20df4e0725a897b4d58e2d13317817fe1d5088057bf9174f4ca8e529aca",
       "route": "/zh/utilities/categories/sailing-and-nautical/tide-height-calculator/"
     },
     "https://www.gamebob.dev/zh/utilities/categories/sailing-and-nautical/under-keel-clearance-calculator/": {
-      "hash": "c47ab7fc8c70c2bec7a714e530c03fe13d02f30a0bd47424638baf1160aa5a5d",
+      "hash": "16ced3bb6db94100a9b8aeed9f715aee0789b0cc4a3884b23e16bed1078ff0ee",
       "route": "/zh/utilities/categories/sailing-and-nautical/under-keel-clearance-calculator/"
     }
   }
