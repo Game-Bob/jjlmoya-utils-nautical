@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { underKeel } from './entry';
 export * from './entry';
 export const UNDER_KEEL_TOOL: ToolDefinition = {

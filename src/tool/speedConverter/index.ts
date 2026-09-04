@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { speedConverter } from './entry';
 export * from './entry';
 export const SPEED_CONVERTER_TOOL: ToolDefinition = {

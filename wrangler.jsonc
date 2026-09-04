@@ -1,0 +1,116 @@
+{
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "gamebob-utilities-nautical",
+    "main": "src/worker.ts",
+    "compatibility_date": "2026-07-22",
+    "workers_dev": false,
+    "preview_urls": true,
+    "routes": [
+        {
+            "pattern": "www.jjlmoya.es/utilidades/categorias/vela-y-nautica*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-longitud-cadena-fondeo*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-autonomia-nautica*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-velocidad-casco-velero*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.jjlmoya.es/utilidades/conversor-unidades-nauticas*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-superficie-velica*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.jjlmoya.es/utilidades/conversor-velocidad-nautica*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.jjlmoya.es/utilidades/calculadora-altura-marea*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.jjlmoya.es/utilidades/calculador-paso-de-bajo*",
+            "zone_name": "jjlmoya.es"
+        },
+        {
+            "pattern": "www.gamebob.dev/en/utilities/categories/sailing-and-nautical*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/fr/utilitaires/categories/voile-et-nautisme*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/de/werkzeuge/kategorien/segeln-und-nautik*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/it/utilita/categorie/vela-e-nautica*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/pt/utilidades/categorias/vela-e-nautica*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/nl/hulpmiddelen/categorieen/zeilen-en-nautiek*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/sv/verktyg/kategorier/segling-och-nautik*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/pl/narzedzia/kategorie/zeglowanie-i-nawigacja*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/id/utilitas/kategori/pelayaran-dan-nautika*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/tr/araclar/kategoriler/yelken-ve-denizcilik*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/ru/instrumenty/kategorii/parusing-i-nautika*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/ja/utilities/categories/sailing-and-nautical*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/ko/utilities/categories/sailing-and-nautical*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/zh/utilities/categories/sailing-and-nautical*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.gamebob.dev/_utilities/nautical/*",
+            "zone_name": "gamebob.dev"
+        },
+        {
+            "pattern": "www.jjlmoya.es/_utilities/nautical/*",
+            "zone_name": "jjlmoya.es"
+        }
+    ],
+    "assets": {
+        "directory": "./dist",
+        "binding": "ASSETS",
+        "html_handling": "force-trailing-slash",
+        "not_found_handling": "404-page"
+    }
+}

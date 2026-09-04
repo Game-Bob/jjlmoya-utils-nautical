@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { nauticalConverter } from './entry';
 export * from './entry';
 export const NAUTICAL_CONVERTER_TOOL: ToolDefinition = {
